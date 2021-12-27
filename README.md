@@ -1,4 +1,13 @@
-## Welcome to GitHub Pages
+
+![Image of two drinks on a table. One empty, as a completed project, and the further away drink not empty as a project on the todo list.](https://cfiorelli.github.io/pdonepwanttodo.jpeg)
+
+
+#Projects Done
+
+#Projects want to do
+
+
+
 
 You can use the [editor on GitHub](https://github.com/cfiorelli/cfiorelli.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
