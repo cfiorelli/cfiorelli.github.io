@@ -1,0 +1,6 @@
+[
+  {"title":"Protein data bank: overview","url":"https://www.rcsb.org/","tags":["protein","resource"],"addedAt":"2023-10-01T12:00:00Z"},
+  {"title":"Example analysis notebook","url":"https://example.com/notebook","tags":["notebook","analysis"],"addedAt":"2024-02-18T09:30:00Z"},
+  {"title":"On reproducible research","url":"https://doi.org/10.1000/example","tags":["paper","reproducibility"],"addedAt":"2022-07-12T14:00:00Z"},
+  {"title":"ProteinSlideshow demo","url":"/projects/proteinslideshow/","tags":["project","demo"],"addedAt":"2025-01-05T08:00:00Z"}
+]
