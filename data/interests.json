@@ -1,4 +1,56 @@
 [
-  {"title":"Semantic Scholar API tutorial","url":"https://www.semanticscholar.org/product/api","tags":["api","tutorial"],"addedAt":"2025-09-01T12:00:00Z","source":"interests"},
-  {"title":"Runway FOD dataset notes","url":"/projects/runway-fod/","tags":["project","fod"],"addedAt":"2025-08-12T09:00:00Z","source":"interests"}
+  {
+    "type": "link",
+    "title": "Learn Claude (Claude Code: a highly agentic coding assistant)",
+    "url": "https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/",
+    "date": "2025-09-24",
+    "category": "Learning",
+    "tags": ["AI","Machine Learning","Programming"],
+    "source": "interests"
+  },
+  {
+    "type": "link",
+    "title": "Learn Git — W3Schools",
+    "url": "https://www.w3schools.com/git/",
+    "date": "2025-09-24",
+    "category": "Learning",
+    "tags": ["Version Control","Git","Programming"],
+    "source": "interests"
+  },
+  {
+    "type": "link",
+    "title": "Introducing AToken — unified visual tokenizer for images, videos & 3D",
+    "url": "https://arxiv.org/pdf/2509.14476",
+    "date": "2025-09-24",
+    "category": "Learning",
+    "tags": ["computer vision","visual tokenization"],
+    "source": "interests"
+  },
+  {
+    "type": "link",
+    "title": "Foreign Object Debris (FOD) — definitions (Skybrary)",
+    "url": "https://skybrary.aero/articles/foreign-object-debris-fod",
+    "date": "2025-09-24",
+    "category": "FOD Project",
+    "tags": ["FOD","Definitions"],
+    "source": "interests"
+  },
+  {
+    "type": "link",
+    "title": "The silent airside threat — how AI is fighting FOD (Airport Council)",
+    "url": "https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/",
+    "date": "2025-04-30",
+    "category": "FOD Project",
+    "tags": ["Operations","AI"],
+    "source": "interests"
+  },
+  {
+    "type": "link",
+    "title": "FAA study — FOD detection system cost‑benefit analysis",
+    "url": "https://www.airporttech.tc.faa.gov/Products/Airport-Safety-Papers-Publications/Airport-Safety-Detail/foreign-object-debris-detection-system-cost-benefit-analysis",
+    "date": null,
+    "category": "FOD Project",
+    "tags": ["Report","Cost‑benefit"],
+    "source": "interests"
+  }
 ]
