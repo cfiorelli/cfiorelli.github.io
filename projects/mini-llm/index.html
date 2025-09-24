@@ -87,6 +87,11 @@ fetch('/api/s2/paper/ARXIV:2301.10140').then(r=>r.json()).then(console.log);
         <li>Allow plugin-style connectors for other scholarly APIs or institutional proxies.</li>
       </ul>
     </section>
+    
+    <section style="margin-top:1rem">
+      <h2>Backend proxy</h2>
+      <p class="muted">See the example proxy I included in <a href="/backend/README.md">/backend/README.md</a> — it shows a small FastAPI pattern for forwarding requests to Semantic Scholar while keeping your API key secret.</p>
+    </section>
   </main>
 </body>
 </html>
