@@ -1,0 +1,64 @@
+<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width,initial-scale=1" />
++  <title>Interests — C. Fiorelli</title>
++  <link rel="icon" href="/assets/img/favicon.svg">
++  <link rel="stylesheet" href="/assets/css/styles.css">
++</head>
++<body>
++  <header class="site-header" role="banner"><div class="container header-inner"><a class="brand" href="/">C. Fiorelli</a><nav class="nav" role="navigation" aria-label="Primary"><a href="/">Home</a><a href="/projects/">Projects</a><a href="/publications/">Publications</a><a href="/about/">About</a></nav></div></header>
++  <main class="container" role="main">
++    <h1>Interests</h1>
++    <p class="muted">A curated feed of topics and links I follow — ordered by recency.</p>
++    <div id="interestsList" class="links-list">Loading…</div>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Interests — C. Fiorelli</title>
+	<link rel="icon" href="/assets/img/favicon.svg">
+	<link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+	<header class="site-header" role="banner">
+		<div class="container header-inner">
+			<a class="brand" href="/">C. Fiorelli</a>
+			<nav class="nav" role="navigation" aria-label="Primary">
+				<a href="/projects/">Projects</a>
+				<a href="/interests/" aria-current="page">Interests</a>
+				<a href="/publications/">Publications</a>
+				<a href="/about/">About</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="container" role="main">
+		<h1>Interests</h1>
+		<p class="muted">A curated feed of topics and links I follow — ordered by recency.</p>
+		<div id="interestsList" class="links-list">Loading…</div>
+	</main>
+
+	<script>
+		// small static list until we add /data/interests.json
+		(function(){
+			const items = [
+				{ title: 'Semantic Scholar API', url: 'https://www.semanticscholar.org/product/api', addedAt: '2025-09-01' },
+				{ title: 'Runway detection papers', url: '#', addedAt: '2025-08-12' }
+			];
+
+			const list = document.getElementById('interestsList');
+			list.innerHTML = '';
+			items.forEach(i => {
+				const el = document.createElement('div');
+				el.className = 'link-item';
+				el.innerHTML = `<a href="${i.url}" target="_blank" rel="noopener noreferrer">${i.title}</a> <span class="muted">${i.addedAt}</span>`;
+				list.appendChild(el);
+			});
+		})();
+	</script>
+
+</body>
+</html>
