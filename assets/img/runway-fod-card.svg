@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Runway FOD Detection card artwork</title>
+  <desc id="desc">Stylized illustration of a runway with radar arcs representing foreign object debris detection.</desc>
+  <defs>
+    <linearGradient id="night" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="runway" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="28" fill="url(#night)" />
+  <g opacity="0.55" stroke="#38bdf8" stroke-width="2.5" fill="none">
+    <path d="M320 80 A180 180 0 0 1 570 210" />
+    <path d="M320 120 A150 150 0 0 1 550 225" stroke-opacity="0.6" />
+    <path d="M320 160 A120 120 0 0 1 520 245" stroke-opacity="0.35" />
+  </g>
+  <g transform="translate(120,120)">
+    <path d="M200 0 L260 0 L320 160 L160 260 L0 160 L60 0 Z" fill="url(#runway)" opacity="0.95" />
+    <rect x="155" y="40" width="10" height="40" fill="#f8fafc" opacity="0.75" rx="3" />
+    <rect x="195" y="80" width="10" height="40" fill="#f8fafc" opacity="0.6" rx="3" />
+    <rect x="235" y="120" width="10" height="40" fill="#f8fafc" opacity="0.45" rx="3" />
+  </g>
+  <g fill="#f97316" opacity="0.85">
+    <circle cx="470" cy="210" r="10" />
+    <text x="470" y="210" text-anchor="middle" dominant-baseline="central" font-size="16" fill="#0f172a">!</text>
+  </g>
+  <g fill="#e0f2fe" opacity="0.75">
+    <circle cx="180" cy="250" r="5" />
+    <circle cx="500" cy="150" r="4" />
+    <circle cx="420" cy="280" r="6" />
+  </g>
+  <text x="320" y="330" text-anchor="middle" font-size="26" fill="#e2e8f0" font-family="'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont">Runway FOD Detection</text>
+  <text x="320" y="360" text-anchor="middle" font-size="16" fill="#cbd5f5" fill-opacity="0.75" font-family="'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont">Computer vision alerts for airside safety</text>
+</svg>
