@@ -89,8 +89,8 @@ fetch('/api/s2/paper/ARXIV:2301.10140').then(r=>r.json()).then(console.log);
     </section>
     
     <section style="margin-top:1rem">
-      <h2>Backend proxy</h2>
-      <p class="muted">See the example proxy I included in <a href="/backend/README.md">/backend/README.md</a> — it shows a small FastAPI pattern for forwarding requests to Semantic Scholar while keeping your API key secret.</p>
+      <h2>Backend notes</h2>
+      <p class="muted">In production you should keep API keys server-side and use a small proxy to forward requests; this helps protect credentials and apply caching/rate limits. Implementation details are intentionally omitted from the public site.</p>
     </section>
   </main>
 </body>
