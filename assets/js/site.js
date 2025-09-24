@@ -36,20 +36,44 @@
 
       const merged = (intData.concat(pubData))
         .filter(Boolean)
-        .sort((a,b)=> new Date(b.addedAt) - new Date(a.addedAt))
+        // Normalize date field: prefer addedAt, fall back to date, support null
+        .map(item => {
+          const raw = item.addedAt ?? item.date ?? null;
+          return Object.assign({}, item, { __ts: raw ? Date.parse(raw) : null });
+        })
+        .sort((a,b)=> (b.__ts || 0) - (a.__ts || 0))
         .slice(0,8);
 
       list.innerHTML = '';
       merged.forEach(l => {
         const el = document.createElement('div');
         el.className = 'link-item';
+
+        const left = document.createElement('div');
+        left.style.flex = '1';
         const a = document.createElement('a');
         a.href = l.url; a.textContent = l.title; a.target = '_blank'; a.rel = 'noopener noreferrer';
-        const meta = document.createElement('span');
-        meta.className = 'muted'; meta.textContent = (new Date(l.addedAt)).toLocaleDateString();
-        // small source badge
-        const badge = document.createElement('span'); badge.className='muted'; badge.style.marginLeft='0.5rem'; badge.textContent = l.source ? l.source : '';
-        el.appendChild(a); el.appendChild(meta); el.appendChild(badge);
+        left.appendChild(a);
+
+        const metaWrap = document.createElement('div');
+        metaWrap.className = 'link-meta';
+        // date display: use normalized timestamp, gracefully handle null
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'muted link-date';
+        dateSpan.textContent = l.__ts ? new Date(l.__ts).toLocaleDateString() : '';
+        // category or source
+        const catSpan = document.createElement('span');
+        catSpan.className = 'muted link-cat';
+        catSpan.textContent = l.category ? l.category : (l.source ? l.source : '');
+
+        metaWrap.appendChild(dateSpan);
+        // spacer
+        const sep = document.createElement('span'); sep.style.display='inline-block'; sep.style.width='0.5rem';
+        metaWrap.appendChild(sep);
+        metaWrap.appendChild(catSpan);
+
+        el.appendChild(left);
+        el.appendChild(metaWrap);
         list.appendChild(el);
       });
     }catch(err){
