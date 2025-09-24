@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Protein Explorer card artwork</title>
+  <desc id="desc">Stylized illustration with a lion icon and molecular orbits representing the Protein Explorer project.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="rgba(96,165,250,0.45)" />
+      <stop offset="100%" stop-color="rgba(30,64,175,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#bg)" rx="28" />
+  <rect width="640" height="400" fill="url(#glow)" rx="28" />
+  <g fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-opacity="0.55">
+    <circle cx="320" cy="200" r="140" />
+    <circle cx="320" cy="200" r="90" stroke-opacity="0.35" />
+    <path d="M120 190 q60 -90 180 -40 q120 50 240 -40" stroke-linecap="round" />
+    <path d="M140 260 q80 -60 200 -10 q120 50 220 -10" stroke-linecap="round" stroke-opacity="0.35" />
+  </g>
+  <g fill="#facc15" fill-opacity="0.65">
+    <circle cx="170" cy="150" r="6" />
+    <circle cx="470" cy="120" r="4" />
+    <circle cx="500" cy="240" r="5" />
+    <circle cx="210" cy="260" r="4" />
+  </g>
+  <text x="320" y="206" text-anchor="middle" font-size="120" dominant-baseline="middle">🦁</text>
+  <text x="320" y="285" text-anchor="middle" font-size="28" fill="#cbd5f5" font-family="'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont">Protein Explorer</text>
+  <text x="320" y="320" text-anchor="middle" font-size="16" fill="#dbeafe" fill-opacity="0.75" font-family="'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont">Residue analysis &amp; structural insights</text>
+</svg>
