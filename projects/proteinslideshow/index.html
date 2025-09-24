@@ -8,10 +8,20 @@
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body data-page="project">
-  <header class="site-header" role="banner"><div class="container header-inner"><a class="brand" href="/">C. Fiorelli</a><nav class="nav" role="navigation" aria-label="Primary"><a href="/">Home</a><a href="/links/">Links</a></nav></div></header>
+  <header class="site-header" role="banner"><div class="container header-inner"><a class="brand" href="/">C. Fiorelli</a><nav class="nav" role="navigation" aria-label="Primary"><a href="/">Home</a><a href="/publications/">Publications</a><a href="/links/">Links</a></nav></div></header>
   <main class="container" role="main">
     <h1>ProteinSlideshow</h1>
-    <p class="muted">An image-first viewer for protein structure slides; responsive and keyboard-friendly.</p>
+    <p class="muted">An image-first viewer for protein structure slides; responsive and keyboard-friendly. Built to simplify reviewing structural snapshots, annotate slides, and support reproducible figure generation for presentations and publications.</p>
+
+    <section style="margin-top:1rem">
+      <h2>Technical details</h2>
+      <ul>
+        <li>Frontend: vanilla HTML/CSS/JavaScript for maximum portability and minimal dependencies.</li>
+        <li>Responsive image grid with keyboard navigation and accessible controls.</li>
+        <li>Designed to load static image assets or integrate with simple JSON manifests for slide metadata (captions, citations, notes).</li>
+        <li>Optimized for reproducible export: image order and metadata can be serialized for reproducible figure generation.</li>
+      </ul>
+    </section>
 
     <section class="grid" style="margin-top:1rem">
       <div class="card"><div class="card-media"><img src="/assets/img/pshot-1.png" alt="screenshot 1"></div><div class="card-body"><p>Screenshot 1</p></div></div>
@@ -23,6 +33,15 @@
       <ul>
         <li><a href="#">Source (placeholder)</a></li>
         <li><a href="#">Demo (placeholder)</a></li>
+      </ul>
+    </section>
+
+    <section style="margin-top:1rem">
+      <h2>Future ideas</h2>
+      <ul>
+        <li>Integrate per-slide metadata with DOIs and reproducible provenance tracking.</li>
+        <li>Enable serverless image thumbnails and lazy-loading for large collections.</li>
+        <li>Optional ML-based slide grouping or similarity search to find related structural views.</li>
       </ul>
     </section>
   </main>
