@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini-LLM Demo</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <style>.chat{border:1px solid rgba(0,0,0,.06);padding:1rem;border-radius:8px;min-height:120px}</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mini-LLM Demo (mocked)</h1>
+    <div class="chat" id="chat" aria-live="polite">Ask about a paper or request a code snippet.</div>
+    <div style="margin-top:1rem;display:flex;gap:.5rem">
+      <input id="q" placeholder="Ask: summarize arxiv:2301.10140" style="flex:1">
+      <button id="send" class="btn">Send</button>
+    </div>
+    <section style="margin-top:1rem">
+      <h2>Generated code</h2>
+      <pre id="code" style="background:#f7f7f7;padding:1rem;border-radius:8px"></pre>
+    </section>
+  </div>
+  <script src="/projects/mini-llm/demo/demo.js" defer></script>
+</body>
+</html>
