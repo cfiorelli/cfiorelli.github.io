@@ -46,11 +46,51 @@
     </section>
 
     <section style="margin-top:1rem">
+      <h2>Community & tutorials</h2>
+      <p class="muted">I was a Technical Program Manager working with Semantic Scholar — I directed community growth, authored tutorials, and hosted webinars to help developers and researchers adopt the API. Below are materials and recordings I led or helped produce.</p>
+      <ul>
+        <li><a href="https://www.semanticscholar.org/product/api" target="_blank" rel="noopener noreferrer">Official Semantic Scholar API tutorial</a></li>
+        <li><a href="https://www.youtube.com/watch?v=lje07xC2y00" target="_blank" rel="noopener noreferrer">Webinar: Intro & best practices</a></li>
+        <li><a href="https://www.youtube.com/watch?v=XYOVciAZi7I" target="_blank" rel="noopener noreferrer">Webinar: API deep dive</a></li>
+        <li><a href="https://www.youtube.com/watch?v=_BQwU2i_nh4" target="_blank" rel="noopener noreferrer">Webinar: Building integrations</a></li>
+      </ul>
+    </section>
+
+    <section style="margin-top:1rem">
+      <h2>Example snippets</h2>
+      <p>Small runnable examples to get started.</p>
+      <details>
+        <summary>Python (requests) — fetch paper metadata</summary>
+        <pre><code>import requests
+resp = requests.get("https://api.semanticscholar.org/graph/v1/paper/ARXIV:2301.10140?fields=title,abstract,authors,year")
+print(resp.json())</code></pre>
+      </details>
+
+      <details>
+        <summary>curl — search</summary>
+        <pre><code>curl "https://api.semanticscholar.org/graph/v1/paper/search?query=semantic+search&limit=5"</code></pre>
+      </details>
+
+      <details>
+        <summary>Client-side pattern (proxy)</summary>
+        <pre><code>// Client calls your backend: GET /api/s2/paper/ARXIV:2301.10140
+// Backend forwards to Semantic Scholar with your API key and returns the response.
+fetch('/api/s2/paper/ARXIV:2301.10140').then(r=>r.json()).then(console.log);
+        </code></pre>
+      </details>
+    </section>
+
+    <section style="margin-top:1rem">
       <h2>Future</h2>
       <ul>
         <li>Add citation export (BibTeX, RIS), and integration with the Publications page.</li>
         <li>Allow plugin-style connectors for other scholarly APIs or institutional proxies.</li>
       </ul>
+    </section>
+    
+    <section style="margin-top:1rem">
+      <h2>Backend proxy</h2>
+      <p class="muted">See the example proxy I included in <a href="/backend/README.md">/backend/README.md</a> — it shows a small FastAPI pattern for forwarding requests to Semantic Scholar while keeping your API key secret.</p>
     </section>
   </main>
 </body>

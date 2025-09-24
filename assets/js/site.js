@@ -20,25 +20,38 @@
     applyTheme(now);
   });
 
-  // load small preview of links for the homepage
+  // load small preview of combined interests + publications for the homepage
   async function loadLinksPreview(){
     const list = document.getElementById('linksList');
     if(!list) return;
     try{
-      const res = await fetch('/data/links.json', {cache: 'no-store'});
-      if(!res.ok) throw new Error('Failed to load');
-      const data = await res.json();
-      const items = data.slice(0,6).map(l=>{
+      // fetch both feeds in parallel
+      const [intR, pubR] = await Promise.all([
+        fetch('/data/interests.json', {cache: 'no-store'}).catch(()=>null),
+        fetch('/data/publications.json', {cache: 'no-store'}).catch(()=>null)
+      ]);
+
+      const intData = intR && intR.ok ? await intR.json() : [];
+      const pubData = pubR && pubR.ok ? await pubR.json() : [];
+
+      const merged = (intData.concat(pubData))
+        .filter(Boolean)
+        .sort((a,b)=> new Date(b.addedAt) - new Date(a.addedAt))
+        .slice(0,8);
+
+      list.innerHTML = '';
+      merged.forEach(l => {
         const el = document.createElement('div');
         el.className = 'link-item';
         const a = document.createElement('a');
-        a.href = l.url; a.textContent = l.title; a.target = '_blank'; a.rel='noopener noreferrer';
+        a.href = l.url; a.textContent = l.title; a.target = '_blank'; a.rel = 'noopener noreferrer';
         const meta = document.createElement('span');
-        meta.className='muted'; meta.textContent = (new Date(l.addedAt)).toLocaleDateString();
-        el.appendChild(a); el.appendChild(meta);
-        return el;
+        meta.className = 'muted'; meta.textContent = (new Date(l.addedAt)).toLocaleDateString();
+        // small source badge
+        const badge = document.createElement('span'); badge.className='muted'; badge.style.marginLeft='0.5rem'; badge.textContent = l.source ? l.source : '';
+        el.appendChild(a); el.appendChild(meta); el.appendChild(badge);
+        list.appendChild(el);
       });
-      list.innerHTML=''; items.forEach(i=>list.appendChild(i));
     }catch(err){
       list.innerHTML = '<p class="muted">Unable to load links.</p>';
       console.error(err);
