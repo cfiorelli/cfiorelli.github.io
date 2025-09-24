@@ -57,7 +57,7 @@ body{
 
 .links-preview{margin-top:2rem}
 .links-list{display:grid;gap:.5rem}
-.link-item{padding:.6rem;border-radius:8px;background:transparent;border:1px solid rgba(var(--text)/0.04);display:flex;justify-content:space-between;align-items:center}
+.link-item{padding:.6rem;border-radius:8px;background:transparent;border:1px solid rgba(var(--text)/0.12);display:flex;justify-content:space-between;align-items:center}
 .link-item a{color:rgb(var(--accent));text-decoration:none}
 
 /* Right aligned meta (date & category) for link preview rows */
