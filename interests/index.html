@@ -1,19 +1,4 @@
 <!doctype html>
-+<html lang="en">
-+<head>
-+  <meta charset="utf-8" />
-+  <meta name="viewport" content="width=device-width,initial-scale=1" />
-+  <title>Interests — C. Fiorelli</title>
-+  <link rel="icon" href="/assets/img/favicon.svg">
-+  <link rel="stylesheet" href="/assets/css/styles.css">
-+</head>
-+<body>
-+  <header class="site-header" role="banner"><div class="container header-inner"><a class="brand" href="/">C. Fiorelli</a><nav class="nav" role="navigation" aria-label="Primary"><a href="/">Home</a><a href="/projects/">Projects</a><a href="/publications/">Publications</a><a href="/about/">About</a></nav></div></header>
-+  <main class="container" role="main">
-+    <h1>Interests</h1>
-+    <p class="muted">A curated feed of topics and links I follow — ordered by recency.</p>
-+    <div id="interestsList" class="links-list">Loading…</div>
-<!doctype html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -37,28 +22,70 @@
 
 	<main class="container" role="main">
 		<h1>Interests</h1>
-		<p class="muted">A curated feed of topics and links I follow — ordered by recency.</p>
-		<div id="interestsList" class="links-list">Loading…</div>
+		<p class="muted">A curated, tabular list of links and resources.</p>
+
+		<div class="table-wrap" style="margin-top:1rem;overflow:auto">
+			<table class="striped" style="width:100%;border-collapse:collapse">
+				<thead>
+					<tr>
+						<th style="text-align:left;padding:.5rem">Title</th>
+						<th style="text-align:left;padding:.5rem">Date</th>
+						<th style="text-align:left;padding:.5rem">Category</th>
+						<th style="text-align:left;padding:.5rem">Tags</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/" target="_blank" rel="noopener">Learn Claude (Claude Code: a highly agentic coding assistant)</a></td>
+						<td>09/24/2025</td>
+						<td>Learning</td>
+						<td><span class="badge">AI</span> <span class="badge">Machine Learning</span> <span class="badge">Programming</span></td>
+					</tr>
+
+					<tr>
+						<td><a href="https://www.w3schools.com/git/" target="_blank" rel="noopener">Learn Git — W3Schools</a></td>
+						<td>09/24/2025</td>
+						<td>Learning</td>
+						<td><span class="badge">Version Control</span> <span class="badge">Git</span> <span class="badge">Programming</span></td>
+					</tr>
+
+					<tr>
+						<td><a href="https://arxiv.org/pdf/2509.14476" target="_blank" rel="noopener">Introducing AToken — unified visual tokenizer for images, videos & 3D</a></td>
+						<td>09/24/2025</td>
+						<td>Learning</td>
+						<td><span class="badge">computer vision</span> <span class="badge">visual tokenization</span></td>
+					</tr>
+
+					<tr>
+						<td><a href="https://skybrary.aero/articles/foreign-object-debris-fod" target="_blank" rel="noopener">Foreign Object Debris (FOD) — definitions (Skybrary)</a></td>
+						<td>09/24/2025</td>
+						<td>FOD Project</td>
+						<td><span class="badge">FOD</span> <span class="badge">Definitions</span></td>
+					</tr>
+
+					<tr>
+						<td><a href="https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/" target="_blank" rel="noopener">The silent airside threat — how AI is fighting FOD (Airport Council)</a></td>
+						<td>04/30/2025</td>
+						<td>FOD Project</td>
+						<td><span class="badge">Operations</span> <span class="badge">AI</span></td>
+					</tr>
+
+					<tr>
+						<td><a href="https://www.airporttech.tc.faa.gov/Products/Airport-Safety-Papers-Publications/Airport-Safety-Detail/foreign-object-debris-detection-system-cost-benefit-analysis" target="_blank" rel="noopener">FAA study — FOD detection system cost‑benefit analysis</a></td>
+						<td>n.d.</td>
+						<td>FOD Project</td>
+						<td><span class="badge">Report</span> <span class="badge">Cost‑benefit</span></td>
+					</tr>
+
+				</tbody>
+			</table>
+		</div>
 	</main>
 
-	<script>
-		// small static list until we add /data/interests.json
-		(function(){
-			const items = [
-				{ title: 'Semantic Scholar API', url: 'https://www.semanticscholar.org/product/api', addedAt: '2025-09-01' },
-				{ title: 'Runway detection papers', url: '#', addedAt: '2025-08-12' }
-			];
-
-			const list = document.getElementById('interestsList');
-			list.innerHTML = '';
-			items.forEach(i => {
-				const el = document.createElement('div');
-				el.className = 'link-item';
-				el.innerHTML = `<a href="${i.url}" target="_blank" rel="noopener noreferrer">${i.title}</a> <span class="muted">${i.addedAt}</span>`;
-				list.appendChild(el);
-			});
-		})();
-	</script>
-
+	<footer class="site-footer" role="contentinfo">
+		<div class="container footer-inner">
+			<p class="muted">If you want this list maintained from `/data/interests.json` instead, I can wire it up to a small JSON file — currently the links are hard-coded for clarity.</p>
+		</div>
+	</footer>
 </body>
 </html>
