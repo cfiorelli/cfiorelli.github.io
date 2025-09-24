@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini-LLM: Semantic Scholar Assistant</title>
+  <link rel="icon" href="/assets/img/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body data-page="project">
+  <header class="site-header" role="banner"><div class="container header-inner"><a class="brand" href="/">C. Fiorelli</a><nav class="nav" role="navigation" aria-label="Primary"><a href="/">Home</a><a href="/publications/">Publications</a><a href="/links/">Links</a></nav></div></header>
+  <main class="container" role="main">
+    <h1>Mini-LLM: Semantic Scholar Assistant</h1>
+    <p class="muted">A conversational webapp that helps researchers query Semantic Scholar, get concise advice, and generate API call code snippets for retrieving papers and metadata.</p>
+
+    <section style="margin-top:1rem">
+      <h2>Goals</h2>
+      <ul>
+        <li>Provide a chat interface to search and summarize research results from Semantic Scholar.</li>
+        <li>Generate example API calls and code snippets to fetch paper metadata or PDFs.</li>
+        <li>Allow users to ask for citation formatting and quick literature overviews.</li>
+      </ul>
+    </section>
+
+    <section style="margin-top:1rem">
+      <h2>Implementation ideas</h2>
+      <ul>
+        <li>Frontend: small React/Vue/vanilla app with streaming chat UI.</li>
+        <li>Backend: proxy to Semantic Scholar API + lightweight LLM to rephrase and summarize results.</li>
+        <li>Security: rate-limiting, caching, and provenance tracking for generated code snippets.</li>
+      </ul>
+    </section>
+
+    <section style="margin-top:1rem">
+      <h2>Future</h2>
+      <ul>
+        <li>Add citation export (BibTeX, RIS), and integration with the Publications page.</li>
+        <li>Allow plugin-style connectors for other scholarly APIs or institutional proxies.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
