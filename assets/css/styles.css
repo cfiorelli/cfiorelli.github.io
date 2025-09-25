@@ -147,6 +147,12 @@ body{
 .interests-table td{padding:.65rem;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
 .interests-table th{font-weight:600}
 .interests-empty{margin-top:1rem}
+.ideas-table{width:100%;border-collapse:collapse;margin-top:1.25rem;min-width:480px}
+.ideas-table th,
+.ideas-table td{padding:.65rem;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+.ideas-table th{font-weight:600;color:rgb(var(--muted))}
+.ideas-table tbody tr:last-child td{border-bottom:none}
+.ideas-table td:last-child{white-space:nowrap}
 .interests-preview{margin-top:2.5rem}
 .interests-list{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.75rem}
 .interests-list li{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:.9rem 1rem;display:flex;flex-direction:column;gap:.25rem}

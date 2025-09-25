@@ -3,12 +3,13 @@
     "slug": "protein-explorer",
     "title": "Protein Explorer",
     "tagline": "Residue proximity explorer for PDB structures",
-    "summary": "Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.",
-  "heroImage": "/assets/img/lion.png",
-  "heroImage2x": "/assets/img/lion.png",
+  "summary": "Lightweight browser viewer that cycles through random Protein Data Bank structures with live metadata, residue proximity maps, and interaction analysis.",
+  "heroImage": "/assets/img/prothero.png",
+  "heroImage2x": "/assets/img/prothero.png",
   "image": "/assets/img/lion.png",
   "image2x": "/assets/img/lion.png",
   "imageAlt": "Protein Explorer lion illustration",
+  "heroAlt": "Screenshot of the Protein Explorer slideshow highlighting metadata panel",
     "status": {
       "percent": 85,
       "label": "Soft launch",
@@ -18,40 +19,43 @@
     "tags": ["protein-structure", "visualization", "ml"],
     "links": {
       "caseStudy": "/projects/protein-explorer/",
-      "demo": "https://example.com/protein-explorer",
-      "repo": "https://github.com/cfiorelli/protein-explorer"
+      "repo": "https://github.com/cfiorelli/proteinslideshow"
     },
     "resources": [
-      {"title": "Case study", "url": "/projects/protein-explorer/", "note": "Full write-up"},
-      {"title": "Demo (beta)", "url": "https://example.com/protein-explorer", "note": "Private preview", "external": true},
-      {"title": "Prototype repo", "url": "https://github.com/cfiorelli/protein-explorer", "external": true}
+      {"title": "Live demo", "url": "https://cfiorelli.github.io/proteinslideshow/", "external": true},
+      {"title": "Source repository", "url": "https://github.com/cfiorelli/proteinslideshow", "external": true}
     ],
     "sections": [
       {
-        "title": "Technical details",
+        "title": "Key features",
         "type": "list",
         "items": [
-          "Frontend: vanilla HTML/CSS/JavaScript for portability.",
-          "Residue neighborhood overlay renders from JSON manifolds exported by BioPython scripts.",
-          "Keyboard accessible navigation for stepping through structural slices.",
-          "Supports reproducible export of image order and captions for figure generation."
+          "Random slideshow of 15 Protein Data Bank entries refreshed automatically for quick exploration.",
+          "Resilient structure loading that falls back across gzipped CIF, raw CIF, and PDB formats to avoid API hiccups.",
+          "Metadata side panel with experiment method, resolution, chains, symmetry, annotations, and primary literature links.",
+          "Representation controls (Cartoon, Surface, Ball & Stick) plus quick residue load for focused inspection.",
+          "Proximity threshold slider that rehydrates the contact map and highlights residues within 1–5 Å.",
+          "Interaction-aware highlighting that distinguishes reachable residues from predicted chemical interactions."
+        ]
+      },
+      {
+        "title": "Controls & UI",
+        "type": "list",
+        "items": [
+          "Keyboard shortcuts for play/pause and stepping through structures (Space, ←, →).",
+          "Toolbar actions for toggling spin, changing representations, and loading specific PDB IDs.",
+          "Quick-load inputs for jumping directly to residue labels such as ALA A265.",
+          "Side-chain interaction analyzer supporting 2–10 residue selections with hydrogen bond and salt bridge detection.",
+          "Filter neighbors toggle to reduce the residue list to active contacts when desired.",
+          "Responsive layout tuned for centered stage presentation on desktop and mobile."
         ]
       },
       {
         "title": "Gallery",
         "type": "gallery",
         "images": [
-          {"src": "/assets/img/pshot-1.png", "alt": "Residue contact heatmap", "caption": "Residue contact map with rotamer confidence."},
-          {"src": "/assets/img/pshot-2.png", "alt": "Interactive protein viewer", "caption": "Interactive viewer with neighborhood filters."}
-        ]
-      },
-      {
-        "title": "Future ideas",
-        "type": "list",
-        "items": [
-          "Integrate per-slide metadata with DOIs and provenance tracking.",
-          "Enable serverless thumbnails and lazy-loading for large collections.",
-          "Add ML-powered slide grouping and similarity search for related structures."
+          {"src": "/assets/img/protexplore.png", "alt": "Protein Explorer slideshow highlighting metadata and controls", "caption": "Protein Slideshow landing view showing structure carousel and controls."},
+          {"src": "/assets/img/residuecontact.png", "alt": "Residue contact map with interaction highlights", "caption": "Residue proximity table with interaction-aware highlighting."}
         ]
       }
     ],
@@ -62,10 +66,10 @@
     "title": "Runway FOD Detection",
     "tagline": "Computer vision pipeline for foreign object debris alerts",
     "summary": "Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.",
-  "heroImage": "/assets/img/projects/runway-fod-1280.png",
-  "image": "/assets/img/projects/runway-fod-640.png",
-  "image2x": "/assets/img/projects/runway-fod-1280.png",
-  "imageAlt": "Magnifying glass revealing runway debris alerts",
+    "heroImage": "/assets/img/projects/runway-fod-1280.png",
+    "image": "/assets/img/projects/runway-fod-640.png",
+    "image2x": "/assets/img/projects/runway-fod-1280.png",
+    "imageAlt": "Magnifying glass revealing runway debris alerts",
     "status": {
       "percent": 20,
       "label": "Concept validation",
@@ -75,7 +79,6 @@
     "tags": ["cv", "safety", "ops"],
     "links": {
       "caseStudy": "/projects/runway-fod-detection/",
-      "demo": "https://example.com/fod-notebook",
       "repo": null
     },
     "resources": [
@@ -127,10 +130,10 @@
     "title": "Mini-LLM: Semantic Scholar Assistant",
     "tagline": "Chat interface for Semantic Scholar research discovery",
     "summary": "Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.",
-  "heroImage": "/assets/img/projects/mini-llm-1280.png",
-  "image": "/assets/img/projects/mini-llm-640.png",
-  "image2x": "/assets/img/projects/mini-llm-1280.png",
-  "imageAlt": "Robot assistant figurine beside machine learning books",
+    "heroImage": "/assets/img/projects/mini-llm-1280.png",
+    "image": "/assets/img/projects/mini-llm-640.png",
+    "image2x": "/assets/img/projects/mini-llm-1280.png",
+    "imageAlt": "Robot assistant figurine beside machine learning books",
     "status": {
       "percent": 5,
       "label": "Ideation",
@@ -139,8 +142,7 @@
     "category": "Applied AI",
     "tags": ["llm", "semantic-scholar", "developer-tools"],
     "links": {
-      "caseStudy": "/projects/mini-llm-semantic-scholar/",
-      "demo": "https://www.semanticscholar.org/product/api",
+      "caseStudy": "https://www.semanticscholar.org/product/api%2Ftutorial",
       "repo": null
     },
     "resources": [
@@ -200,5 +202,34 @@
       }
     ],
     "updated": "2025-06-30"
+  },
+  {
+    "slug": "idea-backlog",
+    "title": "Idea Backlog",
+    "tagline": "Future project ideas at various stages of polish",
+    "summary": "A running backlog of product and research experiments, from unstarted sparks to built concepts awaiting write-ups.",
+    "heroImage": "/assets/img/ideabacklog.png",
+    "image": "/assets/img/ideabacklog.png",
+    "image2x": "/assets/img/ideabacklog.png",
+    "imageAlt": "Notebook with project ideas sketched across the page",
+    "status": {
+      "percent": 35,
+      "label": "Backlog grooming",
+      "note": "Capturing ideas and promoting built experiments that still need docs."
+    },
+    "category": "Concepts",
+    "tags": ["ideation", "experiments"],
+    "links": {
+      "caseStudy": "/projects/idea-backlog/",
+      "repo": null
+    },
+    "sections": [
+      {
+        "title": "Idea inventory",
+        "type": "html",
+        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
+      }
+    ],
+    "updated": "2025-09-25"
   }
 ]

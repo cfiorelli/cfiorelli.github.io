@@ -4,8 +4,7 @@ title: Publications
 description: Selected papers and reports authored by Christopher Fiorelli.
 permalink: publications/index.html
 ---
-{% set sorted = publications | sort(attribute='year') | reverse %}
-{% set grouped = sorted | groupby('year') %}
+{% set sorted = publications | sort(attribute='year', reverse=true) %}
 
 <section class="publications-hero" aria-labelledby="publications-title">
   <div class="publications-hero__inner">
@@ -22,30 +21,33 @@ permalink: publications/index.html
   </div>
 </section>
 
-{% for year, items in grouped %}
-  <section class="publications-year" aria-labelledby="year-{{ year }}">
-    <h2 id="year-{{ year }}">{{ year }}</h2>
+{% set currentYear = null %}
+{% for item in sorted %}
+  {% if item.year != currentYear %}
+    {% if currentYear is not none %}
+        </ol>
+      </section>
+    {% endif %}
+    {% set currentYear = item.year %}
+  <section class="publications-year" aria-labelledby="year-{{ currentYear }}">
+    <h2 id="year-{{ currentYear }}">{{ currentYear }}</h2>
     <ol class="publications-list">
-      {% for item in items %}
-        {% set authorList = item.authors or [] %}
-        {% set authorText = authorList | join(', ') %}
-        <li class="publications-entry">
-          <article>
-            <p class="citation">
-              {% if authorText %}
-                <span class="authors">{{ authorText }}</span>
-              {% endif %}
-              <span class="year">({{ item.year }})</span>.
-              {% if item.url %}
-                <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>.
-              {% else %}
-                {{ item.title }}.
-              {% endif %}
-              <em class="venue">{{ item.venue }}</em>.
-            </p>
-          </article>
-        </li>
-      {% endfor %}
+  {% endif %}
+      <li class="publications-entry">
+        <article>
+          <p class="citation">
+            <span class="year">({{ item.year }})</span>.
+            {% if item.url %}
+              <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>.
+            {% else %}
+              {{ item.title }}.
+            {% endif %}
+            <em class="venue">{{ item.venue }}</em>.
+          </p>
+        </article>
+      </li>
+{% endfor %}
+{% if currentYear is not none %}
     </ol>
   </section>
-{% endfor %}
+{% endif %}

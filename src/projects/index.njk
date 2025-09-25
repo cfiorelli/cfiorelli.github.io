@@ -4,12 +4,65 @@ title: Projects
 description: A selection of projects with notes, links, and resources.
 permalink: projects/index.html
 ---
+{% set sortedProjects = projects | sort(attribute='updated') | reverse %}
+
 <section>
-  <h1>Projects</h1>
+  <div class="section-heading">
+    <h1>Projects</h1>
+    <a class="section-link" href="/projects/">Latest additions first</a>
+  </div>
   <p>A selection of projects with notes, links, and resources.</p>
-  <div id="projects-list" class="grid">
-    <p class="muted">Loading projects…</p>
+  <div class="grid project-grid">
+    {% for project in sortedProjects %}
+      {% set links = project.links or {} %}
+      {% set caseStudyUrl = links.caseStudy or ('/projects/' ~ project.slug ~ '/') %}
+      {% set cardImage = project.image or project.heroImage %}
+      {% set cardImage2x = project.image2x or project.heroImage2x or project.heroImage %}
+      {% set cardAlt = project.imageAlt or project.title %}
+      <article class="card project-card">
+        {% if cardImage %}
+          <div class="card-media">
+            <img src="{{ cardImage }}"
+                 {% if cardImage2x %}srcset="{{ cardImage }} 1x, {{ cardImage2x }} 2x"{% endif %}
+                 sizes="(min-width: 960px) 320px, (min-width: 640px) 45vw, 90vw"
+                 loading="lazy"
+                 decoding="async"
+                 alt="{{ cardAlt }}">
+          </div>
+        {% endif %}
+        <div class="card-body">
+          {% if project.status %}
+            {% set statusPercent = project.status.percent | default(0) %}
+            {% set statusLabel = project.status.label %}
+            <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %} aria-label="{{ statusPercent }}% complete{% if statusLabel %} — {{ statusLabel }}{% endif %}">
+              <span class="project-status__percent">{{ statusPercent }}%</span>
+              {% if statusLabel %}
+                <span class="project-status__label">{{ statusLabel }}</span>
+              {% endif %}
+            </div>
+          {% endif %}
+          <h3>{{ project.title }}</h3>
+          {% if project.tagline %}
+            <p class="muted">{{ project.tagline }}</p>
+          {% endif %}
+          {% if project.summary %}
+            <p>{{ project.summary }}</p>
+          {% endif %}
+          {% if project.tags %}
+            <div class="tags">
+              {% for tag in project.tags %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <div class="card-actions">
+            <a class="btn" href="{{ caseStudyUrl }}">Project page</a>
+            {% if links.repo %}
+              <a class="btn ghost" href="{{ links.repo }}" target="_blank" rel="noopener noreferrer">Source</a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
   </div>
 </section>
-
-<script type="module" src="/assets/js/projects.js" defer></script>

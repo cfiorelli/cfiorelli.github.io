@@ -14,24 +14,66 @@ document.addEventListener('DOMContentLoaded', () => {
     list.innerHTML = '';
     projects.forEach((project) => {
       const card = document.createElement('article');
-      card.className = 'card';
+      card.className = 'card project-card';
 
       if (project.image) {
+        const media = document.createElement('div');
+        media.className = 'card-media';
+
         const img = document.createElement('img');
         img.src = project.image;
-        img.alt = project.title || '';
-        card.appendChild(img);
+        if (project.image2x) {
+          img.srcset = `${project.image} 1x, ${project.image2x} 2x`;
+        }
+        img.alt = project.imageAlt || project.title || '';
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        media.appendChild(img);
+        card.appendChild(media);
       }
 
       const body = document.createElement('div');
       body.className = 'card-body';
 
+      const links = project.links || {};
+      const caseStudyUrl = links.caseStudy || `/projects/${project.slug}/`;
+
       const heading = document.createElement('h2');
       const link = document.createElement('a');
-      link.href = `/projects/${project.slug}/`;
+      link.href = caseStudyUrl;
       link.textContent = project.title || 'Untitled project';
+      if (/^https?:/.test(caseStudyUrl)) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
       heading.appendChild(link);
       body.appendChild(heading);
+
+      if (project.status) {
+        const percent = typeof project.status.percent === 'number' ? project.status.percent : 0;
+        const label = project.status.label || '';
+        const status = document.createElement('div');
+        status.className = 'project-status';
+        if (project.status.note) {
+          status.title = project.status.note;
+        }
+        const ariaLabel = [`${percent}% complete`, label ? `— ${label}` : ''].join(' ').trim();
+        status.setAttribute('aria-label', ariaLabel);
+
+        const percentEl = document.createElement('span');
+        percentEl.className = 'project-status__percent';
+        percentEl.textContent = `${percent}%`;
+        status.appendChild(percentEl);
+
+        if (label) {
+          const labelEl = document.createElement('span');
+          labelEl.className = 'project-status__label';
+          labelEl.textContent = label;
+          status.appendChild(labelEl);
+        }
+
+        body.appendChild(status);
+      }
 
       if (project.summary) {
         const summary = document.createElement('p');
@@ -54,30 +96,23 @@ document.addEventListener('DOMContentLoaded', () => {
       actions.className = 'card-actions';
 
       const view = document.createElement('a');
-      view.href = `/projects/${project.slug}/`;
+      view.href = caseStudyUrl;
       view.className = 'btn';
-      view.textContent = 'View project';
+      view.textContent = 'Project page';
+      if (/^https?:/.test(caseStudyUrl)) {
+        view.target = '_blank';
+        view.rel = 'noopener noreferrer';
+      }
       actions.appendChild(view);
 
-      if (project.links) {
-        if (project.links.demo) {
-          const demo = document.createElement('a');
-          demo.href = project.links.demo;
-          demo.className = 'btn subtle';
-          demo.textContent = 'Demo';
-          demo.target = '_blank';
-          demo.rel = 'noopener noreferrer';
-          actions.appendChild(demo);
-        }
-        if (project.links.repo) {
-          const repo = document.createElement('a');
-          repo.href = project.links.repo;
-          repo.className = 'btn subtle';
-          repo.textContent = 'Source';
-          repo.target = '_blank';
-          repo.rel = 'noopener noreferrer';
-          actions.appendChild(repo);
-        }
+      if (links.repo) {
+        const repo = document.createElement('a');
+        repo.href = links.repo;
+        repo.className = 'btn ghost';
+        repo.textContent = 'Source';
+        repo.target = '_blank';
+        repo.rel = 'noopener noreferrer';
+        actions.appendChild(repo);
       }
 
       body.appendChild(actions);

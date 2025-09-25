@@ -3,9 +3,9 @@ layout: layout
 ---
 <article class="project-detail">
   <header class="project-header">
-    {% set hero = heroImage or project.heroImage or project.image2x or project.image %}
-    {% set hero2x = project.heroImage2x or project.heroImage or project.image2x %}
-    {% set heroAlt = project.imageAlt or (title ~ ' hero image') %}
+  {% set hero = heroImage or project.heroImage or project.image2x or project.image %}
+  {% set hero2x = project.heroImage2x or project.heroImage or project.image2x %}
+  {% set heroAlt = project.heroAlt or project.imageAlt or (title ~ ' hero image') %}
     {% if hero %}
       <div class="project-hero">
         <img src="{{ hero }}"

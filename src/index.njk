@@ -64,11 +64,9 @@ permalink: index.html
               </div>
             {% endif %}
             <div class="card-actions">
-              <a class="btn" href="{{ caseStudyUrl }}">View project</a>
-              {% if links.demo %}
-                <a class="btn ghost" href="{{ links.demo }}" target="_blank" rel="noopener noreferrer">Demo</a>
-              {% elseif links.repo %}
-                <a class="btn ghost" href="{{ links.repo }}" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a class="btn" href="{{ caseStudyUrl }}">Project page</a>
+              {% if links.repo %}
+                <a class="btn ghost" href="{{ links.repo }}" target="_blank" rel="noopener noreferrer">Source</a>
               {% endif %}
             </div>
           </div>
@@ -79,7 +77,10 @@ permalink: index.html
 </section>
 
 <section class="interests-preview" aria-labelledby="interests-heading">
-  <h2 id="interests-heading">Latest interests</h2>
+  <div class="section-heading">
+    <h2 id="interests-heading">Latest interests</h2>
+    <a class="section-link" href="/interests/">Browse all interests →</a>
+  </div>
   <ul class="interests-list">
     {% for item in curiositiesList %}
       {% if loop.index <= 5 %}
@@ -112,16 +113,15 @@ permalink: index.html
       {% endif %}
     {% endfor %}
   </ul>
-  <p class="muted"><a href="/interests/">Browse all interests →</a></p>
 </section>
 
 <section class="about-preview" aria-labelledby="about-heading">
   <div class="about-preview-card">
-    <h2 id="about-heading">About Chris</h2>
+    <h2 id="about-heading">About Christopher</h2>
     <p class="muted">Technical Program Manager with 10+ years coordinating AI, LLM, SaaS, and data platform programs. Experienced across compliance operations, vendor management, and ML/AI ops with hands-on SQL and Python.</p>
     <ul class="about-preview-list">
-      <li>Ex-Google Geo (Street View / Maps) and Bing ML</li>
-      <li>Coordinated AI2’s Defcon AI Village 2024 red-teaming for OLMO</li>
+      <li>Professional experience includes: <a href="https://allenai.org" target="_blank" rel="noopener noreferrer">Ai2</a>, <a href="https://mapsplatform.google.com/resources/blog/?tags=&year=all" target="_blank" rel="noopener noreferrer">Google Geo (Street View / Maps)</a>, and <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="noopener noreferrer">Bing ML</a></li>
+      <li>Coordinated <a href="https://defcon.org/" target="_blank" rel="noopener noreferrer">Defcon</a>’s <a href="https://aivillage.org/" target="_blank" rel="noopener noreferrer">AI Village</a> 2024 red-teaming event for Ai2’s OLMo</li>
       <li>Focus on scaling research-to-production pipelines</li>
     </ul>
     <div class="card-actions">
