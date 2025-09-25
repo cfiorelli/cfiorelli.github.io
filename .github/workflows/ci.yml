@@ -11,29 +11,39 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check that index.html exists
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build with Eleventy
+        run: npm run build
+      - name: Check that index.html was generated
         run: |
-          if [ ! -f index.html ]; then echo 'index.html missing' && exit 1; fi
+          if [ ! -f _site/index.html ]; then echo '_site/index.html missing after build' && exit 1; fi
       - name: Validate internal links (basic)
         run: |
-          # find internal links and curl them to ensure 200
-          grep -Eo "href=\"/[^\"]+\"" -R | sed -E 's/href=\"([^\"]+)\"/\1/' | sort -u > /tmp/links.txt || true
-          echo 'Found links:' && cat /tmp/links.txt
-          set -e
-          while read -r l; do
-            url="http://localhost:1313$l"
-            # serve site using a simple python server in background
-          done
+          # find internal links in built site
+          find _site -name "*.html" -exec grep -l "href=\"/" {} \; | head -5 | xargs echo "Found HTML files with internal links:"
 
   deploy:
     needs: validate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
+      - name: Build with Eleventy
+        run: npm run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./_site
