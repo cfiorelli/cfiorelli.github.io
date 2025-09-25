@@ -64,6 +64,14 @@
 
 - Update the corresponding entry in `data/projects.json` (`heroImage`, `image`, `image2x`, and `imageAlt`).
 
+## 🚀 Deployment
+
+- Every push to `main` triggers the **CI & Deploy** GitHub Actions workflow.
+- The workflow installs dependencies, runs `npm run build`, uploads the `_site/` directory via `actions/upload-pages-artifact`, and publishes it with `actions/deploy-pages`.
+- To monitor a run, open the repository’s **Actions** tab (or run `gh run list` / `gh run watch <run-id>` locally).
+- If you need to redeploy without new code, re-run the latest workflow from GitHub’s Actions UI or push an empty commit.
+- GitHub Pages is configured for the workflow build type; no manual pushes to `gh-pages` are required.
+
 ## ✅ Quality checklist
 
 - `npm run build` succeeds without warnings.
