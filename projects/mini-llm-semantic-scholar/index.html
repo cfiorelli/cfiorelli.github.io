@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  <title>Mini-LLM: Semantic Scholar Assistant · C. Fiorelli</title>
+  <meta name="description" content="Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.">
+  
+    <link rel="canonical" href="https://cfiorelli.github.io/projects/mini-llm-semantic-scholar/">
+  
+  <meta property="og:title" content="Mini-LLM: Semantic Scholar Assistant">
+  <meta property="og:description" content="Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.">
+  <meta property="og:type" content="article">
+  
+    <meta property="og:url" content="https://cfiorelli.github.io/projects/mini-llm-semantic-scholar/">
+  
+  
+    <meta property="og:site_name" content="C. Fiorelli">
+  
+  <meta property="og:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mini-LLM: Semantic Scholar Assistant">
+  <meta name="twitter:description" content="Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.">
+  <meta name="twitter:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="theme-system" data-page="project">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/">C. Fiorelli</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="/projects/" >Projects</a>
+        <a href="/interests/" >Interests</a>
+        <a href="/publications/" >Publications</a>
+        <a href="/about/" >About</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" aria-pressed="false" title="Toggle theme">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main" id="main" role="main">
+    <article class="project-detail">
+  <header class="project-header">
+    
+    
+    
+    
+      <div class="project-hero">
+        <img src="/assets/img/projects/mini-llm-1280.png"
+             srcset="/assets/img/projects/mini-llm-1280.png 1x, /assets/img/projects/mini-llm-1280.png 2x"
+             sizes="100vw"
+             loading="lazy"
+             decoding="async"
+             alt="Robot assistant figurine beside machine learning books">
+      </div>
+    
+    <h1>Mini-LLM: Semantic Scholar Assistant</h1>
+    <p class="muted">Chat interface for Semantic Scholar research discovery</p>
+    
+      <ul class="tag-list">
+        
+          <li class="badge">llm</li>
+        
+          <li class="badge">semantic-scholar</li>
+        
+          <li class="badge">developer-tools</li>
+        
+      </ul>
+    
+  </header>
+
+  <section class="project-summary">
+    
+      <p>Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.</p>
+    
+    
+      
+      <div class="project-progress project-progress--detail">
+        <div class="project-progress__pill">
+          <span class="project-progress__percent">5%</span>
+          <span class="project-progress__label">Ideation</span>
+        </div>
+        <div class="project-progress__bar">
+          <div class="project-progress__bar-fill" style="--progress: 5;"></div>
+        </div>
+        <p class="project-progress__note muted">Testing retrieval-augmented prompts with the SDK team.</p>
+      </div>
+    
+
+    
+  </section>
+
+  
+    <section class="project-sections">
+      
+        <article class="project-section">
+          <h2>Goals</h2>
+
+          
+
+          
+            <ul>
+              
+                <li>Provide a chat interface for Semantic Scholar search and summarization.</li>
+              
+                <li>Generate example API calls and code snippets for common workflows.</li>
+              
+                <li>Offer quick citation formatting and literature overviews.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Implementation ideas</h2>
+
+          
+
+          
+            <ul>
+              
+                <li>Frontend: lightweight streaming chat experience.</li>
+              
+                <li>Backend: proxy to Semantic Scholar API plus LLM for rephrasing results.</li>
+              
+                <li>Security: rate-limiting, caching, and provenance tracking for generated code snippets.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Community &amp; tutorials</h2>
+
+          
+
+          
+            <ul class="project-section__links">
+              
+                <li><a href="https://www.semanticscholar.org/product/api" target="_blank" rel="noopener noreferrer">Official Semantic Scholar API tutorial</a></li>
+              
+                <li><a href="https://www.youtube.com/watch?v=lje07xC2y00" target="_blank" rel="noopener noreferrer">Webinar: Intro &amp; best practices</a></li>
+              
+                <li><a href="https://www.youtube.com/watch?v=XYOVciAZi7I" target="_blank" rel="noopener noreferrer">Webinar: API deep dive</a></li>
+              
+                <li><a href="https://www.youtube.com/watch?v=_BQwU2i_nh4" target="_blank" rel="noopener noreferrer">Webinar: Building integrations</a></li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Example snippets</h2>
+
+          
+
+          
+            <p>Small runnable examples to get started.</p>
+<details><summary>Python (requests) — fetch paper metadata</summary><pre><code>import requests
+resp = requests.get("https://api.semanticscholar.org/graph/v1/paper/ARXIV:2301.10140?fields=title,abstract,authors,year")
+print(resp.json())</code></pre></details>
+<details><summary>curl — search</summary><pre><code>curl "https://api.semanticscholar.org/graph/v1/paper/search?query=semantic+search&limit=5"</code></pre></details>
+<details><summary>Client-side pattern (proxy)</summary><pre><code>// Client calls your backend: GET /api/s2/paper/ARXIV:2301.10140
+// Backend forwards to Semantic Scholar with your API key and returns the response.
+fetch('/api/s2/paper/ARXIV:2301.10140').then(r=&gt;r.json()).then(console.log);</code></pre></details>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Future</h2>
+
+          
+
+          
+            <ul>
+              
+                <li>Add citation export (BibTeX, RIS) with Publications page integration.</li>
+              
+                <li>Allow plugin-style connectors for other scholarly APIs.</li>
+              
+                <li>Explore assisted prompt building for RAG pipelines.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Backend notes</h2>
+
+          
+
+          
+            
+              
+                <p>Production deployments should keep API keys server-side and proxy requests. Apply caching and rate limits to protect the upstream API.</p>
+              
+            
+          
+        </article>
+      
+    </section>
+  
+
+  
+    <section class="project-links">
+      <h2>Links & resources</h2>
+      <ul>
+        
+          <li><a href="/projects/mini-llm-semantic-scholar/">Concept notes</a> — <span class="muted">Project outline</span></li>
+        
+          <li><a href="https://www.semanticscholar.org/product/api" target="_blank" rel="noopener noreferrer">API product page</a></li>
+        
+          <li><a href="https://www.youtube.com/playlist?list=PLSemScholar" target="_blank" rel="noopener noreferrer">Webinar playlist</a></li>
+        
+      </ul>
+    </section>
+  
+</article>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> C. Fiorelli — <a href="/about/">About</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

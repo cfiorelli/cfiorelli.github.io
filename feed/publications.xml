@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>C. Fiorelli — Publications</title>
+    <link>https://cfiorelli.github.io/publications/</link>
+    <description>Technical program manager building production-friendly AI systems, data platforms, and reproducible research tooling.</description>
+    <lastBuildDate>Wed, 01 Jan 2025 00:00:00 GMT</lastBuildDate>
+    <language>en</language>
+    <item>
+      <title>The Semantic Scholar Open Data Platform</title>
+      <link>https://arxiv.org/html/2301.10140v2</link>
+      <guid isPermaLink="false">https://arxiv.org/html/2301.10140v2</guid>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+      <description>Authors: Christopher Fiorelli | Venue: arXiv</description>
+    </item>
+    <item>
+      <title>To Err is AI: A Case Study Informing LLM Flaw Reporting Practices</title>
+      <link>https://arxiv.org/html/2410.12104v1</link>
+      <guid isPermaLink="false">https://arxiv.org/html/2410.12104v1</guid>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+      <description>Authors: Christopher Fiorelli | Venue: arXiv</description>
+    </item>
+  </channel>
+</rss>

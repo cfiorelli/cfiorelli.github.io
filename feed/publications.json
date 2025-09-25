@@ -1,0 +1,23 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "C. Fiorelli — Publications",
+  "home_page_url": "https://cfiorelli.github.io",
+  "feed_url": "https://cfiorelli.github.io/feed/publications.json",
+  "description": "Technical program manager building production-friendly AI systems, data platforms, and reproducible research tooling.",
+  "items": [
+    {
+      "id": "https://arxiv.org/html/2301.10140v2",
+      "url": "https://arxiv.org/html/2301.10140v2",
+      "title": "The Semantic Scholar Open Data Platform",
+      "content_text": "Authors: Christopher Fiorelli | Venue: arXiv",
+      "date_published": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "https://arxiv.org/html/2410.12104v1",
+      "url": "https://arxiv.org/html/2410.12104v1",
+      "title": "To Err is AI: A Case Study Informing LLM Flaw Reporting Practices",
+      "content_text": "Authors: Christopher Fiorelli | Venue: arXiv",
+      "date_published": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}

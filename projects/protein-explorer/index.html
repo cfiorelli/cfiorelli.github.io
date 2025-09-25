@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  <title>Protein Explorer · C. Fiorelli</title>
+  <meta name="description" content="Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.">
+  
+    <link rel="canonical" href="https://cfiorelli.github.io/projects/protein-explorer/">
+  
+  <meta property="og:title" content="Protein Explorer">
+  <meta property="og:description" content="Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.">
+  <meta property="og:type" content="article">
+  
+    <meta property="og:url" content="https://cfiorelli.github.io/projects/protein-explorer/">
+  
+  
+    <meta property="og:site_name" content="C. Fiorelli">
+  
+  <meta property="og:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Protein Explorer">
+  <meta name="twitter:description" content="Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.">
+  <meta name="twitter:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="theme-system" data-page="project">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/">C. Fiorelli</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="/projects/" >Projects</a>
+        <a href="/interests/" >Interests</a>
+        <a href="/publications/" >Publications</a>
+        <a href="/about/" >About</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" aria-pressed="false" title="Toggle theme">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main" id="main" role="main">
+    <article class="project-detail">
+  <header class="project-header">
+    
+    
+    
+    
+      <div class="project-hero">
+        <img src="/assets/img/lion.png"
+             srcset="/assets/img/lion.png 1x, /assets/img/lion.png 2x"
+             sizes="100vw"
+             loading="lazy"
+             decoding="async"
+             alt="Protein Explorer lion illustration">
+      </div>
+    
+    <h1>Protein Explorer</h1>
+    <p class="muted">Residue proximity explorer for PDB structures</p>
+    
+      <ul class="tag-list">
+        
+          <li class="badge">protein-structure</li>
+        
+          <li class="badge">visualization</li>
+        
+          <li class="badge">ml</li>
+        
+      </ul>
+    
+  </header>
+
+  <section class="project-summary">
+    
+      <p>Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.</p>
+    
+    
+      
+      <div class="project-progress project-progress--detail">
+        <div class="project-progress__pill">
+          <span class="project-progress__percent">85%</span>
+          <span class="project-progress__label">Soft launch</span>
+        </div>
+        <div class="project-progress__bar">
+          <div class="project-progress__bar-fill" style="--progress: 85;"></div>
+        </div>
+        <p class="project-progress__note muted">Deploying new contact maps to structural biology partners.</p>
+      </div>
+    
+
+    
+  </section>
+
+  
+    <section class="project-sections">
+      
+        <article class="project-section">
+          <h2>Technical details</h2>
+
+          
+
+          
+            <ul>
+              
+                <li>Frontend: vanilla HTML/CSS/JavaScript for portability.</li>
+              
+                <li>Residue neighborhood overlay renders from JSON manifolds exported by BioPython scripts.</li>
+              
+                <li>Keyboard accessible navigation for stepping through structural slices.</li>
+              
+                <li>Supports reproducible export of image order and captions for figure generation.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Gallery</h2>
+
+          
+
+          
+            <div class="project-gallery">
+              
+                <figure>
+                  <img src="/assets/img/pshot-1.png" alt="Residue contact heatmap" loading="lazy" decoding="async">
+                  <figcaption class="muted">Residue contact map with rotamer confidence.</figcaption>
+                </figure>
+              
+                <figure>
+                  <img src="/assets/img/pshot-2.png" alt="Interactive protein viewer" loading="lazy" decoding="async">
+                  <figcaption class="muted">Interactive viewer with neighborhood filters.</figcaption>
+                </figure>
+              
+            </div>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Future ideas</h2>
+
+          
+
+          
+            <ul>
+              
+                <li>Integrate per-slide metadata with DOIs and provenance tracking.</li>
+              
+                <li>Enable serverless thumbnails and lazy-loading for large collections.</li>
+              
+                <li>Add ML-powered slide grouping and similarity search for related structures.</li>
+              
+            </ul>
+          
+        </article>
+      
+    </section>
+  
+
+  
+    <section class="project-links">
+      <h2>Links & resources</h2>
+      <ul>
+        
+          <li><a href="/projects/protein-explorer/">Case study</a> — <span class="muted">Full write-up</span></li>
+        
+          <li><a href="https://example.com/protein-explorer" target="_blank" rel="noopener noreferrer">Demo (beta)</a> — <span class="muted">Private preview</span></li>
+        
+          <li><a href="https://github.com/cfiorelli/protein-explorer" target="_blank" rel="noopener noreferrer">Prototype repo</a></li>
+        
+      </ul>
+    </section>
+  
+</article>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> C. Fiorelli — <a href="/about/">About</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-labelledby="title desc">
+  <title id="title">Runway FOD Detection hero artwork</title>
+  <desc id="desc">Large illustration of a runway grid with highlighted foreign object debris markers.</desc>
+  <defs>
+    <linearGradient id="fodGradientLg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#12131B"/>
+      <stop offset="100%" stop-color="#FF8B4F"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#fodGradientLg)" rx="48"/>
+  <g stroke="#FFE5D7" stroke-width="3" opacity="0.75">
+    <line x1="160" y1="120" x2="1120" y2="120"/>
+    <line x1="160" y1="210" x2="1120" y2="210"/>
+    <line x1="160" y1="300" x2="1120" y2="300"/>
+    <line x1="160" y1="390" x2="1120" y2="390"/>
+    <line x1="160" y1="480" x2="1120" y2="480"/>
+    <line x1="160" y1="570" x2="1120" y2="570"/>
+    <line x1="160" y1="660" x2="1120" y2="660"/>
+    <line x1="280" y1="640" x2="280" y2="180"/>
+    <line x1="440" y1="640" x2="440" y2="180"/>
+    <line x1="600" y1="640" x2="600" y2="180"/>
+    <line x1="760" y1="640" x2="760" y2="180"/>
+    <line x1="920" y1="640" x2="920" y2="180"/>
+    <line x1="1080" y1="640" x2="1080" y2="180"/>
+  </g>
+  <g fill="none" stroke="#FFBCA2" stroke-width="4" stroke-linecap="round">
+    <path d="M280 480 L440 420 L600 472 L760 420 L920 448"/>
+  </g>
+  <g fill="none" stroke="#FFE5D7" stroke-width="4" stroke-linecap="round">
+    <circle cx="440" cy="420" r="32"/>
+    <circle cx="600" cy="472" r="30"/>
+    <circle cx="760" cy="420" r="34"/>
+  </g>
+  <g fill="none" stroke="#FF8B4F" stroke-width="8" opacity="0.9">
+    <circle cx="600" cy="472" r="52"/>
+  </g>
+  <text x="120" y="640" fill="#FFF0EB" font-family="'Segoe UI', system-ui, -apple-system" font-size="60" font-weight="600">Runway FOD Detection</text>
+  <text x="120" y="700" fill="#FFF0EB" font-family="'Segoe UI', system-ui, -apple-system" font-size="28" opacity="0.85">Computer vision pipeline for debris alerts</text>
+</svg>

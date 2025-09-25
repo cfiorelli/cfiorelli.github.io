@@ -1,51 +1,242 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width,initial-scale=1" />
-	<title>Interests — C. Fiorelli</title>
-	<link rel="icon" href="/assets/img/favicon.svg">
-	<link rel="stylesheet" href="/assets/css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  <title>Interests · C. Fiorelli</title>
+  <meta name="description" content="A curated, searchable list of papers, books, and links that are shaping current work.">
+  
+    <link rel="canonical" href="https://cfiorelli.github.io/interests/">
+  
+  <meta property="og:title" content="Interests">
+  <meta property="og:description" content="A curated, searchable list of papers, books, and links that are shaping current work.">
+  <meta property="og:type" content="article">
+  
+    <meta property="og:url" content="https://cfiorelli.github.io/interests/">
+  
+  
+    <meta property="og:site_name" content="C. Fiorelli">
+  
+  <meta property="og:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interests">
+  <meta name="twitter:description" content="A curated, searchable list of papers, books, and links that are shaping current work.">
+  <meta name="twitter:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body>
-	<header class="site-header" role="banner">
-		<div class="container header-inner">
-			<a class="brand" href="/">C. Fiorelli</a>
-			<nav class="nav" role="navigation" aria-label="Primary">
-				<a href="/projects/">Projects</a>
-				<a href="/interests/" aria-current="page">Interests</a>
-				<a href="/publications/">Publications</a>
-				<a href="/about/">About</a>
-			</nav>
-		</div>
-	</header>
+<body class="theme-system" data-page="interests">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/">C. Fiorelli</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="/projects/" >Projects</a>
+        <a href="/interests/" aria-current="page">Interests</a>
+        <a href="/publications/" >Publications</a>
+        <a href="/about/" >About</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" aria-pressed="false" title="Toggle theme">🌗</button>
+      </div>
+    </div>
+  </header>
 
-	<main class="container" role="main">
-		<h1>Interests</h1>
-		<p class="muted">A curated, tabular list of links and resources.</p>
+  <main class="container main" id="main" role="main">
+    
+<section class="interests-header">
+  <h1>Interests</h1>
+  <p class="muted">Search and filter recent papers, books, and links Im exploring right now.</p>
+</section>
 
-			<div class="table-wrap" style="margin-top:1rem;overflow:auto">
-				<table class="striped" style="width:100%;border-collapse:collapse">
-					<thead>
-						<tr>
-							<th style="text-align:left;padding:.5rem">Title</th>
-							<th style="text-align:left;padding:.5rem">Date</th>
-							<th style="text-align:left;padding:.5rem">Category</th>
-							<th style="text-align:left;padding:.5rem">Tags</th>
-						</tr>
-					</thead>
-					<tbody id="interestsTableBody">
-						<tr><td colspan="4" class="muted">Loading…</td></tr>
-					</tbody>
-				</table>
-			</div>
-			<script src="/assets/js/interests.js" defer></script>
-	</main>
+<section class="interests-controls" aria-label="Interests filters">
+  <label for="interests-search" class="visually-hidden">Search interests</label>
+  <input id="interests-search" type="search" placeholder="Search by title or tag" data-interests-search>
 
-	<footer class="site-footer" role="contentinfo">
-			<div class="container footer-inner">
-				<p class="muted">This page is rendered from <code>/data/interests.json</code>. To add or edit entries, update that file (or ask me and I will add items for you). Entries support type (link|note), title, url, date, category, and tags.</p>
-			</div>
-	</footer>
+  <label for="interests-tag" class="visually-hidden">Filter by tag</label>
+  <select id="interests-tag" data-interests-tag>
+    <option value="">All tags</option>
+  </select>
+</section>
+
+<div class="table-wrap">
+  <table class="interests-table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Added</th>
+        <th scope="col">Tags</th>
+      </tr>
+    </thead>
+    <tbody data-interests-table>
+      
+        
+        
+        
+        <tr data-search="scaling laws for neural language models language-models research" data-tags="language-models research">
+          <td>
+            
+              <a href="https://arxiv.org/abs/2001.08361" target="_blank" rel="noopener noreferrer">Scaling Laws for Neural Language Models</a>
+            
+          </td>
+          <td>2025-08-14</td>
+          <td class="tags">
+            
+              <span>language-models</span>
+            
+              <span>research</span>
+            
+          </td>
+        </tr>
+      
+        
+        
+        
+        <tr data-search="practical evaluation for retrieval-augmented generation rag evaluation" data-tags="rag evaluation">
+          <td>
+            
+              <a href="https://openai.com/research/practical-evaluation-for-rag" target="_blank" rel="noopener noreferrer">Practical Evaluation for Retrieval-Augmented Generation</a>
+            
+          </td>
+          <td>2025-07-29</td>
+          <td class="tags">
+            
+              <span>rag</span>
+            
+              <span>evaluation</span>
+            
+          </td>
+        </tr>
+      
+        
+        
+        
+        <tr data-search="designing machine learning systems mlops books" data-tags="mlops books">
+          <td>
+            
+              <a href="https://www.oreilly.com/library/view/designing-machine-learning/9781098115777/" target="_blank" rel="noopener noreferrer">Designing Machine Learning Systems</a>
+            
+          </td>
+          <td>2025-06-02</td>
+          <td class="tags">
+            
+              <span>mlops</span>
+            
+              <span>books</span>
+            
+          </td>
+        </tr>
+      
+        
+        
+        
+        <tr data-search="introducing the semantic scholar api sdk semantic-scholar sdk" data-tags="semantic-scholar sdk">
+          <td>
+            
+              <a href="https://www.semanticscholar.org/blog/semantic-scholar-api-sdk/" target="_blank" rel="noopener noreferrer">Introducing the Semantic Scholar API SDK</a>
+            
+          </td>
+          <td>2025-05-11</td>
+          <td class="tags">
+            
+              <span>semantic-scholar</span>
+            
+              <span>sdk</span>
+            
+          </td>
+        </tr>
+      
+        
+        
+        
+        <tr data-search="lightspeed fod monitoring case study safety operations" data-tags="safety operations">
+          <td>
+            
+              <a href="https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/" target="_blank" rel="noopener noreferrer">Lightspeed FOD monitoring case study</a>
+            
+          </td>
+          <td>2025-04-30</td>
+          <td class="tags">
+            
+              <span>safety</span>
+            
+              <span>operations</span>
+            
+          </td>
+        </tr>
+      
+        
+        
+        
+        <tr data-search="geb: gödel, escher, bach books cognition" data-tags="books cognition">
+          <td>
+            
+              <a href="https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach" target="_blank" rel="noopener noreferrer">GEB: Gödel, Escher, Bach</a>
+            
+          </td>
+          <td>2024-01-15</td>
+          <td class="tags">
+            
+              <span>Books</span>
+            
+              <span>Cognition</span>
+            
+          </td>
+        </tr>
+      
+        
+        
+        
+        <tr data-search="attention is all you need ai transformers" data-tags="ai transformers">
+          <td>
+            
+              <a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener noreferrer">Attention is All You Need</a>
+            
+          </td>
+          <td>2023-09-01</td>
+          <td class="tags">
+            
+              <span>AI</span>
+            
+              <span>Transformers</span>
+            
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+  <p class="muted interests-empty" data-interests-empty hidden>No results match your filters.</p>
+</div>
+
+<script src="/assets/js/interests.js" defer></script>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> C. Fiorelli — <a href="/about/">About</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>

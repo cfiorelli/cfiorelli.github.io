@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>C. Fiorelli — Interests</title>
+    <link>https://cfiorelli.github.io/interests/</link>
+    <description>Technical program manager building production-friendly AI systems, data platforms, and reproducible research tooling.</description>
+    <lastBuildDate>Thu, 14 Aug 2025 00:00:00 GMT</lastBuildDate>
+    <language>en</language>
+    <item>
+      <title>Scaling Laws for Neural Language Models</title>
+      <link>https://arxiv.org/abs/2001.08361</link>
+      <guid isPermaLink="false">https://arxiv.org/abs/2001.08361</guid>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 GMT</pubDate>
+      <description>Tags: language-models, research</description>
+    </item>
+    <item>
+      <title>Practical Evaluation for Retrieval-Augmented Generation</title>
+      <link>https://openai.com/research/practical-evaluation-for-rag</link>
+      <guid isPermaLink="false">https://openai.com/research/practical-evaluation-for-rag</guid>
+      <pubDate>Tue, 29 Jul 2025 00:00:00 GMT</pubDate>
+      <description>Tags: rag, evaluation</description>
+    </item>
+    <item>
+      <title>Designing Machine Learning Systems</title>
+      <link>https://www.oreilly.com/library/view/designing-machine-learning/9781098115777/</link>
+      <guid isPermaLink="false">https://www.oreilly.com/library/view/designing-machine-learning/9781098115777/</guid>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 GMT</pubDate>
+      <description>Tags: mlops, books</description>
+    </item>
+    <item>
+      <title>Introducing the Semantic Scholar API SDK</title>
+      <link>https://www.semanticscholar.org/blog/semantic-scholar-api-sdk/</link>
+      <guid isPermaLink="false">https://www.semanticscholar.org/blog/semantic-scholar-api-sdk/</guid>
+      <pubDate>Sun, 11 May 2025 00:00:00 GMT</pubDate>
+      <description>Tags: semantic-scholar, sdk</description>
+    </item>
+    <item>
+      <title>Lightspeed FOD monitoring case study</title>
+      <link>https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/</link>
+      <guid isPermaLink="false">https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/</guid>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 GMT</pubDate>
+      <description>Tags: safety, operations</description>
+    </item>
+  </channel>
+</rss>

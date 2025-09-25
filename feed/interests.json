@@ -1,0 +1,59 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "C. Fiorelli — Interests",
+  "home_page_url": "https://cfiorelli.github.io",
+  "feed_url": "https://cfiorelli.github.io/feed/interests.json",
+  "description": "Technical program manager building production-friendly AI systems, data platforms, and reproducible research tooling.",
+  "items": [
+    {
+      "id": "https://arxiv.org/abs/2001.08361",
+      "url": "https://arxiv.org/abs/2001.08361",
+      "title": "Scaling Laws for Neural Language Models",
+      "date_published": "2025-08-14T00:00:00.000Z",
+      "tags": [
+        "language-models",
+        "research"
+      ]
+    },
+    {
+      "id": "https://openai.com/research/practical-evaluation-for-rag",
+      "url": "https://openai.com/research/practical-evaluation-for-rag",
+      "title": "Practical Evaluation for Retrieval-Augmented Generation",
+      "date_published": "2025-07-29T00:00:00.000Z",
+      "tags": [
+        "rag",
+        "evaluation"
+      ]
+    },
+    {
+      "id": "https://www.oreilly.com/library/view/designing-machine-learning/9781098115777/",
+      "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098115777/",
+      "title": "Designing Machine Learning Systems",
+      "date_published": "2025-06-02T00:00:00.000Z",
+      "tags": [
+        "mlops",
+        "books"
+      ]
+    },
+    {
+      "id": "https://www.semanticscholar.org/blog/semantic-scholar-api-sdk/",
+      "url": "https://www.semanticscholar.org/blog/semantic-scholar-api-sdk/",
+      "title": "Introducing the Semantic Scholar API SDK",
+      "date_published": "2025-05-11T00:00:00.000Z",
+      "tags": [
+        "semantic-scholar",
+        "sdk"
+      ]
+    },
+    {
+      "id": "https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/",
+      "url": "https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/",
+      "title": "Lightspeed FOD monitoring case study",
+      "date_published": "2025-04-30T00:00:00.000Z",
+      "tags": [
+        "safety",
+        "operations"
+      ]
+    }
+  ]
+}

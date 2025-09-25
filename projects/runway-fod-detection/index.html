@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+  
+  <title>Runway FOD Detection · C. Fiorelli</title>
+  <meta name="description" content="Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.">
+  
+    <link rel="canonical" href="https://cfiorelli.github.io/projects/runway-fod-detection/">
+  
+  <meta property="og:title" content="Runway FOD Detection">
+  <meta property="og:description" content="Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.">
+  <meta property="og:type" content="article">
+  
+    <meta property="og:url" content="https://cfiorelli.github.io/projects/runway-fod-detection/">
+  
+  
+    <meta property="og:site_name" content="C. Fiorelli">
+  
+  <meta property="og:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Runway FOD Detection">
+  <meta name="twitter:description" content="Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.">
+  <meta name="twitter:image" content="https://cfiorelli.github.io/assets/img/lion.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="theme-system" data-page="project">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/">C. Fiorelli</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="/projects/" >Projects</a>
+        <a href="/interests/" >Interests</a>
+        <a href="/publications/" >Publications</a>
+        <a href="/about/" >About</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" aria-pressed="false" title="Toggle theme">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main" id="main" role="main">
+    <article class="project-detail">
+  <header class="project-header">
+    
+    
+    
+    
+      <div class="project-hero">
+        <img src="/assets/img/projects/runway-fod-1280.png"
+             srcset="/assets/img/projects/runway-fod-1280.png 1x, /assets/img/projects/runway-fod-1280.png 2x"
+             sizes="100vw"
+             loading="lazy"
+             decoding="async"
+             alt="Magnifying glass revealing runway debris alerts">
+      </div>
+    
+    <h1>Runway FOD Detection</h1>
+    <p class="muted">Computer vision pipeline for foreign object debris alerts</p>
+    
+      <ul class="tag-list">
+        
+          <li class="badge">cv</li>
+        
+          <li class="badge">safety</li>
+        
+          <li class="badge">ops</li>
+        
+      </ul>
+    
+  </header>
+
+  <section class="project-summary">
+    
+      <p>Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.</p>
+    
+    
+      
+      <div class="project-progress project-progress--detail">
+        <div class="project-progress__pill">
+          <span class="project-progress__percent">20%</span>
+          <span class="project-progress__label">Concept validation</span>
+        </div>
+        <div class="project-progress__bar">
+          <div class="project-progress__bar-fill" style="--progress: 20;"></div>
+        </div>
+        <p class="project-progress__note muted">Validating detections against curated apron footage.</p>
+      </div>
+    
+
+    
+  </section>
+
+  
+    <section class="project-sections">
+      
+        <article class="project-section">
+          <h2>Problem statement</h2>
+
+          
+
+          
+            
+              
+                <p>Detect objects in the field of view and classify them as cleared (no impact to operations) or not cleared (threat to operations). Prioritize detections by size, material, and proximity to active runways.</p>
+              
+            
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Approach</h2>
+
+          
+
+          
+            <ul>
+              
+                <li>Collect day/night runway imagery with bounding boxes and threat labels.</li>
+              
+                <li>Train YOLOv8 / Faster R-CNN models with calibrated confidence thresholds.</li>
+              
+                <li>Fuse detections across frames to estimate persistence and reduce false positives.</li>
+              
+                <li>Provide operator UX with explainable metadata—size, distance, sample frames—for rapid triage.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Implementation notes</h2>
+
+          
+
+          
+            <ul>
+              
+                <li>Edge deployment option with quantized models for near-runway cameras.</li>
+              
+                <li>Cloud analytics handles model updates and reporting (details omitted for public summary).</li>
+              
+                <li>APIs integrate with airport operations dashboards and maintenance ticketing.</li>
+              
+            </ul>
+          
+        </article>
+      
+        <article class="project-section">
+          <h2>Links &amp; future work</h2>
+
+          
+
+          
+            <ul class="project-section__links">
+              
+                <li><a href="https://example.com/fod-dataset" target="_blank" rel="noopener noreferrer">Dataset &amp; annotation guide</a> — <span class="muted">In progress</span></li>
+              
+                <li><a href="https://example.com/fod-recipes" target="_blank" rel="noopener noreferrer">Model training recipes</a> — <span class="muted">Draft</span></li>
+              
+                <li><a href="https://example.com/fod-roadmap" target="_blank" rel="noopener noreferrer">Sensor fusion roadmap</a> — <span class="muted">Upcoming</span></li>
+              
+            </ul>
+          
+        </article>
+      
+    </section>
+  
+
+  
+    <section class="project-links">
+      <h2>Links & resources</h2>
+      <ul>
+        
+          <li><a href="/projects/runway-fod/">Concept brief</a> — <span class="muted">Project overview</span></li>
+        
+          <li><a href="https://example.com/fod-notebook" target="_blank" rel="noopener noreferrer">Model notebook</a> — <span class="muted">Detection experiments</span></li>
+        
+          <li><a href="https://example.com/fod-ops" target="_blank" rel="noopener noreferrer">Ops handoff checklist</a></li>
+        
+      </ul>
+    </section>
+  
+</article>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> C. Fiorelli — <a href="/about/">About</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>
