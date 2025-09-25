@@ -1,4 +1,16 @@
 [
-  {"title":"The Semantic Scholar Open Data Platform","url":"https://arxiv.org/abs/2301.10140","tags":["paper","open-data"],"addedAt":"2025-01-05T08:00:00Z","source":"publications"},
-  {"title":"To Err is AI: LLM Flaw Reporting","url":"https://arxiv.org/abs/2410.12104","tags":["paper","llm"],"addedAt":"2024-10-11T08:00:00Z","source":"publications"}
+  {
+    "title": "The Semantic Scholar Open Data Platform",
+    "url": "https://arxiv.org/html/2301.10140v2",
+    "year": 2025,
+    "venue": "arXiv",
+    "authors": ["Christopher Fiorelli"]
+  },
+  {
+    "title": "To Err is AI: A Case Study Informing LLM Flaw Reporting Practices",
+    "url": "https://arxiv.org/html/2410.12104v1",
+    "year": 2024,
+    "venue": "arXiv",
+    "authors": ["Christopher Fiorelli"]
+  }
 ]

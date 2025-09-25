@@ -4,10 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ProteinSlideshow — Project</title>
+  <meta name="description" content="Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.">
+  <meta property="og:title" content="Protein Explorer">
+  <meta property="og:description" content="Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.">
+  <meta property="og:image" content="/assets/img/pshot-1.png">
   <link rel="icon" href="/assets/img/favicon.svg">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body data-page="project">
+<body data-page="project" data-project-slug="protein-explorer">
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="/">C. Fiorelli</a>
@@ -20,12 +24,19 @@
     </div>
   </header>
   <main class="container" role="main">
-  <meta name="description" content="Protein Explorer — explore residue proximity and predicted side-chain interactions in PDB structures.">
-  <meta property="og:title" content="Protein Explorer">
-  <meta property="og:description" content="Explore residue proximity and predicted side-chain interactions in PDB structures.">
-  <meta property="og:image" content="/assets/img/pshot-1.png">
   <h1>Protein Explorer</h1>
-  <p class="muted">Explore residue proximity and predicted side‑chain interactions in structures from the Protein Data Bank.</p>
+  <p class="muted">Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.</p>
+
+    <section class="project-progress project-progress--detail" data-project-progress>
+      <div class="project-progress__pill">
+        <span class="project-progress__percent" data-status-percent>0%</span>
+        <span class="project-progress__label" data-status-label>Loading status…</span>
+      </div>
+      <div class="project-progress__bar">
+        <div class="project-progress__bar-fill" data-status-bar></div>
+      </div>
+      <p class="project-progress__note muted" data-status-note hidden></p>
+    </section>
 
     <section style="margin-top:1rem">
       <h2>Technical details</h2>
@@ -58,5 +69,6 @@
       </ul>
     </section>
   </main>
+  <script src="/assets/js/project-status.js" defer></script>
 </body>
 </html>

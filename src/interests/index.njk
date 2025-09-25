@@ -1,0 +1,58 @@
+---
+layout: layout
+title: Interests
+description: A curated, searchable list of papers, books, and links that are shaping current work.
+permalink: interests/index.html
+---
+{% set sorted = interests | sort(attribute='addedAt') | reverse %}
+<section class="interests-header">
+  <h1>Interests</h1>
+  <p class="muted">Search and filter recent papers, books, and links Im exploring right now.</p>
+</section>
+
+<section class="interests-controls" aria-label="Interests filters">
+  <label for="interests-search" class="visually-hidden">Search interests</label>
+  <input id="interests-search" type="search" placeholder="Search by title or tag" data-interests-search>
+
+  <label for="interests-tag" class="visually-hidden">Filter by tag</label>
+  <select id="interests-tag" data-interests-tag>
+    <option value="">All tags</option>
+  </select>
+</section>
+
+<div class="table-wrap">
+  <table class="interests-table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Added</th>
+        <th scope="col">Tags</th>
+      </tr>
+    </thead>
+    <tbody data-interests-table>
+      {% for item in sorted %}
+        {% set tagList = item.tags or [] %}
+        {% set tagText = tagList | join(' ') %}
+        {% set displayDate = item.addedAt or item.added %}
+        <tr data-search="{{ (item.title + ' ' + tagText) | lower }}" data-tags="{{ tagText | lower }}">
+          <td>
+            {% if item.url %}
+              <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+            {% else %}
+              {{ item.title }}
+            {% endif %}
+          </td>
+          <td>{{ displayDate }}</td>
+          <td class="tags">
+            {% for tag in tagList %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="muted interests-empty" data-interests-empty hidden>No results match your filters.</p>
+</div>
+
+<script src="/assets/js/interests.js" defer></script>

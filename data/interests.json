@@ -1,56 +1,44 @@
 [
   {
-    "type": "link",
-    "title": "Learn Claude (Claude Code: a highly agentic coding assistant)",
-    "url": "https://learn.deeplearning.ai/courses/claude-code-a-highly-agentic-coding-assistant/",
-    "date": "2025-09-24",
-    "category": "Learning",
-    "tags": ["AI","Machine Learning","Programming"],
-    "source": "interests"
+    "title": "Scaling Laws for Neural Language Models",
+    "url": "https://arxiv.org/abs/2001.08361",
+    "tags": ["language-models", "research"],
+    "addedAt": "2025-08-14"
   },
   {
-    "type": "link",
-    "title": "Learn Git — W3Schools",
-    "url": "https://www.w3schools.com/git/",
-    "date": "2025-09-24",
-    "category": "Learning",
-    "tags": ["Version Control","Git","Programming"],
-    "source": "interests"
+    "title": "Practical Evaluation for Retrieval-Augmented Generation",
+    "url": "https://openai.com/research/practical-evaluation-for-rag",
+    "tags": ["rag", "evaluation"],
+    "addedAt": "2025-07-29"
   },
   {
-    "type": "link",
-    "title": "Introducing AToken — unified visual tokenizer for images, videos & 3D",
-    "url": "https://arxiv.org/pdf/2509.14476",
-    "date": "2025-09-24",
-    "category": "Learning",
-    "tags": ["computer vision","visual tokenization"],
-    "source": "interests"
+    "title": "Designing Machine Learning Systems",
+    "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098115777/",
+    "tags": ["mlops", "books"],
+    "addedAt": "2025-06-02"
   },
   {
-    "type": "link",
-    "title": "Foreign Object Debris (FOD) — definitions (Skybrary)",
-    "url": "https://skybrary.aero/articles/foreign-object-debris-fod",
-    "date": "2025-09-24",
-    "category": "FOD Project",
-    "tags": ["FOD","Definitions"],
-    "source": "interests"
+    "title": "Introducing the Semantic Scholar API SDK",
+    "url": "https://www.semanticscholar.org/blog/semantic-scholar-api-sdk/",
+    "tags": ["semantic-scholar", "sdk"],
+    "addedAt": "2025-05-11"
   },
   {
-    "type": "link",
-    "title": "The silent airside threat — how AI is fighting FOD (Airport Council)",
+    "title": "Lightspeed FOD monitoring case study",
     "url": "https://airportscouncil.org/2025/04/30/the-silent-airside-threat-how-ai-is-fighting-foreign-object-debris-fod-and-revolutionizing-airport-operations/",
-    "date": "2025-04-30",
-    "category": "FOD Project",
-    "tags": ["Operations","AI"],
-    "source": "interests"
+    "tags": ["safety", "operations"],
+    "addedAt": "2025-04-30"
   },
   {
-    "type": "link",
-    "title": "FAA study — FOD detection system cost‑benefit analysis",
-    "url": "https://www.airporttech.tc.faa.gov/Products/Airport-Safety-Papers-Publications/Airport-Safety-Detail/foreign-object-debris-detection-system-cost-benefit-analysis",
-    "date": null,
-    "category": "FOD Project",
-    "tags": ["Report","Cost‑benefit"],
-    "source": "interests"
+    "title": "GEB: Gödel, Escher, Bach",
+    "url": "https://en.wikipedia.org/wiki/G%C3%B6del,_Escher,_Bach",
+    "tags": ["Books", "Cognition"],
+    "addedAt": "2024-01-15"
+  },
+  {
+    "title": "Attention is All You Need",
+    "url": "https://arxiv.org/abs/1706.03762",
+    "tags": ["AI", "Transformers"],
+    "addedAt": "2023-09-01"
   }
 ]

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% set pageTitle = title or site.title %}
+  {% set fullTitle = site.title %}
+  {% if title and title != site.title %}
+    {% set fullTitle = title ~ ' · ' ~ site.title %}
+  {% endif %}
+  {% set pageDescription = description or site.description %}
+  {% set pagePath = page.url | replace('index.html', '') %}
+  {% if not pagePath %}
+    {% set pagePath = '/' %}
+  {% endif %}
+  {% set canonicalUrl = pagePath %}
+  {% if site.url %}
+    {% set canonicalUrl = site.url ~ pagePath %}
+  {% endif %}
+  {% set ogType = 'article' %}
+  {% if page.url == '/' %}
+    {% set ogType = 'website' %}
+  {% endif %}
+  {% set ogImage = page.ogImage or site.ogImage or '/assets/img/favicon.svg' %}
+  {% set ogImageAbsolute = ogImage %}
+  {% if ogImage and site.url and not ('://' in ogImage) %}
+    {% set ogImageAbsolute = site.url ~ ogImage %}
+  {% endif %}
+  <title>{{ fullTitle }}</title>
+  <meta name="description" content="{{ pageDescription | safe }}">
+  {% if canonicalUrl %}
+    <link rel="canonical" href="{{ canonicalUrl }}">
+  {% endif %}
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription | safe }}">
+  <meta property="og:type" content="{{ ogType }}">
+  {% if canonicalUrl %}
+    <meta property="og:url" content="{{ canonicalUrl }}">
+  {% endif %}
+  {% if site.title %}
+    <meta property="og:site_name" content="{{ site.title }}">
+  {% endif %}
+  <meta property="og:image" content="{{ ogImageAbsolute }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription | safe }}">
+  <meta name="twitter:image" content="{{ ogImageAbsolute }}">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="theme-system" data-page="{{ page.fileSlug }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="/">C. Fiorelli</a>
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="/projects/" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a>
+        <a href="/interests/" {% if page.url == '/interests/' %}aria-current="page"{% endif %}>Interests</a>
+        <a href="/publications/" {% if page.url == '/publications/' %}aria-current="page"{% endif %}>Publications</a>
+        <a href="/about/" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" aria-pressed="false" title="Toggle theme">🌗</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container main" id="main" role="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> C. Fiorelli — <a href="/about/">About</a></p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Mini-LLM: Semantic Scholar Assistant</title>
-  <meta name="description" content="Mini-LLM: conversational assistant for Semantic Scholar with code snippet generation for API calls.">
+  <meta name="description" content="Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.">
   <meta property="og:title" content="Mini-LLM: Semantic Scholar Assistant">
-  <meta property="og:description" content="Conversational assistant for Semantic Scholar with code snippet generation.">
+  <meta property="og:description" content="Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.">
   <meta property="og:image" content="/assets/img/favicon.svg">
   <link rel="icon" href="/assets/img/favicon.svg">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body data-page="project">
+<body data-page="project" data-project-slug="mini-llm-semantic-scholar">
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="/">C. Fiorelli</a>
@@ -25,7 +25,18 @@
   </header>
   <main class="container" role="main">
     <h1>Mini-LLM: Semantic Scholar Assistant</h1>
-    <p class="muted">A conversational webapp that helps researchers query Semantic Scholar, get concise advice, and generate API call code snippets for retrieving papers and metadata.</p>
+    <p class="muted">Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.</p>
+
+    <section class="project-progress project-progress--detail" data-project-progress>
+      <div class="project-progress__pill">
+        <span class="project-progress__percent" data-status-percent>0%</span>
+        <span class="project-progress__label" data-status-label>Loading status…</span>
+      </div>
+      <div class="project-progress__bar">
+        <div class="project-progress__bar-fill" data-status-bar></div>
+      </div>
+      <p class="project-progress__note muted" data-status-note hidden></p>
+    </section>
 
     <section style="margin-top:1rem">
       <h2>Goals</h2>
@@ -93,5 +104,6 @@ fetch('/api/s2/paper/ARXIV:2301.10140').then(r=>r.json()).then(console.log);
       <p class="muted">In production you should keep API keys server-side and use a small proxy to forward requests; this helps protect credentials and apply caching/rate limits. Implementation details are intentionally omitted from the public site.</p>
     </section>
   </main>
+  <script src="/assets/js/project-status.js" defer></script>
 </body>
 </html>

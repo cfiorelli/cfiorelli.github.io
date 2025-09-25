@@ -1,43 +1,54 @@
-// Render the Interests page from /data/interests.json
-async function renderInterests(){
-  const tbody = document.querySelector('#interestsTableBody');
-  if(!tbody) return;
-  try{
-    const res = await fetch('/data/interests.json', {cache:'no-store'});
-    if(!res.ok) throw new Error('Failed to load interests');
-    const items = await res.json();
-    // sort by date desc (nulls last)
-    items.sort((a,b)=>{
-      const da = a.date ? new Date(a.date) : 0;
-      const db = b.date ? new Date(b.date) : 0;
-      return db - da;
-    });
-    tbody.innerHTML = '';
-    items.forEach(it=>{
-      const tr = document.createElement('tr');
-      // Title cell
-      const tdTitle = document.createElement('td');
-      if(it.type === 'link'){
-        const a = document.createElement('a'); a.href = it.url; a.target='_blank'; a.rel='noopener noreferrer'; a.textContent = it.title;
-        tdTitle.appendChild(a);
-      } else if(it.type === 'note'){
-        tdTitle.textContent = it.title || '';
-      }
-      // Date
-      const tdDate = document.createElement('td'); tdDate.textContent = it.date ? it.date : 'n.d.';
-      // Category
-      const tdCat = document.createElement('td'); tdCat.textContent = it.category || '';
-      // Tags
-      const tdTags = document.createElement('td');
-      (it.tags || []).forEach(t=>{const s = document.createElement('span'); s.className='badge'; s.textContent=t; tdTags.appendChild(s); tdTags.appendChild(document.createTextNode(' '));});
+document.addEventListener('DOMContentLoaded', () => {
+  const table = document.querySelector('[data-interests-table]');
+  if (!table) return;
 
-      tr.appendChild(tdTitle); tr.appendChild(tdDate); tr.appendChild(tdCat); tr.appendChild(tdTags);
-      tbody.appendChild(tr);
-    });
-  }catch(err){
-    console.error(err);
-    const tr = document.createElement('tr'); const td = document.createElement('td'); td.colSpan=4; td.className='muted'; td.textContent='Unable to load interests.'; tr.appendChild(td); tbody.appendChild(tr);
+  const rows = Array.from(table.querySelectorAll('tr'));
+  const searchInput = document.querySelector('[data-interests-search]');
+  const tagSelect = document.querySelector('[data-interests-tag]');
+  const emptyState = document.querySelector('[data-interests-empty]');
+
+  const uniqueTags = new Set();
+  rows.forEach((row) => {
+    const tags = (row.dataset.tags || '').split(' ').filter(Boolean);
+    tags.forEach((tag) => uniqueTags.add(tag));
+  });
+
+  if (tagSelect) {
+    Array.from(uniqueTags)
+      .sort((a, b) => a.localeCompare(b))
+      .forEach((tag) => {
+        const option = document.createElement('option');
+        option.value = tag;
+        option.textContent = tag;
+        tagSelect.appendChild(option);
+      });
   }
-}
 
-document.addEventListener('DOMContentLoaded', ()=>{ renderInterests(); });
+  const applyFilters = () => {
+    const query = (searchInput?.value || '').trim().toLowerCase();
+    const tag = (tagSelect?.value || '').toLowerCase();
+
+    let visibleCount = 0;
+
+    rows.forEach((row) => {
+      const haystack = row.dataset.search || '';
+      const tags = row.dataset.tags || '';
+
+      const matchesSearch = !query || haystack.includes(query);
+      const matchesTag = !tag || tags.split(' ').includes(tag);
+
+      const isVisible = matchesSearch && matchesTag;
+      row.hidden = !isVisible;
+      if (isVisible) visibleCount += 1;
+    });
+
+    if (emptyState) {
+      emptyState.hidden = visibleCount !== 0;
+    }
+  };
+
+  searchInput?.addEventListener('input', applyFilters);
+  tagSelect?.addEventListener('change', applyFilters);
+
+  applyFilters();
+});

@@ -1,0 +1,204 @@
+[
+  {
+    "slug": "protein-explorer",
+    "title": "Protein Explorer",
+    "tagline": "Residue proximity explorer for PDB structures",
+    "summary": "Interactive viewer that spotlights residue neighborhoods, contact probabilities, and predicted side-chain conformations in a single pane.",
+  "heroImage": "/assets/img/lion.png",
+  "heroImage2x": "/assets/img/lion.png",
+  "image": "/assets/img/lion.png",
+  "image2x": "/assets/img/lion.png",
+  "imageAlt": "Protein Explorer lion illustration",
+    "status": {
+      "percent": 85,
+      "label": "Soft launch",
+      "note": "Deploying new contact maps to structural biology partners."
+    },
+    "category": "Computational Biology",
+    "tags": ["protein-structure", "visualization", "ml"],
+    "links": {
+      "caseStudy": "/projects/protein-explorer/",
+      "demo": "https://example.com/protein-explorer",
+      "repo": "https://github.com/cfiorelli/protein-explorer"
+    },
+    "resources": [
+      {"title": "Case study", "url": "/projects/protein-explorer/", "note": "Full write-up"},
+      {"title": "Demo (beta)", "url": "https://example.com/protein-explorer", "note": "Private preview", "external": true},
+      {"title": "Prototype repo", "url": "https://github.com/cfiorelli/protein-explorer", "external": true}
+    ],
+    "sections": [
+      {
+        "title": "Technical details",
+        "type": "list",
+        "items": [
+          "Frontend: vanilla HTML/CSS/JavaScript for portability.",
+          "Residue neighborhood overlay renders from JSON manifolds exported by BioPython scripts.",
+          "Keyboard accessible navigation for stepping through structural slices.",
+          "Supports reproducible export of image order and captions for figure generation."
+        ]
+      },
+      {
+        "title": "Gallery",
+        "type": "gallery",
+        "images": [
+          {"src": "/assets/img/pshot-1.png", "alt": "Residue contact heatmap", "caption": "Residue contact map with rotamer confidence."},
+          {"src": "/assets/img/pshot-2.png", "alt": "Interactive protein viewer", "caption": "Interactive viewer with neighborhood filters."}
+        ]
+      },
+      {
+        "title": "Future ideas",
+        "type": "list",
+        "items": [
+          "Integrate per-slide metadata with DOIs and provenance tracking.",
+          "Enable serverless thumbnails and lazy-loading for large collections.",
+          "Add ML-powered slide grouping and similarity search for related structures."
+        ]
+      }
+    ],
+    "updated": "2025-09-20"
+  },
+  {
+    "slug": "runway-fod-detection",
+    "title": "Runway FOD Detection",
+    "tagline": "Computer vision pipeline for foreign object debris alerts",
+    "summary": "Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.",
+  "heroImage": "/assets/img/projects/runway-fod-1280.png",
+  "image": "/assets/img/projects/runway-fod-640.png",
+  "image2x": "/assets/img/projects/runway-fod-1280.png",
+  "imageAlt": "Magnifying glass revealing runway debris alerts",
+    "status": {
+      "percent": 20,
+      "label": "Concept validation",
+      "note": "Validating detections against curated apron footage."
+    },
+    "category": "Safety & Operations",
+    "tags": ["cv", "safety", "ops"],
+    "links": {
+      "caseStudy": "/projects/runway-fod-detection/",
+      "demo": "https://example.com/fod-notebook",
+      "repo": null
+    },
+    "resources": [
+      {"title": "Concept brief", "url": "/projects/runway-fod/", "note": "Project overview"},
+      {"title": "Model notebook", "url": "https://example.com/fod-notebook", "note": "Detection experiments", "external": true},
+      {"title": "Ops handoff checklist", "url": "https://example.com/fod-ops", "external": true}
+    ],
+    "sections": [
+      {
+        "title": "Problem statement",
+        "type": "text",
+        "body": [
+          "Detect objects in the field of view and classify them as cleared (no impact to operations) or not cleared (threat to operations). Prioritize detections by size, material, and proximity to active runways."
+        ]
+      },
+      {
+        "title": "Approach",
+        "type": "list",
+        "items": [
+          "Collect day/night runway imagery with bounding boxes and threat labels.",
+          "Train YOLOv8 / Faster R-CNN models with calibrated confidence thresholds.",
+          "Fuse detections across frames to estimate persistence and reduce false positives.",
+          "Provide operator UX with explainable metadata—size, distance, sample frames—for rapid triage."
+        ]
+      },
+      {
+        "title": "Implementation notes",
+        "type": "list",
+        "items": [
+          "Edge deployment option with quantized models for near-runway cameras.",
+          "Cloud analytics handles model updates and reporting (details omitted for public summary).",
+          "APIs integrate with airport operations dashboards and maintenance ticketing."
+        ]
+      },
+      {
+        "title": "Links & future work",
+        "type": "links",
+        "items": [
+          {"title": "Dataset & annotation guide", "url": "https://example.com/fod-dataset", "note": "In progress", "external": true},
+          {"title": "Model training recipes", "url": "https://example.com/fod-recipes", "note": "Draft", "external": true},
+          {"title": "Sensor fusion roadmap", "url": "https://example.com/fod-roadmap", "note": "Upcoming", "external": true}
+        ]
+      }
+    ],
+    "updated": "2025-05-12"
+  },
+  {
+    "slug": "mini-llm-semantic-scholar",
+    "title": "Mini-LLM: Semantic Scholar Assistant",
+    "tagline": "Chat interface for Semantic Scholar research discovery",
+    "summary": "Lightweight assistant that pairs conversational search with auto-generated API snippets for Semantic Scholar developers.",
+  "heroImage": "/assets/img/projects/mini-llm-1280.png",
+  "image": "/assets/img/projects/mini-llm-640.png",
+  "image2x": "/assets/img/projects/mini-llm-1280.png",
+  "imageAlt": "Robot assistant figurine beside machine learning books",
+    "status": {
+      "percent": 5,
+      "label": "Ideation",
+      "note": "Testing retrieval-augmented prompts with the SDK team."
+    },
+    "category": "Applied AI",
+    "tags": ["llm", "semantic-scholar", "developer-tools"],
+    "links": {
+      "caseStudy": "/projects/mini-llm-semantic-scholar/",
+      "demo": "https://www.semanticscholar.org/product/api",
+      "repo": null
+    },
+    "resources": [
+      {"title": "Concept notes", "url": "/projects/mini-llm-semantic-scholar/", "note": "Project outline"},
+      {"title": "API product page", "url": "https://www.semanticscholar.org/product/api", "external": true},
+      {"title": "Webinar playlist", "url": "https://www.youtube.com/playlist?list=PLSemScholar", "external": true}
+    ],
+    "sections": [
+      {
+        "title": "Goals",
+        "type": "list",
+        "items": [
+          "Provide a chat interface for Semantic Scholar search and summarization.",
+          "Generate example API calls and code snippets for common workflows.",
+          "Offer quick citation formatting and literature overviews."
+        ]
+      },
+      {
+        "title": "Implementation ideas",
+        "type": "list",
+        "items": [
+          "Frontend: lightweight streaming chat experience.",
+          "Backend: proxy to Semantic Scholar API plus LLM for rephrasing results.",
+          "Security: rate-limiting, caching, and provenance tracking for generated code snippets."
+        ]
+      },
+      {
+        "title": "Community & tutorials",
+        "type": "links",
+        "items": [
+          {"title": "Official Semantic Scholar API tutorial", "url": "https://www.semanticscholar.org/product/api", "external": true},
+          {"title": "Webinar: Intro & best practices", "url": "https://www.youtube.com/watch?v=lje07xC2y00", "external": true},
+          {"title": "Webinar: API deep dive", "url": "https://www.youtube.com/watch?v=XYOVciAZi7I", "external": true},
+          {"title": "Webinar: Building integrations", "url": "https://www.youtube.com/watch?v=_BQwU2i_nh4", "external": true}
+        ]
+      },
+      {
+        "title": "Example snippets",
+        "type": "html",
+        "content": "<p>Small runnable examples to get started.</p>\n<details><summary>Python (requests) — fetch paper metadata</summary><pre><code>import requests\nresp = requests.get(\"https://api.semanticscholar.org/graph/v1/paper/ARXIV:2301.10140?fields=title,abstract,authors,year\")\nprint(resp.json())</code></pre></details>\n<details><summary>curl — search</summary><pre><code>curl \"https://api.semanticscholar.org/graph/v1/paper/search?query=semantic+search&limit=5\"</code></pre></details>\n<details><summary>Client-side pattern (proxy)</summary><pre><code>// Client calls your backend: GET /api/s2/paper/ARXIV:2301.10140\n// Backend forwards to Semantic Scholar with your API key and returns the response.\nfetch('/api/s2/paper/ARXIV:2301.10140').then(r=&gt;r.json()).then(console.log);</code></pre></details>"
+      },
+      {
+        "title": "Future",
+        "type": "list",
+        "items": [
+          "Add citation export (BibTeX, RIS) with Publications page integration.",
+          "Allow plugin-style connectors for other scholarly APIs.",
+          "Explore assisted prompt building for RAG pipelines."
+        ]
+      },
+      {
+        "title": "Backend notes",
+        "type": "text",
+        "body": [
+          "Production deployments should keep API keys server-side and proxy requests. Apply caching and rate limits to protect the upstream API."
+        ]
+      }
+    ],
+    "updated": "2025-06-30"
+  }
+]
