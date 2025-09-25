@@ -1,0 +1,131 @@
+---
+layout: layout
+title: Home
+description: C. Fiorelli — Technical Program Manager building production AI systems, data platforms, and reproducible research tooling.
+permalink: index.html
+---
+{% set sortedProjects = projects | sort(attribute='updated') | reverse %}
+{% set curiositiesList = curiosities or [] %}
+
+<section class="hero">
+  <h1 class="hero-title">Systems, Signals, and Fragments</h1>
+  <p class="hero-sub">Projects I’m building, questions I’m circling, and references I keep returning to.</p>
+  <p class="hero-meta">A portfolio of work-in-progress at the intersection of AI, systems, and human curiosity.</p>
+</section>
+
+<section class="projects-preview" aria-labelledby="projects-heading">
+  <div class="section-heading">
+    <h2 id="projects-heading">Featured projects</h2>
+    <a class="section-link" href="/projects/">View all projects →</a>
+  </div>
+
+  <div class="grid project-grid">
+    {% for project in sortedProjects %}
+      {% if loop.index <= 3 %}
+        {% set links = project.links or {} %}
+        {% set caseStudyUrl = links.caseStudy or ('/projects/' ~ project.slug ~ '/') %}
+        {% set cardImage = project.image or project.heroImage %}
+        {% set cardImage2x = project.image2x or project.heroImage %}
+        {% set cardAlt = project.imageAlt or project.title %}
+        <article class="card project-card">
+          {% if cardImage %}
+            <div class="card-media">
+              <img src="{{ cardImage }}"
+                   {% if cardImage2x %}srcset="{{ cardImage }} 1x, {{ cardImage2x }} 2x"{% endif %}
+                   sizes="(min-width: 960px) 320px, (min-width: 640px) 45vw, 90vw"
+                   loading="lazy"
+                   decoding="async"
+                   alt="{{ cardAlt }}">
+            </div>
+          {% endif %}
+          <div class="card-body">
+            {% if project.status %}
+              {% set statusPercent = project.status.percent | default(0) %}
+              {% set statusLabel = project.status.label %}
+              <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %} aria-label="{{ statusPercent }}% complete{% if statusLabel %} — {{ statusLabel }}{% endif %}">
+                <span class="project-status__percent">{{ statusPercent }}%</span>
+                {% if statusLabel %}
+                  <span class="project-status__label">{{ statusLabel }}</span>
+                {% endif %}
+              </div>
+            {% endif %}
+            <h3>{{ project.title }}</h3>
+            {% if project.tagline %}
+              <p class="muted">{{ project.tagline }}</p>
+            {% endif %}
+            {% if project.summary %}
+              <p>{{ project.summary }}</p>
+            {% endif %}
+            {% if project.tags %}
+              <div class="tags">
+                {% for tag in project.tags %}
+                  <span>{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <div class="card-actions">
+              <a class="btn" href="{{ caseStudyUrl }}">View project</a>
+              {% if links.demo %}
+                <a class="btn ghost" href="{{ links.demo }}" target="_blank" rel="noopener noreferrer">Demo</a>
+              {% elseif links.repo %}
+                <a class="btn ghost" href="{{ links.repo }}" target="_blank" rel="noopener noreferrer">Repository</a>
+              {% endif %}
+            </div>
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="interests-preview" aria-labelledby="interests-heading">
+  <h2 id="interests-heading">Latest interests</h2>
+  <ul class="interests-list">
+    {% for item in curiositiesList %}
+      {% if loop.index <= 5 %}
+        {% set displayDate = item.addedAt or item.added %}
+        <li>
+          {% if item.url %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+          {% else %}
+            {{ item.title }}
+          {% endif %}
+          <div class="interest-meta">
+            {% if displayDate %}
+              <span class="muted">{{ displayDate }}</span>
+            {% endif %}
+            {% if item.sourceLabel %}
+              <span class="badge">{{ item.sourceLabel }}</span>
+            {% endif %}
+            {% if item.category %}
+              <span class="muted">{{ item.category }}</span>
+            {% endif %}
+          </div>
+          {% if item.tags %}
+            <span class="tags-inline">
+              {% for tag in item.tags %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </span>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <p class="muted"><a href="/interests/">Browse all interests →</a></p>
+</section>
+
+<section class="about-preview" aria-labelledby="about-heading">
+  <div class="about-preview-card">
+    <h2 id="about-heading">About Chris</h2>
+    <p class="muted">Technical Program Manager with 10+ years coordinating AI, LLM, SaaS, and data platform programs. Experienced across compliance operations, vendor management, and ML/AI ops with hands-on SQL and Python.</p>
+    <ul class="about-preview-list">
+      <li>Ex-Google Geo (Street View / Maps) and Bing ML</li>
+      <li>Coordinated AI2’s Defcon AI Village 2024 red-teaming for OLMO</li>
+      <li>Focus on scaling research-to-production pipelines</li>
+    </ul>
+    <div class="card-actions">
+      <a class="btn subtle" href="/about/">Read the full bio →</a>
+    </div>
+  </div>
+</section>

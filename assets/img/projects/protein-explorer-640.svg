@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Protein Explorer project artwork</title>
+  <desc id="desc">Abstract gradient background with molecule illustration representing the Protein Explorer project.</desc>
+  <defs>
+    <linearGradient id="peGradient" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#183672"/>
+      <stop offset="100%" stop-color="#2BB3D8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#peGradient)" rx="28"/>
+  <g fill="none" stroke="#C0E9FF" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <circle cx="170" cy="210" r="70"/>
+    <circle cx="300" cy="140" r="40"/>
+    <circle cx="430" cy="230" r="58"/>
+    <path d="M228 194 L270 160 L344 176 L386 214 L430 230"/>
+    <path d="M216 234 L270 282 L338 262"/>
+  </g>
+  <text x="44" y="320" fill="#F0FAFF" font-family="'Segoe UI', system-ui, -apple-system" font-size="32" font-weight="600">Protein Explorer</text>
+  <text x="44" y="352" fill="#F0FAFF" font-family="'Segoe UI', system-ui, -apple-system" font-size="18" opacity="0.85">Residue insights &amp; structure maps</text>
+</svg>

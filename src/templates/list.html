@@ -1,0 +1,30 @@
+---
+layout: layout
+---
+<section class="list-page">
+  <header class="list-header">
+    <h1>{{ title }}</h1>
+    {% if description %}<p class="muted">{{ description }}</p>{% endif %}
+  </header>
+
+  <div class="links-list">
+    {% for item in items %}
+      <div class="link-item">
+        <div>
+          {% if item.url %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+          {% else %}
+            <span>{{ item.title }}</span>
+          {% endif %}
+          {% if item.summary %}
+            <p class="muted">{{ item.summary }}</p>
+          {% endif %}
+        </div>
+        <div class="link-meta">
+          {% if item.date %}<span class="muted link-date">{{ item.date }}</span>{% endif %}
+          {% if item.category %}<span class="muted link-cat">{{ item.category }}</span>{% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

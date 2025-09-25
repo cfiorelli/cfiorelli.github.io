@@ -1,0 +1,106 @@
+---
+layout: layout
+---
+<article class="project-detail">
+  <header class="project-header">
+    {% set hero = heroImage or project.heroImage or project.image2x or project.image %}
+    {% set hero2x = project.heroImage2x or project.heroImage or project.image2x %}
+    {% set heroAlt = project.imageAlt or (title ~ ' hero image') %}
+    {% if hero %}
+      <div class="project-hero">
+        <img src="{{ hero }}"
+             {% if hero2x %}srcset="{{ hero }} 1x, {{ hero2x }} 2x"{% endif %}
+             sizes="100vw"
+             loading="lazy"
+             decoding="async"
+             alt="{{ heroAlt }}">
+      </div>
+    {% endif %}
+    <h1>{{ title }}</h1>
+    {% if project.tagline %}<p class="muted">{{ project.tagline }}</p>{% endif %}
+    {% if project.tags %}
+      <ul class="tag-list">
+        {% for tag in project.tags %}
+          <li class="badge">{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </header>
+
+  <section class="project-summary">
+    {% if project.summary %}
+      <p>{{ project.summary }}</p>
+    {% endif %}
+    {% if project.status %}
+      {% set pct = project.status.percent | default(0) %}
+      <div class="project-progress project-progress--detail">
+        <div class="project-progress__pill">
+          <span class="project-progress__percent">{{ pct }}%</span>
+          {% if project.status.label %}<span class="project-progress__label">{{ project.status.label }}</span>{% endif %}
+        </div>
+        <div class="project-progress__bar">
+          <div class="project-progress__bar-fill" style="--progress: {{ pct }};"></div>
+        </div>
+        {% if project.status.note %}<p class="project-progress__note muted">{{ project.status.note }}</p>{% endif %}
+      </div>
+    {% endif %}
+
+    {% if content and (content | trim) %}
+      {{ content | safe }}
+    {% endif %}
+  </section>
+
+  {% if project.sections %}
+    <section class="project-sections">
+      {% for block in project.sections %}
+        <article class="project-section">
+          {% if block.title %}<h2>{{ block.title }}</h2>{% endif %}
+
+          {% set type = block.type or 'text' %}
+
+          {% if type == 'list' and block.items %}
+            <ul>
+              {% for item in block.items %}
+                <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          {% elif type == 'links' and block.items %}
+            <ul class="project-section__links">
+              {% for item in block.items %}
+                <li><a href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.title }}</a>{% if item.note %} — <span class="muted">{{ item.note }}</span>{% endif %}</li>
+              {% endfor %}
+            </ul>
+          {% elif type == 'gallery' and block.images %}
+            <div class="project-gallery">
+              {% for image in block.images %}
+                <figure>
+                  <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy" decoding="async">
+                  {% if image.caption %}<figcaption class="muted">{{ image.caption }}</figcaption>{% endif %}
+                </figure>
+              {% endfor %}
+            </div>
+          {% elif type == 'html' and block.content %}
+            {{ block.content | safe }}
+          {% else %}
+            {% if block.body %}
+              {% for paragraph in block.body %}
+                <p>{{ paragraph }}</p>
+              {% endfor %}
+            {% endif %}
+          {% endif %}
+        </article>
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if project.resources %}
+    <section class="project-links">
+      <h2>Links & resources</h2>
+      <ul>
+        {% for link in project.resources %}
+          <li><a href="{{ link.url }}"{% if link.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a>{% if link.note %} — <span class="muted">{{ link.note }}</span>{% endif %}</li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+</article>

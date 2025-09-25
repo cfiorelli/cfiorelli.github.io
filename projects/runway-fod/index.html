@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Runway FOD Detection — Project</title>
-  <meta name="description" content="Runway FOD detection: computer vision to detect and classify foreign object debris on runways.">
+  <meta name="description" content="Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.">
   <meta property="og:title" content="Runway FOD Detection">
-  <meta property="og:description" content="Computer vision to detect and classify foreign object debris on runways.">
+  <meta property="og:description" content="Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.">
   <meta property="og:image" content="/assets/img/pshot-2.png">
   <link rel="icon" href="/assets/img/favicon.svg">
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body data-page="project">
+<body data-page="project" data-project-slug="runway-fod-detection">
   <header class="site-header" role="banner">
     <div class="container header-inner">
       <a class="brand" href="/">C. Fiorelli</a>
@@ -25,7 +25,18 @@
   </header>
   <main class="container" role="main">
     <h1>Runway FOD (Foreign Object Debris) Detection</h1>
-    <p class="muted">Computer vision system to detect, classify, and prioritize foreign object debris on runways. FOD causes substantial operational cost and safety risk; estimates of annual global costs of FOD range up to $22.7 billion.</p>
+    <p class="muted">Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.</p>
+
+    <section class="project-progress project-progress--detail" data-project-progress>
+      <div class="project-progress__pill">
+        <span class="project-progress__percent" data-status-percent>0%</span>
+        <span class="project-progress__label" data-status-label>Loading status…</span>
+      </div>
+      <div class="project-progress__bar">
+        <div class="project-progress__bar-fill" data-status-bar></div>
+      </div>
+      <p class="project-progress__note muted" data-status-note hidden></p>
+    </section>
 
     <section style="margin-top:1rem">
       <h2>Problem statement</h2>
@@ -60,5 +71,6 @@
       </ul>
     </section>
   </main>
+  <script src="/assets/js/project-status.js" defer></script>
 </body>
 </html>
