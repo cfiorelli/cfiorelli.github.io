@@ -1,5 +1,11 @@
 [
   {
+    "title": "Radios: How Do They Work?",
+    "url": "https://lcamtuf.substack.com/p/radios-how-do-they-work",
+    "tags": ["Engineering", "RF", "Substack"],
+    "addedAt": "2025-10-23"
+  },
+  {
     "title": "Scaling Laws for Neural Language Models",
     "url": "https://arxiv.org/abs/2001.08361",
     "tags": ["language-models", "research"],
