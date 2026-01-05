@@ -1,5 +1,51 @@
 [
   {
+    "slug": "pathreader",
+    "title": "Pathreader",
+    "tagline": "AI-powered computer vision for aviation safety",
+    "summary": "Building computer vision systems for aviation safety operations at a stealth startup. Focus on safety-critical applications, FAA regulatory compliance, and production-grade ML deployment.",
+    "heroImage": "/assets/img/projects/runway-fod-1280.png",
+    "image": "/assets/img/projects/runway-fod-640.png",
+    "image2x": "/assets/img/projects/runway-fod-1280.png",
+    "imageAlt": "Aviation safety technology visualization",
+    "status": {
+      "percent": 40,
+      "label": "Active development",
+      "note": "Stealth mode - launching 2026"
+    },
+    "category": "Product Development",
+    "tags": ["computer-vision", "aviation", "safety", "yolov8", "startup"],
+    "links": {
+      "caseStudy": null,
+      "repo": null
+    },
+    "resources": [],
+    "sections": [
+      {
+        "title": "Focus areas",
+        "type": "list",
+        "items": [
+          "Computer vision model development and deployment for aviation safety applications",
+          "Dataset governance, annotation pipelines, and quality assurance workflows",
+          "YOLOv8 model training and optimization on Ubuntu-based infrastructure",
+          "FAA regulatory compliance and safety-critical system documentation",
+          "Cross-functional coordination between engineering, operations, and safety teams"
+        ]
+      },
+      {
+        "title": "Technical environment",
+        "type": "list",
+        "items": [
+          "Computer vision frameworks: YOLOv8, object detection and tracking pipelines",
+          "Infrastructure: Ubuntu, Python, dataset management tools",
+          "Focus on production-grade deployment and operational reliability",
+          "Startup environment: rapid iteration, cross-functional ownership"
+        ]
+      }
+    ],
+    "updated": "2026-01-04"
+  },
+  {
     "slug": "protein-explorer",
     "title": "Protein Explorer",
     "tagline": "Residue proximity explorer for PDB structures",
@@ -12,8 +58,8 @@
   "heroAlt": "Screenshot of the Protein Explorer slideshow highlighting metadata panel",
     "status": {
       "percent": 85,
-      "label": "Soft launch",
-      "note": "Deploying new contact maps to structural biology partners."
+      "label": "On hold",
+      "note": "Paused while focusing on current projects."
     },
     "category": "Computational Biology",
     "tags": ["protein-structure", "visualization", "ml"],
@@ -72,8 +118,8 @@
     "imageAlt": "Magnifying glass revealing runway debris alerts",
     "status": {
       "percent": 20,
-      "label": "Concept validation",
-      "note": "Validating detections against curated apron footage."
+      "label": "On hold",
+      "note": "Concept work paused. See Pathreader for active aviation safety work."
     },
     "category": "Safety & Operations",
     "tags": ["cv", "safety", "ops"],
@@ -136,8 +182,8 @@
     "imageAlt": "Robot assistant figurine beside machine learning books",
     "status": {
       "percent": 5,
-      "label": "Ideation",
-      "note": "Testing retrieval-augmented prompts with the SDK team."
+      "label": "On hold",
+      "note": "Concept paused while focusing on current projects."
     },
     "category": "Applied AI",
     "tags": ["llm", "semantic-scholar", "developer-tools"],
@@ -227,9 +273,9 @@
       {
         "title": "Idea inventory",
         "type": "html",
-        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
+        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong>Musicr</strong> — Chat app where conversations are encoded by their vector space proximity to songs and lyrics. Messages get matched to music based on semantic similarity.</td><td>Idea · Not started</td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
       }
     ],
-    "updated": "2025-09-25"
+    "updated": "2026-01-04"
   }
 ]

@@ -1,5 +1,35 @@
 [
   {
+    "title": "YOLOv8 Documentation - Ultralytics",
+    "url": "https://docs.ultralytics.com/",
+    "tags": ["Computer Vision", "YOLO", "Object Detection"],
+    "addedAt": "2026-01-04"
+  },
+  {
+    "title": "FAA System Safety Handbook",
+    "url": "https://www.faa.gov/safety/ground",
+    "tags": ["Aviation", "Safety", "Regulatory"],
+    "addedAt": "2026-01-03"
+  },
+  {
+    "title": "The Hard Thing About Hard Things - Startup Management",
+    "url": "https://www.amazon.com/Hard-Thing-About-Things-Building/dp/0062273205",
+    "tags": ["Startups", "Management", "Books"],
+    "addedAt": "2025-12-15"
+  },
+  {
+    "title": "Computer Vision Datasets: Best Practices for Annotation and Governance",
+    "url": "https://arxiv.org/abs/2301.10092",
+    "tags": ["Computer Vision", "ML", "Dataset Governance"],
+    "addedAt": "2025-11-28"
+  },
+  {
+    "title": "Startup Financial Modeling for Technical Founders",
+    "url": "https://www.ycombinator.com/library/6k-startup-financial-modeling",
+    "tags": ["Finance", "Startups", "Y Combinator"],
+    "addedAt": "2025-11-10"
+  },
+  {
     "title": "The First Interstellar Software Update - The Insane Hack That Saved Voyager 1",
     "url": "https://www.youtube.com/watch?v=p0K7u3B_8rY",
     "tags": ["Space", "Software Update"],
