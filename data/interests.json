@@ -1,5 +1,35 @@
 [
   {
+    "title": "pgvector: Open-source Vector Similarity Search for Postgres",
+    "url": "https://github.com/pgvector/pgvector",
+    "tags": ["Vector Search", "PostgreSQL", "Embeddings"],
+    "addedAt": "2026-02-19"
+  },
+  {
+    "title": "HNSW Explained — Approximate Nearest Neighbor Search",
+    "url": "https://www.pinecone.io/learn/series/faiss/hnsw/",
+    "tags": ["Vector Search", "ANN", "ML Infrastructure"],
+    "addedAt": "2026-02-18"
+  },
+  {
+    "title": "Sentence Transformers: all-MiniLM-L6-v2",
+    "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2",
+    "tags": ["Embeddings", "NLP", "Transformers"],
+    "addedAt": "2026-02-15"
+  },
+  {
+    "title": "AI Agents Need Guardrails — Building Policy Enforcement for Autonomous Systems",
+    "url": "https://www.anthropic.com/research/alignment",
+    "tags": ["AI Safety", "Agents", "Policy"],
+    "addedAt": "2026-02-14"
+  },
+  {
+    "title": "Railway: Deploy Anything",
+    "url": "https://railway.app/",
+    "tags": ["Deployment", "DevOps", "PaaS"],
+    "addedAt": "2026-02-10"
+  },
+  {
     "title": "YOLOv8 Documentation - Ultralytics",
     "url": "https://docs.ultralytics.com/",
     "tags": ["Computer Vision", "YOLO", "Object Detection"],
