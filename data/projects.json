@@ -1,5 +1,175 @@
 [
   {
+    "slug": "musicr",
+    "title": "Musicr",
+    "tagline": "Real-time chat where every message maps to a song",
+    "summary": "Anonymous real-time chat where each message is matched to a song using semantic similarity. Type anything — a mood, a memory, a joke — and Musicr finds the closest track from a 114k-song catalog using pgvector HNSW cosine search. No accounts, no sign-up.",
+    "heroImage": "/assets/img/projects/musicr-1280.svg",
+    "image": "/assets/img/projects/musicr-640.svg",
+    "image2x": "/assets/img/projects/musicr-1280.svg",
+    "imageAlt": "Chat bubbles and sound wave representing Musicr",
+    "status": {
+      "percent": 75,
+      "label": "Live — seeking feedback",
+      "note": "Deployed on Railway. Collecting early user feedback on matching quality and UX."
+    },
+    "category": "Applied AI",
+    "tags": ["nlp", "semantic-search", "pgvector", "real-time", "typescript"],
+    "links": {
+      "caseStudy": "/projects/musicr/",
+      "repo": "https://github.com/cfiorelli/musicr"
+    },
+    "resources": [
+      {"title": "Live app", "url": "https://musicrweb-production.up.railway.app/", "external": true},
+      {"title": "Source repository", "url": "https://github.com/cfiorelli/musicr", "external": true}
+    ],
+    "sections": [
+      {
+        "title": "How it works",
+        "type": "list",
+        "items": [
+          "User types any message — a mood, a memory, an observation — in the anonymous chat.",
+          "The server embeds the text with Xenova/all-MiniLM-L6-v2 (384-dim, runs server-side, no external API needed).",
+          "pgvector performs HNSW cosine similarity search across a 114k-song catalog (title, artist, tags, album metadata).",
+          "The matched song appears in the chat instantly. Click it to listen on YouTube.",
+          "Threaded replies let users react and riff on each match."
+        ]
+      },
+      {
+        "title": "Stack",
+        "type": "list",
+        "items": [
+          "API: Fastify + WebSocket, per-IP rate limiting, maintenance mode, hard 500-char input cap.",
+          "DB: PostgreSQL + pgvector — HNSW index on 384-dim embedding vectors, cosine distance operator (<=>).",
+          "Embeddings: Xenova/all-MiniLM-L6-v2 local model — no OpenAI dependency in production.",
+          "Frontend: React 18 + Zustand + Tailwind CSS + Vite.",
+          "Monorepo: pnpm workspaces (apps/api, apps/web, shared/types).",
+          "Deployment: Railway — API via Dockerfile, web via Nixpacks, PostgreSQL addon with pgvector."
+        ]
+      },
+      {
+        "title": "Design decisions",
+        "type": "list",
+        "items": [
+          "Fully anonymous — users get a hashed-IP handle; no PII stored.",
+          "Matching uses song metadata only (no lyrics), so results are sometimes uncanny and sometimes a stretch — that tension is intentional.",
+          "Catalog seeded with diversity caps per artist to ensure breadth across 114k tracks.",
+          "Launched on Show HN with security hardening: Gitleaks CI, Dependabot, secret rotation runbook."
+        ]
+      }
+    ],
+    "updated": "2026-02-19"
+  },
+  {
+    "slug": "ai-agent-firewall",
+    "title": "AI Agent Firewall",
+    "tagline": "Policy-driven guardrails for AI agent actions",
+    "summary": "Prototype firewall that gates AI agent communications against a versioned, human-reviewed policy set. Extracts rule candidates from PDF policy documents via LLM, routes them through a human review step, then deterministically evaluates outgoing messages with an explainable trace.",
+    "heroImage": "/assets/img/projects/ai-firewall-1280.svg",
+    "image": "/assets/img/projects/ai-firewall-640.svg",
+    "image2x": "/assets/img/projects/ai-firewall-1280.svg",
+    "imageAlt": "Shield and policy rule cards representing an AI agent firewall",
+    "status": {
+      "percent": 20,
+      "label": "Early prototype",
+      "note": "Core evaluation engine and policy versioning complete. UI refinement in progress."
+    },
+    "category": "Applied AI",
+    "tags": ["ai-safety", "llm", "policy-engine", "next-js", "typescript"],
+    "links": {
+      "caseStudy": "/projects/ai-agent-firewall/",
+      "repo": "https://github.com/cfiorelli/ai-agent-firewall-prototype"
+    },
+    "resources": [
+      {"title": "Source repository", "url": "https://github.com/cfiorelli/ai-agent-firewall-prototype", "external": true}
+    ],
+    "sections": [
+      {
+        "title": "What it does",
+        "type": "list",
+        "items": [
+          "Upload a policy PDF (e.g., an insurance contract) and extract rule candidates via the Anthropic API.",
+          "Human reviewers approve, reject, or edit candidates before rules become active.",
+          "Rules are versioned — each policy set is immutable; edits produce a new version via clone-and-edit.",
+          "The evaluation engine deterministically checks outgoing agent messages against the active policy and returns a pass/fail trace with per-rule explanations.",
+          "Magic-link auth with RBAC (admin, test_user, demo) — no passwords."
+        ]
+      },
+      {
+        "title": "Rule templates",
+        "type": "list",
+        "items": [
+          "FORBIDDEN_PHRASE — blocks/escalates messages containing prohibited language.",
+          "REQUIRED_DISCLOSURE — enforces presence of mandated disclosures based on message conditions.",
+          "REQUIRE_REASON_CODE — requires valid reason codes on denial decisions.",
+          "REQUIRE_CITATION — ensures policy or regulatory citations accompany claims.",
+          "CHANNEL_RESTRICTION — limits which communication channels may be used."
+        ]
+      },
+      {
+        "title": "Stack",
+        "type": "list",
+        "items": [
+          "Next.js 15 App Router — server and client components.",
+          "Prisma ORM + PostgreSQL — versioned policy storage and evaluation logs.",
+          "Anthropic API (@anthropic-ai/sdk) — LLM-assisted rule candidate extraction from PDFs.",
+          "pdf-parse — server-side PDF text extraction.",
+          "Railway — deployment target with volume-mounted PDF storage."
+        ]
+      }
+    ],
+    "updated": "2026-02-15"
+  },
+  {
+    "slug": "wealth-distribution-viz",
+    "title": "Wealth Distribution Viz",
+    "tagline": "Interactive explorer for global wealth distribution data",
+    "summary": "Single-page visualization of global wealth distribution using UBS Global Wealth Report 2023 data. Define custom wealth brackets and explore how 3.77 billion adults are distributed from $0 to $100B+. 76 fine-grained bins combining real survey data with Pareto-modeled ultra-high-wealth ranges.",
+    "heroImage": "/assets/img/projects/wealth-viz-1280.svg",
+    "image": "/assets/img/projects/wealth-viz-640.svg",
+    "image2x": "/assets/img/projects/wealth-viz-1280.svg",
+    "imageAlt": "Bar chart of global wealth distribution by bracket",
+    "status": {
+      "percent": 90,
+      "label": "Stable",
+      "note": "Live and stable. Future work: regional breakdowns and historical time-series."
+    },
+    "category": "Data Visualization",
+    "tags": ["data-viz", "javascript", "chart-js", "economics"],
+    "links": {
+      "caseStudy": "/projects/wealth-distribution-viz/",
+      "repo": "https://github.com/cfiorelli/wealth-distribution-viz"
+    },
+    "resources": [
+      {"title": "Live demo", "url": "https://cfiorelli.github.io/wealth-distribution-viz/", "external": true},
+      {"title": "Source repository", "url": "https://github.com/cfiorelli/wealth-distribution-viz", "external": true}
+    ],
+    "sections": [
+      {
+        "title": "Features",
+        "type": "list",
+        "items": [
+          "Define custom wealth brackets and see how the global population distributes across them in real time.",
+          "Toggle between percentage-of-population and absolute headcount views.",
+          "Coverage analytics show what share of global wealth and population your brackets capture.",
+          "76 data bins from $0 to $100B+: real UBS data, linear interpolation, and Pareto-modeled ultra-high-wealth tail (α = 1.3–1.5).",
+          "No build step, no backend — pure HTML, CSS, and JavaScript with Chart.js via CDN. Just open and run."
+        ]
+      },
+      {
+        "title": "Data methodology",
+        "type": "list",
+        "items": [
+          "Source: UBS Global Wealth Report 2023 (2022 data) — $454.4T total wealth, 3.77B adults tracked.",
+          "Original data provides 4 coarse bins; fine-grained bins derived via linear interpolation ($0–$1M) and Pareto distribution modeling ($1M+).",
+          "All bins normalized to sum to exact global totals for mathematical consistency.",
+          "Data quality clearly labelled per bin: real, interpolated, or modeled."
+        ]
+      }
+    ],
+    "updated": "2025-11-19"
+  },
+  {
     "slug": "pathreader",
     "title": "Pathreader",
     "tagline": "AI-powered computer vision for aviation safety",
@@ -128,9 +298,7 @@
       "repo": null
     },
     "resources": [
-      {"title": "Concept brief", "url": "/projects/runway-fod/", "note": "Project overview"},
-      {"title": "Model notebook", "url": "https://example.com/fod-notebook", "note": "Detection experiments", "external": true},
-      {"title": "Ops handoff checklist", "url": "https://example.com/fod-ops", "external": true}
+      {"title": "Concept brief", "url": "/projects/runway-fod-detection/", "note": "Project overview"}
     ],
     "sections": [
       {
@@ -160,12 +328,12 @@
         ]
       },
       {
-        "title": "Links & future work",
-        "type": "links",
+        "title": "Future work",
+        "type": "list",
         "items": [
-          {"title": "Dataset & annotation guide", "url": "https://example.com/fod-dataset", "note": "In progress", "external": true},
-          {"title": "Model training recipes", "url": "https://example.com/fod-recipes", "note": "Draft", "external": true},
-          {"title": "Sensor fusion roadmap", "url": "https://example.com/fod-roadmap", "note": "Upcoming", "external": true}
+          "Dataset annotation guide and labeling conventions.",
+          "Model training recipes for YOLOv8 / Faster R-CNN on runway imagery.",
+          "Sensor fusion roadmap for multi-camera persistence tracking."
         ]
       }
     ],
@@ -273,7 +441,7 @@
       {
         "title": "Idea inventory",
         "type": "html",
-        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong>Musicr</strong> — Chat app where conversations are encoded by their vector space proximity to songs and lyrics. Messages get matched to music based on semantic similarity.</td><td>Idea · Not started</td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
+        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong><a href=\"/projects/musicr/\">Musicr</a></strong> — Real-time anonymous chat where every message is matched to a song via semantic similarity (pgvector + 114k-track catalog). Deployed on Railway.</td><td>Built · <a href=\"https://musicrweb-production.up.railway.app/\" target=\"_blank\" rel=\"noopener\">Live</a></td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
       }
     ],
     "updated": "2026-01-04"
