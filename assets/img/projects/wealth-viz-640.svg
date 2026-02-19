@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="wv-title wv-desc">
+  <title id="wv-title">Wealth Distribution Visualization project artwork</title>
+  <desc id="wv-desc">Bar chart showing global wealth distribution across wealth brackets.</desc>
+  <defs>
+    <linearGradient id="wvGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14230F"/>
+      <stop offset="100%" stop-color="#1A3422"/>
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ADE80"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" fill="url(#wvGrad)" rx="28"/>
+
+  <!-- Chart area background -->
+  <rect x="60" y="60" width="520" height="230" rx="8" fill="#0F1F0F" opacity="0.5"/>
+
+  <!-- Grid lines -->
+  <line x1="60" y1="233" x2="580" y2="233" stroke="#2D4A2D" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="175" x2="580" y2="175" stroke="#2D4A2D" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="60" y1="117" x2="580" y2="117" stroke="#2D4A2D" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Bars: distribution (most people are in low-wealth brackets) -->
+  <rect x="80"  y="108" width="52" height="182" rx="4" fill="url(#barGrad)" opacity="0.95"/>
+  <rect x="148" y="148" width="52" height="142" rx="4" fill="url(#barGrad)" opacity="0.85"/>
+  <rect x="216" y="196" width="52" height="94"  rx="4" fill="url(#barGrad)" opacity="0.75"/>
+  <rect x="284" y="238" width="52" height="52"  rx="4" fill="url(#barGrad)" opacity="0.65"/>
+  <rect x="352" y="258" width="52" height="32"  rx="4" fill="url(#barGrad)" opacity="0.55"/>
+  <rect x="420" y="272" width="52" height="18"  rx="4" fill="url(#barGrad)" opacity="0.45"/>
+  <rect x="488" y="280" width="52" height="10"  rx="4" fill="url(#barGrad)" opacity="0.35"/>
+
+  <!-- X-axis labels -->
+  <text x="106"  y="308" fill="#86EFAC" font-family="'Segoe UI',system-ui,-apple-system" font-size="10" text-anchor="middle">$0–10K</text>
+  <text x="174"  y="308" fill="#86EFAC" font-family="'Segoe UI',system-ui,-apple-system" font-size="10" text-anchor="middle">$10–100K</text>
+  <text x="242"  y="308" fill="#86EFAC" font-family="'Segoe UI',system-ui,-apple-system" font-size="10" text-anchor="middle">$100K–1M</text>
+  <text x="310"  y="308" fill="#86EFAC" font-family="'Segoe UI',system-ui,-apple-system" font-size="10" text-anchor="middle">$1M–10M</text>
+  <text x="378"  y="308" fill="#86EFAC" font-family="'Segoe UI',system-ui,-apple-system" font-size="10" text-anchor="middle">$10M–100M</text>
+  <text x="446"  y="308" fill="#86EFAC" font-family="'Segoe UI',system-ui,-apple-system" font-size="10" text-anchor="middle">$100M–1B</text>
+  <text x="514"  y="308" fill="#86EFAC" font-family="'Segoe UI',system-ui,-apple-system" font-size="10" text-anchor="middle">$1B+</text>
+
+  <text x="44" y="348" fill="#D1FAE5" font-family="'Segoe UI',system-ui,-apple-system" font-size="28" font-weight="700">Wealth Distribution</text>
+  <text x="44" y="378" fill="#4ADE80" font-family="'Segoe UI',system-ui,-apple-system" font-size="16" opacity="0.9">Interactive global wealth explorer · UBS 2023 data</text>
+</svg>
