@@ -3,15 +3,16 @@
     "slug": "musicr",
     "title": "Musicr",
     "tagline": "Real-time chat where every message maps to a song",
-    "summary": "Anonymous real-time chat where each message is matched to a song using semantic similarity. Type anything — a mood, a memory, a joke — and Musicr finds the closest track from a 114k-song catalog using pgvector HNSW cosine search. No accounts, no sign-up.",
+    "summary": "Anonymous chat app built around one question: can sentence embeddings replace music taste discovery? Type anything — a mood, a memory, a passing thought — and Musicr matches it to a song from a 114k-track catalog via pgvector HNSW cosine search. The embedding model runs server-side (no OpenAI); matching uses song metadata, not lyrics. No accounts, no sign-up. Source code on GitHub.",
     "heroImage": "/assets/img/projects/musicr-1280.svg",
     "image": "/assets/img/projects/musicr-640.svg",
     "image2x": "/assets/img/projects/musicr-1280.svg",
     "imageAlt": "Chat bubbles and sound wave representing Musicr",
+    "featured": true,
     "status": {
-      "percent": 75,
-      "label": "Live — seeking feedback",
-      "note": "Deployed on Railway. Collecting early user feedback on matching quality and UX."
+      "percent": 65,
+      "label": "Prototype",
+      "note": "Deployment paused. Source code and architecture docs (ARCHITECTURE.md, RUNBOOK.md, SECURITY.md) available on GitHub."
     },
     "category": "Applied AI",
     "tags": ["nlp", "semantic-search", "pgvector", "real-time", "typescript"],
@@ -20,7 +21,6 @@
       "repo": "https://github.com/cfiorelli/musicr"
     },
     "resources": [
-      {"title": "Live app", "url": "https://musicrweb-production.up.railway.app/", "external": true},
       {"title": "Source repository", "url": "https://github.com/cfiorelli/musicr", "external": true}
     ],
     "sections": [
@@ -64,25 +64,23 @@
     "slug": "ai-agent-firewall",
     "title": "AI Agent Firewall",
     "tagline": "Policy-driven guardrails for AI agent actions",
-    "summary": "Prototype firewall that gates AI agent communications against a versioned, human-reviewed policy set. Extracts rule candidates from PDF policy documents via LLM, routes them through a human review step, then deterministically evaluates outgoing messages with an explainable trace.",
+    "summary": "As AI agents take on business communication tasks, they need the same compliance controls applied to human employees. This prototype tackles that: upload a policy PDF, the Anthropic API extracts rule candidates, a human reviewer approves them, and the evaluation engine deterministically checks each outgoing agent message with a per-rule pass/fail trace. Rules are immutable once active — edits produce a new versioned policy set. Early prototype; evaluation engine and policy management are functional.",
     "heroImage": "/assets/img/projects/ai-firewall-1280.svg",
     "image": "/assets/img/projects/ai-firewall-640.svg",
     "image2x": "/assets/img/projects/ai-firewall-1280.svg",
     "imageAlt": "Shield and policy rule cards representing an AI agent firewall",
+    "featured": true,
     "status": {
       "percent": 20,
-      "label": "Early prototype",
-      "note": "Core evaluation engine and policy versioning complete. UI refinement in progress."
+      "label": "Prototype",
+      "note": "Core evaluation engine and policy versioning complete. UI refinement in progress. No public source repository."
     },
     "category": "Applied AI",
     "tags": ["ai-safety", "llm", "policy-engine", "next-js", "typescript"],
     "links": {
-      "caseStudy": "/projects/ai-agent-firewall/",
-      "repo": "https://github.com/cfiorelli/ai-agent-firewall-prototype"
+      "caseStudy": "/projects/ai-agent-firewall/"
     },
-    "resources": [
-      {"title": "Source repository", "url": "https://github.com/cfiorelli/ai-agent-firewall-prototype", "external": true}
-    ],
+    "resources": [],
     "sections": [
       {
         "title": "What it does",
@@ -96,17 +94,6 @@
         ]
       },
       {
-        "title": "Rule templates",
-        "type": "list",
-        "items": [
-          "FORBIDDEN_PHRASE — blocks/escalates messages containing prohibited language.",
-          "REQUIRED_DISCLOSURE — enforces presence of mandated disclosures based on message conditions.",
-          "REQUIRE_REASON_CODE — requires valid reason codes on denial decisions.",
-          "REQUIRE_CITATION — ensures policy or regulatory citations accompany claims.",
-          "CHANNEL_RESTRICTION — limits which communication channels may be used."
-        ]
-      },
-      {
         "title": "Stack",
         "type": "list",
         "items": [
@@ -116,6 +103,17 @@
           "pdf-parse — server-side PDF text extraction.",
           "Railway — deployment target with volume-mounted PDF storage."
         ]
+      },
+      {
+        "title": "Rule templates",
+        "type": "list",
+        "items": [
+          "FORBIDDEN_PHRASE — blocks/escalates messages containing prohibited language.",
+          "REQUIRED_DISCLOSURE — enforces presence of mandated disclosures based on message conditions.",
+          "REQUIRE_REASON_CODE — requires valid reason codes on denial decisions.",
+          "REQUIRE_CITATION — ensures policy or regulatory citations accompany claims.",
+          "CHANNEL_RESTRICTION — limits which communication channels may be used."
+        ]
       }
     ],
     "updated": "2026-02-15"
@@ -124,21 +122,23 @@
     "slug": "wealth-distribution-viz",
     "title": "Wealth Distribution Viz",
     "tagline": "Interactive explorer for global wealth distribution data",
-    "summary": "Single-page visualization of global wealth distribution using UBS Global Wealth Report 2023 data. Define custom wealth brackets and explore how 3.77 billion adults are distributed from $0 to $100B+. 76 fine-grained bins combining real survey data with Pareto-modeled ultra-high-wealth ranges.",
+    "summary": "No-build static visualization of global wealth distribution using UBS Global Wealth Report 2023 data (2022 snapshot). Define custom wealth brackets and explore how 3.77 billion adults are distributed from $0 to $100B+. 76 fine-grained bins: real UBS survey data plus Pareto-modeled ultra-high-wealth ranges (α 1.3–1.5). Pure HTML, CSS, and Chart.js — open and run in any browser.",
     "heroImage": "/assets/img/projects/wealth-viz-1280.svg",
     "image": "/assets/img/projects/wealth-viz-640.svg",
     "image2x": "/assets/img/projects/wealth-viz-1280.svg",
     "imageAlt": "Bar chart of global wealth distribution by bracket",
+    "featured": true,
     "status": {
       "percent": 90,
-      "label": "Stable",
-      "note": "Live and stable. Future work: regional breakdowns and historical time-series."
+      "label": "Live",
+      "note": "Live and stable. Future work: update to newer UBS annual data, regional breakdowns, historical time-series."
     },
     "category": "Data Visualization",
     "tags": ["data-viz", "javascript", "chart-js", "economics"],
     "links": {
       "caseStudy": "/projects/wealth-distribution-viz/",
-      "repo": "https://github.com/cfiorelli/wealth-distribution-viz"
+      "repo": "https://github.com/cfiorelli/wealth-distribution-viz",
+      "demo": "https://cfiorelli.github.io/wealth-distribution-viz/"
     },
     "resources": [
       {"title": "Live demo", "url": "https://cfiorelli.github.io/wealth-distribution-viz/", "external": true},
@@ -163,7 +163,8 @@
           "Source: UBS Global Wealth Report 2023 (2022 data) — $454.4T total wealth, 3.77B adults tracked.",
           "Original data provides 4 coarse bins; fine-grained bins derived via linear interpolation ($0–$1M) and Pareto distribution modeling ($1M+).",
           "All bins normalized to sum to exact global totals for mathematical consistency.",
-          "Data quality clearly labelled per bin: real, interpolated, or modeled."
+          "Data quality clearly labelled per bin: real, interpolated, or modeled.",
+          "Dataset scope: 2022 global wealth levels from the UBS 2023 report. A future update would incorporate newer annual data."
         ]
       }
     ],
@@ -174,14 +175,14 @@
     "title": "Pathreader",
     "tagline": "AI-powered computer vision for aviation safety",
     "summary": "Building computer vision systems for aviation safety operations at a stealth startup. Focus on safety-critical applications, FAA regulatory compliance, and production-grade ML deployment.",
-    "heroImage": "/assets/img/projects/runway-fod-1280.png",
-    "image": "/assets/img/projects/runway-fod-640.png",
-    "image2x": "/assets/img/projects/runway-fod-1280.png",
-    "imageAlt": "Aviation safety technology visualization",
+    "heroImage": "/assets/img/projects/pathreader-1280.svg",
+    "image": "/assets/img/projects/pathreader-640.svg",
+    "image2x": "/assets/img/projects/pathreader-1280.svg",
+    "imageAlt": "Computer vision viewfinder tracking an aviation approach path",
     "status": {
       "percent": 40,
-      "label": "Active development",
-      "note": "Stealth mode - launching 2026"
+      "label": "In progress",
+      "note": "Stealth mode — launching 2026"
     },
     "category": "Product Development",
     "tags": ["computer-vision", "aviation", "safety", "yolov8", "startup"],
@@ -198,8 +199,7 @@
           "Computer vision model development and deployment for aviation safety applications",
           "Dataset governance, annotation pipelines, and quality assurance workflows",
           "YOLOv8 model training and optimization on Ubuntu-based infrastructure",
-          "FAA regulatory compliance and safety-critical system documentation",
-          "Cross-functional coordination between engineering, operations, and safety teams"
+          "FAA regulatory compliance and safety-critical system documentation"
         ]
       },
       {
@@ -208,8 +208,7 @@
         "items": [
           "Computer vision frameworks: YOLOv8, object detection and tracking pipelines",
           "Infrastructure: Ubuntu, Python, dataset management tools",
-          "Focus on production-grade deployment and operational reliability",
-          "Startup environment: rapid iteration, cross-functional ownership"
+          "Production-grade deployment with operational reliability requirements"
         ]
       }
     ],
@@ -219,13 +218,13 @@
     "slug": "protein-explorer",
     "title": "Protein Explorer",
     "tagline": "Residue proximity explorer for PDB structures",
-  "summary": "Lightweight browser viewer that cycles through random Protein Data Bank structures with live metadata, residue proximity maps, and interaction analysis.",
-  "heroImage": "/assets/img/prothero.png",
-  "heroImage2x": "/assets/img/prothero.png",
-  "image": "/assets/img/lion.png",
-  "image2x": "/assets/img/lion.png",
-  "imageAlt": "Protein Explorer lion illustration",
-  "heroAlt": "Screenshot of the Protein Explorer slideshow highlighting metadata panel",
+    "summary": "Browser-based PDB structure viewer built with the NGL visualization library and the RCSB Protein Data Bank API. Cycles through structures with a metadata side panel, configurable residue proximity maps (1–5 Å threshold), and interaction highlights for hydrogen bonds (≤3.5 Å), salt bridges (≤4 Å), ionic bonds, and disulfide bonds (≤2.2 Å). No build step.",
+    "heroImage": "/assets/img/prothero.png",
+    "heroImage2x": "/assets/img/prothero.png",
+    "image": "/assets/img/projects/protein-explorer-640.svg",
+    "image2x": "/assets/img/projects/protein-explorer-1280.svg",
+    "imageAlt": "Protein structure browser with residue proximity map",
+    "heroAlt": "Screenshot of the Protein Explorer slideshow highlighting metadata panel",
     "status": {
       "percent": 85,
       "label": "On hold",
@@ -235,7 +234,8 @@
     "tags": ["protein-structure", "visualization", "ml"],
     "links": {
       "caseStudy": "/projects/protein-explorer/",
-      "repo": "https://github.com/cfiorelli/proteinslideshow"
+      "repo": "https://github.com/cfiorelli/proteinslideshow",
+      "demo": "https://cfiorelli.github.io/proteinslideshow/"
     },
     "resources": [
       {"title": "Live demo", "url": "https://cfiorelli.github.io/proteinslideshow/", "external": true},
@@ -246,7 +246,7 @@
         "title": "Key features",
         "type": "list",
         "items": [
-          "Random slideshow of 15 Protein Data Bank entries refreshed automatically for quick exploration.",
+          "Fetches 15 random Protein Data Bank entries from the full RCSB catalog on load; auto-advances for quick structure browsing.",
           "Resilient structure loading that falls back across gzipped CIF, raw CIF, and PDB formats to avoid API hiccups.",
           "Metadata side panel with experiment method, resolution, chains, symmetry, annotations, and primary literature links.",
           "Representation controls (Cartoon, Surface, Ball & Stick) plus quick residue load for focused inspection.",
@@ -282,10 +282,10 @@
     "title": "Runway FOD Detection",
     "tagline": "Computer vision pipeline for foreign object debris alerts",
     "summary": "Detection stack that pairs YOLO with RCNN persistence tracking so airside teams can triage debris before it becomes costly FOD.",
-    "heroImage": "/assets/img/projects/runway-fod-1280.png",
-    "image": "/assets/img/projects/runway-fod-640.png",
-    "image2x": "/assets/img/projects/runway-fod-1280.png",
-    "imageAlt": "Magnifying glass revealing runway debris alerts",
+    "heroImage": "/assets/img/projects/runway-fod-1280.svg",
+    "image": "/assets/img/projects/runway-fod-640.svg",
+    "image2x": "/assets/img/projects/runway-fod-1280.svg",
+    "imageAlt": "Runway grid with detection markers highlighting debris locations",
     "status": {
       "percent": 20,
       "label": "On hold",
@@ -361,8 +361,7 @@
     },
     "resources": [
       {"title": "Concept notes", "url": "/projects/mini-llm-semantic-scholar/", "note": "Project outline"},
-      {"title": "API product page", "url": "https://www.semanticscholar.org/product/api", "external": true},
-      {"title": "Webinar playlist", "url": "https://www.youtube.com/playlist?list=PLSemScholar", "external": true}
+      {"title": "API product page", "url": "https://www.semanticscholar.org/product/api", "external": true}
     ],
     "sections": [
       {
@@ -388,9 +387,9 @@
         "type": "links",
         "items": [
           {"title": "Official Semantic Scholar API tutorial", "url": "https://www.semanticscholar.org/product/api", "external": true},
-          {"title": "Webinar: Intro & best practices", "url": "https://www.youtube.com/watch?v=lje07xC2y00", "external": true},
-          {"title": "Webinar: API deep dive", "url": "https://www.youtube.com/watch?v=XYOVciAZi7I", "external": true},
-          {"title": "Webinar: Building integrations", "url": "https://www.youtube.com/watch?v=_BQwU2i_nh4", "external": true}
+          {"title": "Advanced Usage of Semantic Scholar API [Webinar]", "url": "https://www.youtube.com/watch?v=lje07xC2y00", "external": true},
+          {"title": "Self-Hosting Semantic Scholar Data [Webinar]", "url": "https://www.youtube.com/watch?v=XYOVciAZi7I", "external": true},
+          {"title": "Getting Started with Semantic Scholar Academic Graph API [Webinar]", "url": "https://www.youtube.com/watch?v=_BQwU2i_nh4", "external": true}
         ]
       },
       {
@@ -441,7 +440,7 @@
       {
         "title": "Idea inventory",
         "type": "html",
-        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong><a href=\"/projects/musicr/\">Musicr</a></strong> — Real-time anonymous chat where every message is matched to a song via semantic similarity (pgvector + 114k-track catalog). Deployed on Railway.</td><td>Built · <a href=\"https://musicrweb-production.up.railway.app/\" target=\"_blank\" rel=\"noopener\">Live</a></td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
+        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong><a href=\"/projects/musicr/\">Musicr</a></strong> — Anonymous chat where every message is matched to a song via semantic similarity (pgvector + 114k-track catalog). Source on GitHub.</td><td>Built · Deployment paused</td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
       }
     ],
     "updated": "2026-01-04"

@@ -1,16 +1,16 @@
 ---
 layout: layout
 title: Home
-description: C. Fiorelli — Technical Product & Program Manager building production AI systems, computer vision products, and data platforms.
+description: C. Fiorelli — Technical PM and builder. 10+ years shipping AI/ML at Ai2, Google Geo, and Microsoft Bing. Currently building computer vision for aviation safety.
 permalink: index.html
 ---
-{% set sortedProjects = projects | sort(attribute='updated') | reverse %}
+{% set featuredProjects = projects | selectattr("featured") | sort(attribute='updated') | reverse %}
 {% set curiositiesList = curiosities or [] %}
 
 <section class="hero">
-  <h1 class="hero-title">Building AI Systems at the Intersection of Safety and Innovation</h1>
-  <p class="hero-sub">Technical Product & Program Manager with 10+ years leading AI/ML initiatives across research, production systems, and safety-critical applications.</p>
-  <p class="hero-meta">Currently: Computer vision for aviation safety. Previously: Ai2, Google Geo, Microsoft Bing ML. Seeking senior TPM/PM roles in AI product development.</p>
+  <h1 class="hero-title">Technical PM and builder</h1>
+  <p class="hero-sub">10+ years shipping AI/ML products at Ai2, Google Geo, and Microsoft Bing. Currently leading computer vision for aviation safety.</p>
+  <p class="hero-meta">Seeking senior PM/TPM roles in AI product development. Hands-on with Python, SQL, pgvector, and production ML systems.</p>
 </section>
 
 <section class="projects-preview" aria-labelledby="projects-heading">
@@ -20,58 +20,59 @@ permalink: index.html
   </div>
 
   <div class="grid project-grid">
-    {% for project in sortedProjects %}
-      {% if loop.index <= 3 %}
-        {% set links = project.links or {} %}
-        {% set caseStudyUrl = links.caseStudy or ('/projects/' ~ project.slug ~ '/') %}
-        {% set cardImage = project.image or project.heroImage %}
-        {% set cardImage2x = project.image2x or project.heroImage %}
-        {% set cardAlt = project.imageAlt or project.title %}
-        <article class="card project-card">
-          {% if cardImage %}
-            <div class="card-media">
-              <img src="{{ cardImage }}"
-                   {% if cardImage2x %}srcset="{{ cardImage }} 1x, {{ cardImage2x }} 2x"{% endif %}
-                   sizes="(min-width: 960px) 320px, (min-width: 640px) 45vw, 90vw"
-                   loading="lazy"
-                   decoding="async"
-                   alt="{{ cardAlt }}">
-            </div>
-          {% endif %}
-          <div class="card-body">
-            {% if project.status %}
-              {% set statusPercent = project.status.percent | default(0) %}
-              {% set statusLabel = project.status.label %}
-              <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %} aria-label="{{ statusPercent }}% complete{% if statusLabel %} — {{ statusLabel }}{% endif %}">
-                <span class="project-status__percent">{{ statusPercent }}%</span>
-                {% if statusLabel %}
-                  <span class="project-status__label">{{ statusLabel }}</span>
-                {% endif %}
-              </div>
-            {% endif %}
-            <h3>{{ project.title }}</h3>
-            {% if project.tagline %}
-              <p class="muted">{{ project.tagline }}</p>
-            {% endif %}
-            {% if project.summary %}
-              <p>{{ project.summary }}</p>
-            {% endif %}
-            {% if project.tags %}
-              <div class="tags">
-                {% for tag in project.tags %}
-                  <span>{{ tag }}</span>
-                {% endfor %}
-              </div>
-            {% endif %}
-            <div class="card-actions">
-              <a class="btn" href="{{ caseStudyUrl }}">Project page</a>
-              {% if links.repo %}
-                <a class="btn ghost" href="{{ links.repo }}" target="_blank" rel="noopener noreferrer">Source</a>
+    {% for project in featuredProjects %}
+      {% set links = project.links or {} %}
+      {% set caseStudyUrl = links.caseStudy or ('/projects/' ~ project.slug ~ '/') %}
+      {% set cardImage = project.image or project.heroImage %}
+      {% set cardImage2x = project.image2x or project.heroImage %}
+      {% set cardAlt = project.imageAlt or project.title %}
+      <article class="card project-card">
+        {% if cardImage %}
+          <div class="card-media">
+            <img src="{{ cardImage }}"
+                 {% if cardImage2x %}srcset="{{ cardImage }} 1x, {{ cardImage2x }} 2x"{% endif %}
+                 sizes="(min-width: 960px) 320px, (min-width: 640px) 45vw, 90vw"
+                 loading="lazy"
+                 decoding="async"
+                 alt="{{ cardAlt }}">
+          </div>
+        {% endif %}
+        <div class="card-body">
+          {% if project.status %}
+            {% set statusPercent = project.status.percent | default(0) %}
+            {% set statusLabel = project.status.label %}
+            <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %} aria-label="{{ statusPercent }}% complete{% if statusLabel %} — {{ statusLabel }}{% endif %}">
+              <span class="project-status__percent">{{ statusPercent }}%</span>
+              {% if statusLabel %}
+                <span class="project-status__label">{{ statusLabel }}</span>
               {% endif %}
             </div>
+          {% endif %}
+          <h3>{{ project.title }}</h3>
+          {% if project.tagline %}
+            <p class="muted">{{ project.tagline }}</p>
+          {% endif %}
+          {% if project.summary %}
+            <p>{{ project.summary }}</p>
+          {% endif %}
+          {% if project.tags %}
+            <div class="tags">
+              {% for tag in project.tags %}
+                <span>{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+          <div class="card-actions">
+            <a class="btn" href="{{ caseStudyUrl }}">Project page</a>
+            {% if links.demo %}
+              <a class="btn subtle" href="{{ links.demo }}" target="_blank" rel="noopener noreferrer">Live demo</a>
+            {% endif %}
+            {% if links.repo %}
+              <a class="btn ghost" href="{{ links.repo }}" target="_blank" rel="noopener noreferrer">Source</a>
+            {% endif %}
           </div>
-        </article>
-      {% endif %}
+        </div>
+      </article>
     {% endfor %}
   </div>
 </section>
@@ -118,15 +119,15 @@ permalink: index.html
 <section class="about-preview" aria-labelledby="about-heading">
   <div class="about-preview-card">
     <h2 id="about-heading">About Christopher</h2>
-    <p class="muted">Technical Product & Program Manager with 10+ years leading AI/ML programs across research, product development, and operations. Recent completion of AI Product Management program at University of Washington. Expertise in computer vision, data platforms, regulatory compliance, and cross-functional leadership. Hands-on with Python, SQL, and production ML systems.</p>
+    <p class="muted">Technical Product & Program Manager with 10+ years shipping AI and ML products across research labs and consumer-scale platforms. Prior work at Ai2, Google Geo, and Microsoft Bing ML. Hands-on with Python, SQL, and production ML systems.</p>
     <ul class="about-preview-list">
       <li>Currently building computer vision systems for aviation safety at a stealth startup (launching 2026)</li>
       <li>Professional experience: <a href="https://allenai.org" target="_blank" rel="noopener noreferrer">Ai2</a>, <a href="https://mapsplatform.google.com/resources/blog/?tags=&year=all" target="_blank" rel="noopener noreferrer">Google Geo (Street View / Maps)</a>, <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="noopener noreferrer">Microsoft Bing ML</a></li>
       <li>Coordinated <a href="https://defcon.org/" target="_blank" rel="noopener noreferrer">Defcon</a> <a href="https://aivillage.org/" target="_blank" rel="noopener noreferrer">AI Village</a> 2024 red-teaming event for Ai2's OLMo LLM</li>
-      <li>Seeking senior TPM/PM roles in AI product development and safety-critical systems</li>
     </ul>
     <div class="card-actions">
-      <a class="btn subtle" href="/about/">Read the full bio →</a>
+      <a class="btn subtle" href="/about/">Full bio →</a>
+      <a class="btn ghost" href="/about/resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
     </div>
   </div>
 </section>

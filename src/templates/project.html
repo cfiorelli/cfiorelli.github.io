@@ -45,6 +45,17 @@ layout: layout
       </div>
     {% endif %}
 
+    {% if project.links and (project.links.demo or project.links.repo) %}
+      <div class="card-actions">
+        {% if project.links.demo %}
+          <a class="btn" href="{{ project.links.demo }}" target="_blank" rel="noopener noreferrer">Live demo</a>
+        {% endif %}
+        {% if project.links.repo %}
+          <a class="btn ghost" href="{{ project.links.repo }}" target="_blank" rel="noopener noreferrer">Source code</a>
+        {% endif %}
+      </div>
+    {% endif %}
+
     {% if content and (content | trim) %}
       {{ content | safe }}
     {% endif %}
@@ -93,7 +104,7 @@ layout: layout
     </section>
   {% endif %}
 
-  {% if project.resources %}
+  {% if project.resources and project.resources.length %}
     <section class="project-links">
       <h2>Links & resources</h2>
       <ul>

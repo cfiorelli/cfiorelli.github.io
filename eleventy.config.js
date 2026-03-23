@@ -2,6 +2,7 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"assets": "assets"});
   eleventyConfig.addPassthroughCopy({"data": "data"});
+  eleventyConfig.addPassthroughCopy({"about/resume.pdf": "about/resume.pdf"});
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.setTemplateFormats([
