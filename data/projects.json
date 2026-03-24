@@ -10,9 +10,9 @@
     "imageAlt": "Chat bubbles and sound wave representing Musicr",
     "featured": true,
     "status": {
-      "percent": 75,
-      "label": "Live",
-      "note": "Deployed on Railway. Collecting feedback on matching quality and UX. Architecture docs on GitHub."
+      "percent": 100,
+      "label": "Closed",
+      "note": "Research and prototyping goals complete. App is live and deployed on Railway; no active development."
     },
     "category": "Applied AI",
     "tags": ["nlp", "semantic-search", "pgvector", "real-time", "typescript"],
@@ -180,7 +180,7 @@
     "heroImage": "/assets/img/projects/pathreader-1280.svg",
     "image": "/assets/img/projects/pathreader-640.svg",
     "image2x": "/assets/img/projects/pathreader-1280.svg",
-    "imageAlt": "Computer vision approach path — the origin project of the Pathreader AI incubator",
+    "imageAlt": "Pathreader AI logo — Applied AI product incubator",
     "status": {
       "percent": 40,
       "label": "In progress",
@@ -231,14 +231,14 @@
     "summary": "Browser-based PDB structure viewer built with the NGL visualization library and the RCSB Protein Data Bank API. Cycles through structures with a metadata side panel, configurable residue proximity maps (1–5 Å threshold), and interaction highlights for hydrogen bonds (≤3.5 Å), salt bridges (≤4 Å), ionic bonds, and disulfide bonds (≤2.2 Å). No build step.",
     "heroImage": "/assets/img/prothero.png",
     "heroImage2x": "/assets/img/prothero.png",
-    "image": "/assets/img/projects/protein-explorer-640.svg",
-    "image2x": "/assets/img/projects/protein-explorer-1280.svg",
+    "image": "/assets/img/lion.png",
+    "image2x": "/assets/img/lion.png",
     "imageAlt": "Protein structure browser with residue proximity map",
     "heroAlt": "Screenshot of the Protein Explorer slideshow highlighting metadata panel",
     "status": {
-      "percent": 85,
-      "label": "On hold",
-      "note": "Paused while focusing on current projects."
+      "percent": 100,
+      "label": "Closed",
+      "note": "Research and prototyping goals complete. Paused; no active development."
     },
     "category": "Computational Biology",
     "tags": ["protein-structure", "visualization", "ml"],
@@ -292,9 +292,9 @@
     "title": "Runway FOD Detection",
     "tagline": "Completed research and prototyping program — shelved for future use",
     "summary": "AI-powered runway foreign object debris detection research and prototyping program. We validated the problem through industry conversations, explored the operating model, and built early prototype software. The work is now shelved for future use.",
-    "heroImage": "/assets/img/projects/runway-fod-1280.svg",
-    "image": "/assets/img/projects/runway-fod-640.svg",
-    "image2x": "/assets/img/projects/runway-fod-1280.svg",
+    "heroImage": "/assets/img/projects/runway-fod-1280.png",
+    "image": "/assets/img/projects/runway-fod-640.png",
+    "image2x": "/assets/img/projects/runway-fod-1280.png",
     "imageAlt": "Runway grid with detection markers highlighting debris locations",
     "status": {
       "percent": 100,

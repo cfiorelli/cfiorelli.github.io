@@ -1,47 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="pr-title pr-desc">
-  <title id="pr-title">Pathreader project artwork</title>
-  <desc id="pr-desc">A computer vision viewfinder tracking an aviation approach path with detection bounding boxes.</desc>
+  <title id="pr-title">Pathreader AI</title>
+  <desc id="pr-desc">Pathreader AI — Applied AI product incubator</desc>
   <defs>
-    <linearGradient id="prGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#081520"/>
-      <stop offset="100%" stop-color="#0F2E3D"/>
+    <linearGradient id="roadGrad640" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="55%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
     </linearGradient>
+    <!-- Gradient on full text: navy for "Pathreader ", transitions to cyan at ~83% where "AI" begins -->
+    <linearGradient id="textGrad640" gradientUnits="userSpaceOnUse" x1="278" y1="0" x2="615" y2="0">
+      <stop offset="0%"  stop-color="#0d1b4b"/>
+      <stop offset="81%" stop-color="#0d1b4b"/>
+      <stop offset="84%" stop-color="#00aaff"/>
+      <stop offset="100%" stop-color="#0044cc"/>
+    </linearGradient>
+    <clipPath id="arrowClip640">
+      <path d="M 84 120 L 162 120 L 244 200 L 162 280 L 84 280 Q 54 280 54 250 L 54 150 Q 54 120 84 120 Z"/>
+    </clipPath>
   </defs>
-  <rect width="640" height="400" fill="url(#prGrad)" rx="28"/>
 
-  <!-- Viewfinder corner brackets -->
-  <path d="M80 60 L80 96 M80 60 L116 60" stroke="#34D399" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M560 60 L560 96 M560 60 L524 60" stroke="#34D399" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M80 295 L80 259 M80 295 L116 295" stroke="#34D399" stroke-width="3" fill="none" stroke-linecap="round"/>
-  <path d="M560 295 L560 259 M560 295 L524 295" stroke="#34D399" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Off-white background -->
+  <rect width="640" height="400" fill="#f7f9fc"/>
 
-  <!-- Approach path — perspective V from vanishing point -->
-  <line x1="320" y1="112" x2="120" y2="290" stroke="#7DD3FC" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.5"/>
-  <line x1="320" y1="112" x2="520" y2="290" stroke="#7DD3FC" stroke-width="1.5" stroke-dasharray="10 5" opacity="0.5"/>
-  <!-- Center-line down the path -->
-  <line x1="320" y1="112" x2="320" y2="290" stroke="#7DD3FC" stroke-width="1" stroke-dasharray="5 4" opacity="0.3"/>
+  <!-- Icon: dark navy arrow/path shape -->
+  <path d="M 84 120 L 162 120 L 244 200 L 162 280 L 84 280 Q 54 280 54 250 L 54 150 Q 54 120 84 120 Z" fill="#0d1b4b"/>
 
-  <!-- Horizon / vanishing point mark -->
-  <circle cx="320" cy="112" r="3" fill="#7DD3FC" opacity="0.6"/>
+  <!-- Winding road inside icon (clipped) -->
+  <g clip-path="url(#arrowClip640)">
+    <!-- Road base: dark blue → light blue gradient, thick stroke -->
+    <path d="M 57 268 Q 90 248 118 230 Q 150 208 178 184 Q 208 158 232 138"
+          fill="none" stroke="url(#roadGrad640)" stroke-width="42" stroke-linecap="round"/>
+    <!-- Road white center highlight -->
+    <path d="M 57 268 Q 90 248 118 230 Q 150 208 178 184 Q 208 158 232 138"
+          fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" opacity="0.68"/>
+  </g>
 
-  <!-- Detection bounding boxes at three depths -->
-  <!-- Far — small -->
-  <rect x="296" y="120" width="48" height="30" rx="3" fill="none" stroke="#34D399" stroke-width="1.2" opacity="0.55"/>
-  <!-- Mid -->
-  <rect x="270" y="172" width="100" height="56" rx="4" fill="none" stroke="#34D399" stroke-width="1.8" opacity="0.75"/>
-  <!-- Near — large, with confidence label -->
-  <rect x="230" y="230" width="180" height="50" rx="5" fill="none" stroke="#34D399" stroke-width="2.5" opacity="0.9"/>
-  <rect x="230" y="215" width="96" height="18" rx="3" fill="#34D399" opacity="0.9"/>
-  <text x="236" y="227" fill="#081520" font-family="'Segoe UI',system-ui,-apple-system" font-size="11" font-weight="700">PATH  0.96</text>
+  <!-- Neural network: 3 nodes + edges, upper-right, partially outside icon -->
+  <line x1="214" y1="137" x2="252" y2="110" stroke="#0d1b4b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="214" y1="137" x2="264" y2="150" stroke="#0d1b4b" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="252" y1="110" x2="264" y2="150" stroke="#0d1b4b" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="214" cy="137" r="8" fill="#0d1b4b"/>
+  <circle cx="252" cy="110" r="8" fill="#0d1b4b"/>
+  <circle cx="264" cy="150" r="8" fill="#0d1b4b"/>
 
-  <!-- Crosshair at mid-frame -->
-  <line x1="308" y1="200" x2="298" y2="200" stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
-  <line x1="332" y1="200" x2="342" y2="200" stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
-  <line x1="320" y1="188" x2="320" y2="178" stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
-  <line x1="320" y1="212" x2="320" y2="222" stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
-  <circle cx="320" cy="200" r="3" fill="none" stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
+  <!-- "Pathreader AI" — single text element with gradient creating the two-color effect -->
+  <text x="278" y="210"
+        fill="url(#textGrad640)"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="43" font-weight="700" letter-spacing="-0.5">Pathreader AI</text>
 
-  <!-- Bottom label -->
-  <text x="44" y="338" fill="#E0F2FE" font-family="'Segoe UI',system-ui,-apple-system" font-size="28" font-weight="700">Pathreader AI</text>
-  <text x="44" y="368" fill="#7DD3FC" font-family="'Segoe UI',system-ui,-apple-system" font-size="16" opacity="0.9">Applied AI product incubator</text>
+  <!-- Tagline -->
+  <text x="278" y="246"
+        fill="#6b7280"
+        font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+        font-size="15" font-weight="400">Applied AI product incubator</text>
 </svg>
