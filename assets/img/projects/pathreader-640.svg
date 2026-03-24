@@ -42,6 +42,6 @@
   <circle cx="320" cy="200" r="3" fill="none" stroke="#34D399" stroke-width="1.5" opacity="0.65"/>
 
   <!-- Bottom label -->
-  <text x="44" y="338" fill="#E0F2FE" font-family="'Segoe UI',system-ui,-apple-system" font-size="28" font-weight="700">Pathreader</text>
-  <text x="44" y="368" fill="#7DD3FC" font-family="'Segoe UI',system-ui,-apple-system" font-size="16" opacity="0.9">Computer vision for aviation safety</text>
+  <text x="44" y="338" fill="#E0F2FE" font-family="'Segoe UI',system-ui,-apple-system" font-size="28" font-weight="700">Pathreader AI</text>
+  <text x="44" y="368" fill="#7DD3FC" font-family="'Segoe UI',system-ui,-apple-system" font-size="16" opacity="0.9">Applied AI product incubator</text>
 </svg>
