@@ -1,5 +1,63 @@
 [
   {
+    "slug": "lowspot",
+    "title": "lowspot",
+    "tagline": "Text-first Spotify desktop client",
+    "summary": "Compact Spotify desktop client built for low-noise playback, search, and library browsing. lowspot favors dense text, a visible system log, explicit playback control, and durable local caching so anything fetched with Spotify API quota is reused after relaunch.",
+    "heroImage": "/assets/img/projects/lowspot-1280.svg",
+    "image": "/assets/img/projects/lowspot-640.svg",
+    "image2x": "/assets/img/projects/lowspot-1280.svg",
+    "imageAlt": "Compact dark desktop music client showing system log, lowspot playback control, and current track",
+    "featured": true,
+    "status": {
+      "percent": 70,
+      "label": "Active local alpha",
+      "note": "Working Tauri desktop app under active development. Current focus: playback stability, rate-limit protection, and library cache durability."
+    },
+    "category": "Desktop App",
+    "tags": ["tauri", "react", "typescript", "spotify", "desktop-app"],
+    "links": {
+      "caseStudy": "/projects/lowspot/",
+      "repo": "https://github.com/cfiorelli/lowspot"
+    },
+    "resources": [
+      {"title": "Source repository", "url": "https://github.com/cfiorelli/lowspot", "external": true}
+    ],
+    "sections": [
+      {
+        "title": "Product shape",
+        "type": "list",
+        "items": [
+          "Collapsed mode is a compact playback and search surface for everyday use.",
+          "Expanded mode opens dense library, search, queue, recently played, and settings views.",
+          "The lowspot on/off control makes playback ownership explicit instead of silently competing with other Spotify devices.",
+          "The interface intentionally avoids album art, recommendation walls, marketing panels, and duplicate helper text."
+        ]
+      },
+      {
+        "title": "Engineering notes",
+        "type": "list",
+        "items": [
+          "Tauri Store persists tokens and the library cache in macOS Application Support.",
+          "Liked Songs and Liked Albums load from cache first, then trickle-fill missing pages conservatively in the background.",
+          "Spotify API requests are tracked with diagnostics, local cooldowns, and a proactive request budget.",
+          "Playback commands verify resulting Spotify state so successful pause, skip, and context-play actions do not leave stale UI."
+        ]
+      },
+      {
+        "title": "Stack",
+        "type": "list",
+        "items": [
+          "Desktop shell: Tauri 2.",
+          "Frontend: React, TypeScript, Vite, Zustand.",
+          "Spotify integration: OAuth PKCE, Spotify Web API, and Web Playback SDK.",
+          "Development workflow: mock mode for fixture-backed UI work without spending Spotify API quota."
+        ]
+      }
+    ],
+    "updated": "2026-05-04"
+  },
+  {
     "slug": "musicr",
     "title": "Musicr",
     "tagline": "Real-time chat where every message maps to a song",
