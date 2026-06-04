@@ -121,64 +121,6 @@
     "updated": "2026-02-19"
   },
   {
-    "slug": "ai-agent-firewall",
-    "title": "AI Agent Firewall",
-    "tagline": "Policy-driven guardrails for AI agent actions",
-    "summary": "As AI agents take on business communication tasks, they need the same compliance controls applied to human employees. This prototype tackles that: upload a policy PDF, the Anthropic API extracts rule candidates, a human reviewer approves them, and the evaluation engine deterministically checks each outgoing agent message with a per-rule pass/fail trace. Rules are immutable once active — edits produce a new versioned policy set. Early prototype; evaluation engine and policy management are functional.",
-    "heroImage": "/assets/img/projects/ai-firewall-1280.svg",
-    "image": "/assets/img/projects/ai-firewall-640.svg",
-    "image2x": "/assets/img/projects/ai-firewall-1280.svg",
-    "imageAlt": "Shield and policy rule cards representing an AI agent firewall",
-    "featured": true,
-    "status": {
-      "percent": 20,
-      "label": "Prototype",
-      "note": "Core evaluation engine and policy versioning complete. UI refinement in progress. No public source repository."
-    },
-    "category": "Applied AI",
-    "tags": ["ai-safety", "llm", "policy-engine", "next-js", "typescript"],
-    "links": {
-      "caseStudy": "/projects/ai-agent-firewall/"
-    },
-    "resources": [],
-    "sections": [
-      {
-        "title": "What it does",
-        "type": "list",
-        "items": [
-          "Upload a policy PDF (e.g., an insurance contract) and extract rule candidates via the Anthropic API.",
-          "Human reviewers approve, reject, or edit candidates before rules become active.",
-          "Rules are versioned — each policy set is immutable; edits produce a new version via clone-and-edit.",
-          "The evaluation engine deterministically checks outgoing agent messages against the active policy and returns a pass/fail trace with per-rule explanations.",
-          "Magic-link auth with RBAC (admin, test_user, demo) — no passwords."
-        ]
-      },
-      {
-        "title": "Stack",
-        "type": "list",
-        "items": [
-          "Next.js 15 App Router — server and client components.",
-          "Prisma ORM + PostgreSQL — versioned policy storage and evaluation logs.",
-          "Anthropic API (@anthropic-ai/sdk) — LLM-assisted rule candidate extraction from PDFs.",
-          "pdf-parse — server-side PDF text extraction.",
-          "Railway — deployment target with volume-mounted PDF storage."
-        ]
-      },
-      {
-        "title": "Rule templates",
-        "type": "list",
-        "items": [
-          "FORBIDDEN_PHRASE — blocks/escalates messages containing prohibited language.",
-          "REQUIRED_DISCLOSURE — enforces presence of mandated disclosures based on message conditions.",
-          "REQUIRE_REASON_CODE — requires valid reason codes on denial decisions.",
-          "REQUIRE_CITATION — ensures policy or regulatory citations accompany claims.",
-          "CHANNEL_RESTRICTION — limits which communication channels may be used."
-        ]
-      }
-    ],
-    "updated": "2026-02-15"
-  },
-  {
     "slug": "wealth-distribution-viz",
     "title": "Wealth Distribution Viz",
     "tagline": "Interactive explorer for global wealth distribution data",
@@ -234,7 +176,7 @@
     "slug": "pathreader",
     "title": "Pathreader AI",
     "tagline": "Applied AI product incubator",
-    "summary": "Pathreader AI is the incubator for applied AI product research and development. It is the umbrella effort under which projects such as Musicr, AI Agent Firewall, and earlier runway FOD work are explored, prototyped, and matured into standalone products.",
+    "summary": "Pathreader AI is the incubator for applied AI product research and development. It is the umbrella effort under which projects such as Musicr and earlier runway FOD work are explored, prototyped, and matured into standalone products.",
     "heroImage": "/assets/img/projects/pathreader-1280.svg",
     "image": "/assets/img/projects/pathreader-640.svg",
     "image2x": "/assets/img/projects/pathreader-1280.svg",
@@ -242,7 +184,7 @@
     "status": {
       "percent": 40,
       "label": "In progress",
-      "note": "Active incubator. Current focus: computer vision for aviation safety. Prior completed work includes Musicr (live), AI Agent Firewall (prototype), and runway FOD research (closed)."
+      "note": "Active incubator. Current focus: computer vision for aviation safety. Prior completed work includes Musicr (live) and runway FOD research (closed)."
     },
     "category": "Applied AI",
     "tags": ["applied-ai", "incubator", "computer-vision", "aviation", "nlp"],
@@ -264,7 +206,6 @@
         "type": "list",
         "items": [
           "Musicr — Live anonymous chat where every message maps to a song via semantic search. Standalone deployed product.",
-          "AI Agent Firewall — Policy-driven compliance engine for AI agent communications. Early prototype; evaluation engine functional.",
           "Runway FOD Detection — AI-powered runway foreign object debris detection research. Research and prototyping completed; shelved for future use.",
           "Computer vision for aviation safety — Ongoing applied CV work; active development."
         ]
