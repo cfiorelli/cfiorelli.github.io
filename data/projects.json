@@ -174,54 +174,27 @@
   },
   {
     "slug": "pathreader",
-    "title": "Pathreader AI",
-    "tagline": "Applied AI product incubator",
-    "summary": "Pathreader AI is the incubator for applied AI product research and development. It is the umbrella effort under which projects such as Musicr and earlier runway FOD work are explored, prototyped, and matured into standalone products.",
+    "title": "PathReader AI",
+    "tagline": "Deterministic policy compliance for AI agents",
+    "summary": "PathReader AI builds compliance and policy infrastructure for AI agent communications.",
     "heroImage": "/assets/img/projects/pathreader-1280.svg",
     "image": "/assets/img/projects/pathreader-640.svg",
     "image2x": "/assets/img/projects/pathreader-1280.svg",
-    "imageAlt": "Pathreader AI logo — Applied AI product incubator",
+    "imageAlt": "PathReader AI logo",
     "status": {
       "percent": 40,
       "label": "In progress",
-      "note": "Active incubator. Current focus: computer vision for aviation safety. Prior completed work includes Musicr (live) and runway FOD research (closed)."
+      "note": "Active development."
     },
     "category": "Applied AI",
-    "tags": ["applied-ai", "incubator", "computer-vision", "aviation", "nlp"],
+    "tags": ["applied-ai", "policy", "compliance", "ai-agents"],
     "links": {
       "caseStudy": null,
       "repo": null
     },
     "resources": [],
-    "sections": [
-      {
-        "title": "What it is",
-        "type": "text",
-        "body": [
-          "Pathreader AI is an applied AI research and product incubator. It provides the operating context for exploring AI product ideas, building early prototypes, and deciding which efforts to mature into standalone products."
-        ]
-      },
-      {
-        "title": "Projects incubated",
-        "type": "list",
-        "items": [
-          "Musicr — Live anonymous chat where every message maps to a song via semantic search. Standalone deployed product.",
-          "Runway FOD Detection — AI-powered runway foreign object debris detection research. Research and prototyping completed; shelved for future use.",
-          "Computer vision for aviation safety — Ongoing applied CV work; active development."
-        ]
-      },
-      {
-        "title": "How projects are developed",
-        "type": "list",
-        "items": [
-          "Ideas are explored as lightweight prototypes before any commitment to a full product build.",
-          "Research includes customer and industry conversations to validate the problem before investing in software.",
-          "Prototypes that validate well are matured into standalone products or continued as active projects.",
-          "Completed efforts are documented and shelved, preserving option value for future resumption."
-        ]
-      }
-    ],
-    "updated": "2026-03-23"
+    "sections": [],
+    "updated": "2026-06-04"
   },
   {
     "slug": "protein-explorer",
@@ -331,7 +304,7 @@
         "title": "Current status",
         "type": "text",
         "body": [
-          "The research and prototyping phase is complete. The work is shelved and preserved — not abandoned. A future patent filing is under consideration for the persistence-tracking approach. This effort was an early project within what became Pathreader AI."
+          "The research and prototyping phase is complete. The work is shelved and preserved — not abandoned."
         ]
       }
     ],
