@@ -176,16 +176,16 @@
     "slug": "pathreader",
     "title": "PathReader AI",
     "tagline": "Deterministic policy compliance for AI agents",
-    "summary": "PathReader AI builds compliance and policy infrastructure for AI agent communications.",
+    "summary": "PathReader turns your existing policy documents into deterministic enforcement rules.",
     "heroImage": "/assets/img/projects/pathreader-1280.svg",
     "image": "/assets/img/projects/pathreader-640.svg",
     "image2x": "/assets/img/projects/pathreader-1280.svg",
     "imageAlt": "PathReader AI logo",
     "featured": true,
     "status": {
-      "percent": 60,
-      "label": "Active",
-      "note": "Active development."
+      "percent": 80,
+      "label": "Pre-launch",
+      "note": "End-to-end functional. Polishing before first customer."
     },
     "category": "Applied AI",
     "tags": ["applied-ai", "policy", "compliance", "ai-agents"],

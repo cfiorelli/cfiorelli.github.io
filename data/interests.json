@@ -1,5 +1,23 @@
 [
   {
+    "title": "Structured Outputs in LLMs — Enforcing JSON Schema at Inference Time",
+    "url": "https://arxiv.org/abs/2307.09702",
+    "tags": ["LLM", "Structured Output", "Compliance"],
+    "addedAt": "2026-06-01"
+  },
+  {
+    "title": "How Enterprises Are Actually Deploying AI Agents in 2025",
+    "url": "https://a16z.com/ai-agents-enterprise/",
+    "tags": ["AI Agents", "Enterprise", "Deployment"],
+    "addedAt": "2026-04-18"
+  },
+  {
+    "title": "Regulatory Compliance as Code — From Documents to Enforceable Rules",
+    "url": "https://martinfowler.com/articles/compliance-as-code.html",
+    "tags": ["Compliance", "Policy", "Engineering"],
+    "addedAt": "2026-03-07"
+  },
+  {
     "title": "pgvector: Open-source Vector Similarity Search for Postgres",
     "url": "https://github.com/pgvector/pgvector",
     "tags": ["Vector Search", "PostgreSQL", "Embeddings"],

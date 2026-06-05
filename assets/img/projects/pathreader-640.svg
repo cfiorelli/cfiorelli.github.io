@@ -1,57 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="pr-title pr-desc">
-  <title id="pr-title">Pathreader AI</title>
-  <desc id="pr-desc">Pathreader AI — Applied AI product incubator</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="pr-title">
+  <title id="pr-title">PathReader AI</title>
   <defs>
-    <linearGradient id="roadGrad640" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1e3a8a"/>
-      <stop offset="55%" stop-color="#2563eb"/>
+    <linearGradient id="roadGrad" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="60%" stop-color="#3b82f6"/>
       <stop offset="100%" stop-color="#93c5fd"/>
     </linearGradient>
-    <!-- Gradient on full text: navy for "Pathreader ", transitions to cyan at ~83% where "AI" begins -->
-    <linearGradient id="textGrad640" gradientUnits="userSpaceOnUse" x1="278" y1="0" x2="615" y2="0">
-      <stop offset="0%"  stop-color="#0d1b4b"/>
-      <stop offset="81%" stop-color="#0d1b4b"/>
-      <stop offset="84%" stop-color="#00aaff"/>
-      <stop offset="100%" stop-color="#0044cc"/>
-    </linearGradient>
-    <clipPath id="arrowClip640">
-      <path d="M 84 120 L 162 120 L 244 200 L 162 280 L 84 280 Q 54 280 54 250 L 54 150 Q 54 120 84 120 Z"/>
-    </clipPath>
   </defs>
 
-  <!-- Off-white background -->
+  <!-- Background -->
   <rect width="640" height="400" fill="#f7f9fc"/>
 
-  <!-- Icon: dark navy arrow/path shape -->
-  <path d="M 84 120 L 162 120 L 244 200 L 162 280 L 84 280 Q 54 280 54 250 L 54 150 Q 54 120 84 120 Z" fill="#0d1b4b"/>
+  <!-- Logo mark: chevron/shield shape matching the uploaded logo -->
+  <g transform="translate(140, 200)">
+    <!-- Outer chevron body -->
+    <path d="M -72 -90 L 40 -90 L 110 0 L 40 90 L -72 90 Q -98 90 -98 64 L -98 -64 Q -98 -90 -72 -90 Z"
+          fill="#1e3a8a"/>
 
-  <!-- Winding road inside icon (clipped) -->
-  <g clip-path="url(#arrowClip640)">
-    <!-- Road base: dark blue → light blue gradient, thick stroke -->
-    <path d="M 57 268 Q 90 248 118 230 Q 150 208 178 184 Q 208 158 232 138"
-          fill="none" stroke="url(#roadGrad640)" stroke-width="42" stroke-linecap="round"/>
-    <!-- Road white center highlight -->
-    <path d="M 57 268 Q 90 248 118 230 Q 150 208 178 184 Q 208 158 232 138"
-          fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" opacity="0.68"/>
+    <!-- Winding road / path inside -->
+    <clipPath id="chevClip">
+      <path d="M -72 -90 L 40 -90 L 110 0 L 40 90 L -72 90 Q -98 90 -98 64 L -98 -64 Q -98 -90 -72 -90 Z"/>
+    </clipPath>
+    <g clip-path="url(#chevClip)">
+      <path d="M -95 72 Q -60 50 -30 24 Q 0 -2 28 -28 Q 58 -56 88 -78"
+            fill="none" stroke="url(#roadGrad)" stroke-width="36" stroke-linecap="round"/>
+      <path d="M -95 72 Q -60 50 -30 24 Q 0 -2 28 -28 Q 58 -56 88 -78"
+            fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="round" opacity="0.65"/>
+    </g>
+
+    <!-- Neural network nodes — upper right, partially outside chevron -->
+    <line x1="68" y1="-62" x2="100" y2="-88" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="68" y1="-62" x2="108" y2="-44" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="100" y1="-88" x2="108" y2="-44" stroke="#1e3a8a" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="68"  cy="-62" r="7" fill="#1e3a8a"/>
+    <circle cx="100" cy="-88" r="7" fill="#1e3a8a"/>
+    <circle cx="108" cy="-44" r="7" fill="#1e3a8a"/>
   </g>
 
-  <!-- Neural network: 3 nodes + edges, upper-right, partially outside icon -->
-  <line x1="214" y1="137" x2="252" y2="110" stroke="#0d1b4b" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="214" y1="137" x2="264" y2="150" stroke="#0d1b4b" stroke-width="2.5" stroke-linecap="round"/>
-  <line x1="252" y1="110" x2="264" y2="150" stroke="#0d1b4b" stroke-width="2.5" stroke-linecap="round"/>
-  <circle cx="214" cy="137" r="8" fill="#0d1b4b"/>
-  <circle cx="252" cy="110" r="8" fill="#0d1b4b"/>
-  <circle cx="264" cy="150" r="8" fill="#0d1b4b"/>
-
-  <!-- "Pathreader AI" — single text element with gradient creating the two-color effect -->
-  <text x="278" y="210"
-        fill="url(#textGrad640)"
+  <!-- Company name: "PathReader" in navy, "AI" in blue -->
+  <text x="278" y="188"
         font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
-        font-size="43" font-weight="700" letter-spacing="-0.5">Pathreader AI</text>
+        font-size="52" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#1e3a8a">PathReader</tspan><tspan fill="#3b82f6"> AI</tspan>
+  </text>
 
   <!-- Tagline -->
-  <text x="278" y="246"
+  <text x="278" y="228"
         fill="#6b7280"
         font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
-        font-size="15" font-weight="400">Applied AI product incubator</text>
+        font-size="15" font-weight="400">Deterministic policy compliance for AI agents</text>
 </svg>
