@@ -176,25 +176,27 @@
     "slug": "pathreader",
     "title": "PathReader AI",
     "tagline": "Deterministic policy compliance for AI agents",
-    "summary": "PathReader AI builds compliance and policy infrastructure for AI agent communications.",
+    "summary": "PathReader AI builds compliance and policy infrastructure for AI agent communications. Co-founder & CTO.",
     "heroImage": "/assets/img/projects/pathreader-1280.svg",
     "image": "/assets/img/projects/pathreader-640.svg",
     "image2x": "/assets/img/projects/pathreader-1280.svg",
     "imageAlt": "PathReader AI logo",
+    "featured": true,
     "status": {
-      "percent": 40,
-      "label": "In progress",
+      "percent": 60,
+      "label": "Active",
       "note": "Active development."
     },
     "category": "Applied AI",
     "tags": ["applied-ai", "policy", "compliance", "ai-agents"],
     "links": {
       "caseStudy": null,
+      "website": "https://pathreader.ai/",
       "repo": null
     },
     "resources": [],
     "sections": [],
-    "updated": "2026-06-04"
+    "updated": "2026-06-05"
   },
   {
     "slug": "protein-explorer",
@@ -262,8 +264,8 @@
   {
     "slug": "runway-fod-detection",
     "title": "Runway FOD Detection",
-    "tagline": "Completed research and prototyping program — shelved for future use",
-    "summary": "AI-powered runway foreign object debris detection research and prototyping program. We validated the problem through industry conversations, explored the operating model, and built early prototype software. The work is now shelved for future use.",
+    "tagline": "UW AI class project — computer vision for airport safety",
+    "summary": "University of Washington AI course project exploring the application of computer vision to runway foreign object debris detection. Academic research and prototype work completed as part of the UW AI Product Management program.",
     "heroImage": "/assets/img/projects/runway-fod-1280.png",
     "image": "/assets/img/projects/runway-fod-640.png",
     "image2x": "/assets/img/projects/runway-fod-1280.png",
@@ -271,44 +273,25 @@
     "status": {
       "percent": 100,
       "label": "Closed",
-      "note": "Research and prototyping complete. Shelved for future use — not abandoned."
+      "note": "Academic project — complete."
     },
-    "category": "Research",
-    "tags": ["computer-vision", "aviation", "safety", "research"],
+    "category": "Academic",
+    "tags": ["computer-vision", "aviation", "safety", "academic"],
     "links": {
       "caseStudy": "/projects/runway-fod-detection/",
       "repo": null
     },
-    "resources": [
-      {"title": "Concept brief", "url": "/projects/runway-fod-detection/", "note": "Project overview"}
-    ],
+    "resources": [],
     "sections": [
       {
-        "title": "Problem",
+        "title": "Overview",
         "type": "text",
         "body": [
-          "Foreign object debris on active runways is a documented safety hazard. Detection today relies on manual inspection and expensive dedicated sensor systems. The opportunity was to use computer vision to automate detection and triage."
-        ]
-      },
-      {
-        "title": "What we did",
-        "type": "list",
-        "items": [
-          "Conducted industry conversations with airport operations and ground handling stakeholders to validate the problem and understand the operating environment.",
-          "Explored operating models — airport-direct, ground handler, and third-party integrator — to assess go-to-market fit.",
-          "Built early prototype software pairing YOLO object detection with RCNN-based persistence tracking to reduce false positives.",
-          "Documented the technical architecture and dataset requirements for potential future resumption."
-        ]
-      },
-      {
-        "title": "Current status",
-        "type": "text",
-        "body": [
-          "The research and prototyping phase is complete. The work is shelved and preserved — not abandoned."
+          "UW AI Product Management course project. Explored how computer vision techniques could be applied to the problem of foreign object debris detection on active runways. The project covered problem framing, research into existing detection approaches, and a prototype implementation as part of coursework."
         ]
       }
     ],
-    "updated": "2026-03-23"
+    "updated": "2026-06-05"
   },
   {
     "slug": "mini-llm-semantic-scholar",

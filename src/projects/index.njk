@@ -56,7 +56,11 @@ permalink: projects/index.html
             </div>
           {% endif %}
           <div class="card-actions">
-            <a class="btn" href="{{ caseStudyUrl }}">Project page</a>
+            {% if links.website %}
+              <a class="btn" href="{{ links.website }}" target="_blank" rel="noopener noreferrer">Visit website</a>
+            {% else %}
+              <a class="btn" href="{{ caseStudyUrl }}">Project page</a>
+            {% endif %}
             {% if links.demo %}
               <a class="btn subtle" href="{{ links.demo }}" target="_blank" rel="noopener noreferrer">Live demo</a>
             {% endif %}
