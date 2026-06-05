@@ -14,7 +14,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addGlobalData("site", {
     title: "C. Fiorelli",
-    description: "Technical Product & Program Manager building production AI systems, computer vision products, and data platforms. 10+ years experience with Ai2, Google, Microsoft.",
+    description: "Co-founder & CTO, PathReader AI. Technical PM with 10+ years shipping AI/ML products at Ai2, Google, and Microsoft. Open to advisory and consulting.",
     url: "https://cfiorelli.github.io",
     ogImage: "/assets/img/lion.png"
   });
