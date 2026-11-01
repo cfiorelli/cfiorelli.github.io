@@ -19,8 +19,6 @@
 ├── assets/                # Global CSS, JS, and images
 ├── data/                  # JSON/JS data sources consumed by Eleventy
 ├── src/                   # Eleventy templates (Nunjucks)
-├── projects/, publications/, interests/
-│                          # Legacy static pages retained for reference
 └── eleventy.config.js     # Eleventy configuration
 ```
 

@@ -32,15 +32,12 @@ layout: layout
       <p>{{ project.summary }}</p>
     {% endif %}
     {% if project.status %}
-      {% set pct = project.status.percent | default(0) %}
       <div class="project-progress project-progress--detail">
-        <div class="project-progress__pill">
-          <span class="project-progress__percent">{{ pct }}%</span>
-          {% if project.status.label %}<span class="project-progress__label">{{ project.status.label }}</span>{% endif %}
-        </div>
-        <div class="project-progress__bar">
-          <div class="project-progress__bar-fill" style="--progress: {{ pct }};"></div>
-        </div>
+        {% if project.status.label %}
+          <div class="project-progress__pill">
+            <span class="project-progress__label">{{ project.status.label }}</span>
+          </div>
+        {% endif %}
         {% if project.status.note %}<p class="project-progress__note muted">{{ project.status.note }}</p>{% endif %}
       </div>
     {% endif %}

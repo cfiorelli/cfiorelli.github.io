@@ -10,7 +10,6 @@
     "imageAlt": "Compact dark desktop music client showing system log, lowspot playback control, and current track",
     "featured": true,
     "status": {
-      "percent": 70,
       "label": "Active local alpha",
       "note": "Working Tauri desktop app under active development. Current focus: playback stability, rate-limit protection, and library cache durability."
     },
@@ -68,19 +67,16 @@
     "imageAlt": "Chat bubbles and sound wave representing Musicr",
     "featured": true,
     "status": {
-      "percent": 100,
       "label": "Closed",
-      "note": "Research and prototyping goals complete. App is live and deployed on Railway; no active development."
+      "note": "Research and prototyping goals complete. No active development."
     },
     "category": "Applied AI",
     "tags": ["nlp", "semantic-search", "pgvector", "real-time", "typescript"],
     "links": {
       "caseStudy": "/projects/musicr/",
-      "repo": "https://github.com/cfiorelli/musicr",
-      "demo": "https://musicrweb-production.up.railway.app/"
+      "repo": "https://github.com/cfiorelli/musicr"
     },
     "resources": [
-      {"title": "Live app", "url": "https://musicrweb-production.up.railway.app/", "external": true},
       {"title": "Source repository", "url": "https://github.com/cfiorelli/musicr", "external": true}
     ],
     "sections": [
@@ -131,7 +127,6 @@
     "imageAlt": "Bar chart of global wealth distribution by bracket",
     "featured": true,
     "status": {
-      "percent": 90,
       "label": "Live",
       "note": "Live and stable. Future work: update to newer UBS annual data, regional breakdowns, historical time-series."
     },
@@ -183,9 +178,7 @@
     "imageAlt": "PathReader AI logo",
     "featured": true,
     "status": {
-      "percent": 80,
-      "label": "Pre-launch",
-      "note": "End-to-end functional. Polishing before first customer."
+      "label": "Live, in pilots"
     },
     "category": "Applied AI",
     "tags": ["applied-ai", "policy", "compliance", "ai-agents"],
@@ -210,7 +203,6 @@
     "imageAlt": "Protein structure browser with residue proximity map",
     "heroAlt": "Screenshot of the Protein Explorer slideshow highlighting metadata panel",
     "status": {
-      "percent": 100,
       "label": "Closed",
       "note": "Research and prototyping goals complete. Paused; no active development."
     },
@@ -271,7 +263,6 @@
     "image2x": "/assets/img/projects/runway-fod-1280.png",
     "imageAlt": "Runway grid with detection markers highlighting debris locations",
     "status": {
-      "percent": 100,
       "label": "Closed",
       "note": "Academic project — complete."
     },
@@ -303,7 +294,6 @@
     "image2x": "/assets/img/projects/mini-llm-1280.png",
     "imageAlt": "Robot assistant figurine beside machine learning books",
     "status": {
-      "percent": 5,
       "label": "On hold",
       "note": "Concept paused while focusing on current projects."
     },
@@ -340,7 +330,6 @@
         "title": "Community & tutorials",
         "type": "links",
         "items": [
-          {"title": "Official Semantic Scholar API tutorial", "url": "https://www.semanticscholar.org/product/api", "external": true},
           {"title": "Advanced Usage of Semantic Scholar API [Webinar]", "url": "https://www.youtube.com/watch?v=lje07xC2y00", "external": true},
           {"title": "Self-Hosting Semantic Scholar Data [Webinar]", "url": "https://www.youtube.com/watch?v=XYOVciAZi7I", "external": true},
           {"title": "Getting Started with Semantic Scholar Academic Graph API [Webinar]", "url": "https://www.youtube.com/watch?v=_BQwU2i_nh4", "external": true}
@@ -380,7 +369,6 @@
     "image2x": "/assets/img/ideabacklog.png",
     "imageAlt": "Notebook with project ideas sketched across the page",
     "status": {
-      "percent": 35,
       "label": "Backlog grooming",
       "note": "Capturing ideas and promoting built experiments that still need docs."
     },
@@ -394,7 +382,7 @@
       {
         "title": "Idea inventory",
         "type": "html",
-        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong><a href=\"/projects/musicr/\">Musicr</a></strong> — Live anonymous chat where every message is matched to a song via semantic similarity (pgvector + 114k-track catalog).</td><td>Built · <a href=\"https://musicrweb-production.up.railway.app/\" target=\"_blank\" rel=\"noopener\">Live</a></td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
+        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong><a href=\"/projects/musicr/\">Musicr</a></strong> — Live anonymous chat where every message is matched to a song via semantic similarity (pgvector + 114k-track catalog).</td><td>Built · Closed</td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
       }
     ],
     "updated": "2026-01-04"
