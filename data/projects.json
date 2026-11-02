@@ -60,7 +60,7 @@
     "slug": "musicr",
     "title": "Musicr",
     "tagline": "Real-time chat where every message maps to a song",
-    "summary": "Live anonymous chat app built around one question: can sentence embeddings replace music taste discovery? Type anything — a mood, a memory, a passing thought — and Musicr matches it to a song from a 114k-track catalog via pgvector HNSW cosine search. The embedding model runs server-side (no OpenAI); matching uses song metadata, not lyrics. No accounts, no sign-up.",
+    "summary": "Live anonymous chat app built around one question: can sentence embeddings replace music taste discovery? Type anything (a mood, a memory, a passing thought) and Musicr matches it to a song from a 114k-track catalog via pgvector HNSW cosine search. The embedding model runs server-side (no OpenAI); matching uses song metadata, not lyrics. No accounts, no sign-up.",
     "heroImage": "/assets/img/projects/musicr-1280.svg",
     "image": "/assets/img/projects/musicr-640.svg",
     "image2x": "/assets/img/projects/musicr-1280.svg",
@@ -84,7 +84,7 @@
         "title": "How it works",
         "type": "list",
         "items": [
-          "User types any message — a mood, a memory, an observation — in the anonymous chat.",
+          "User types any message (a mood, a memory, an observation) in the anonymous chat.",
           "The server embeds the text with Xenova/all-MiniLM-L6-v2 (384-dim, runs server-side, no external API needed).",
           "pgvector performs HNSW cosine similarity search across a 114k-song catalog (title, artist, tags, album metadata).",
           "The matched song appears in the chat instantly. Click it to listen on YouTube.",
@@ -96,19 +96,19 @@
         "type": "list",
         "items": [
           "API: Fastify + WebSocket, per-IP rate limiting, maintenance mode, hard 500-char input cap.",
-          "DB: PostgreSQL + pgvector — HNSW index on 384-dim embedding vectors, cosine distance operator (<=>).",
-          "Embeddings: Xenova/all-MiniLM-L6-v2 local model — no OpenAI dependency in production.",
+          "DB: PostgreSQL + pgvector, HNSW index on 384-dim embedding vectors, cosine distance operator (<=>).",
+          "Embeddings: Xenova/all-MiniLM-L6-v2 local model. No OpenAI dependency in production.",
           "Frontend: React 18 + Zustand + Tailwind CSS + Vite.",
           "Monorepo: pnpm workspaces (apps/api, apps/web, shared/types).",
-          "Deployment: Railway — API via Dockerfile, web via Nixpacks, PostgreSQL addon with pgvector."
+          "Deployment: Railway (API via Dockerfile, web via Nixpacks, PostgreSQL addon with pgvector)."
         ]
       },
       {
         "title": "Design decisions",
         "type": "list",
         "items": [
-          "Fully anonymous — users get a hashed-IP handle; no PII stored.",
-          "Matching uses song metadata only (no lyrics), so results are sometimes uncanny and sometimes a stretch — that tension is intentional.",
+          "Fully anonymous: users get a hashed-IP handle; no PII stored.",
+          "Matching uses song metadata only (no lyrics), so results are sometimes uncanny and sometimes a stretch. That tension is intentional.",
           "Catalog seeded with diversity caps per artist to ensure breadth across 114k tracks.",
           "Launched on Show HN with security hardening: Gitleaks CI, Dependabot, secret rotation runbook."
         ]
@@ -120,7 +120,7 @@
     "slug": "wealth-distribution-viz",
     "title": "Wealth Distribution Viz",
     "tagline": "Interactive explorer for global wealth distribution data",
-    "summary": "No-build static visualization of global wealth distribution using UBS Global Wealth Report 2023 data (2022 snapshot). Define custom wealth brackets and explore how 3.77 billion adults are distributed from $0 to $100B+. 76 fine-grained bins: real UBS survey data plus Pareto-modeled ultra-high-wealth ranges (α 1.3–1.5). Pure HTML, CSS, and Chart.js — open and run in any browser.",
+    "summary": "No-build static visualization of global wealth distribution using UBS Global Wealth Report 2023 data (2022 snapshot). Define custom wealth brackets and explore how 3.77 billion adults are distributed from $0 to $100B+. 76 fine-grained bins: real UBS survey data plus Pareto-modeled ultra-high-wealth ranges (α 1.3–1.5). Pure HTML, CSS, and Chart.js. Open and run in any browser.",
     "heroImage": "/assets/img/projects/wealth-viz-1280.svg",
     "image": "/assets/img/projects/wealth-viz-640.svg",
     "image2x": "/assets/img/projects/wealth-viz-1280.svg",
@@ -150,14 +150,14 @@
           "Toggle between percentage-of-population and absolute headcount views.",
           "Coverage analytics show what share of global wealth and population your brackets capture.",
           "76 data bins from $0 to $100B+: real UBS data, linear interpolation, and Pareto-modeled ultra-high-wealth tail (α = 1.3–1.5).",
-          "No build step, no backend — pure HTML, CSS, and JavaScript with Chart.js via CDN. Just open and run."
+          "No build step, no backend: pure HTML, CSS, and JavaScript with Chart.js via CDN. Just open and run."
         ]
       },
       {
         "title": "Data methodology",
         "type": "list",
         "items": [
-          "Source: UBS Global Wealth Report 2023 (2022 data) — $454.4T total wealth, 3.77B adults tracked.",
+          "Source: UBS Global Wealth Report 2023 (2022 data), $454.4T total wealth, 3.77B adults tracked.",
           "Original data provides 4 coarse bins; fine-grained bins derived via linear interpolation ($0–$1M) and Pareto distribution modeling ($1M+).",
           "All bins normalized to sum to exact global totals for mathematical consistency.",
           "Data quality clearly labelled per bin: real, interpolated, or modeled.",
@@ -178,7 +178,7 @@
     "imageAlt": "PathReader AI logo",
     "featured": true,
     "status": {
-      "label": "Live, in pilots"
+      "label": "Live, pre-pilot"
     },
     "category": "Applied AI",
     "tags": ["applied-ai", "policy", "compliance", "ai-agents"],
@@ -256,7 +256,7 @@
   {
     "slug": "runway-fod-detection",
     "title": "Runway FOD Detection",
-    "tagline": "UW AI class project — computer vision for airport safety",
+    "tagline": "UW AI class project: computer vision for airport safety",
     "summary": "University of Washington AI course project exploring the application of computer vision to runway foreign object debris detection. Academic research and prototype work completed as part of the UW AI Product Management program.",
     "heroImage": "/assets/img/projects/runway-fod-1280.png",
     "image": "/assets/img/projects/runway-fod-640.png",
@@ -264,7 +264,7 @@
     "imageAlt": "Runway grid with detection markers highlighting debris locations",
     "status": {
       "label": "Closed",
-      "note": "Academic project — complete."
+      "note": "Academic project. Complete."
     },
     "category": "Academic",
     "tags": ["computer-vision", "aviation", "safety", "academic"],
@@ -338,7 +338,7 @@
       {
         "title": "Example snippets",
         "type": "html",
-        "content": "<p>Small runnable examples to get started.</p>\n<details><summary>Python (requests) — fetch paper metadata</summary><pre><code>import requests\nresp = requests.get(\"https://api.semanticscholar.org/graph/v1/paper/ARXIV:2301.10140?fields=title,abstract,authors,year\")\nprint(resp.json())</code></pre></details>\n<details><summary>curl — search</summary><pre><code>curl \"https://api.semanticscholar.org/graph/v1/paper/search?query=semantic+search&limit=5\"</code></pre></details>\n<details><summary>Client-side pattern (proxy)</summary><pre><code>// Client calls your backend: GET /api/s2/paper/ARXIV:2301.10140\n// Backend forwards to Semantic Scholar with your API key and returns the response.\nfetch('/api/s2/paper/ARXIV:2301.10140').then(r=&gt;r.json()).then(console.log);</code></pre></details>"
+        "content": "<p>Small runnable examples to get started.</p>\n<details><summary>Python (requests): fetch paper metadata</summary><pre><code>import requests\nresp = requests.get(\"https://api.semanticscholar.org/graph/v1/paper/ARXIV:2301.10140?fields=title,abstract,authors,year\")\nprint(resp.json())</code></pre></details>\n<details><summary>curl: search</summary><pre><code>curl \"https://api.semanticscholar.org/graph/v1/paper/search?query=semantic+search&limit=5\"</code></pre></details>\n<details><summary>Client-side pattern (proxy)</summary><pre><code>// Client calls your backend: GET /api/s2/paper/ARXIV:2301.10140\n// Backend forwards to Semantic Scholar with your API key and returns the response.\nfetch('/api/s2/paper/ARXIV:2301.10140').then(r=&gt;r.json()).then(console.log);</code></pre></details>"
       },
       {
         "title": "Future",
@@ -382,7 +382,7 @@
       {
         "title": "Idea inventory",
         "type": "html",
-        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong> — Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong> — Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong> — Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong><a href=\"/projects/musicr/\">Musicr</a></strong> — Live anonymous chat where every message is matched to a song via semantic similarity (pgvector + 114k-track catalog).</td><td>Built · Closed</td></tr><tr><td><strong>Endless Quiz</strong> — LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong> — Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
+        "content": "<table class=\"ideas-table\"><thead><tr><th>Idea</th><th>Status</th></tr></thead><tbody><tr><td><strong>Star Trek Progress Dashboard</strong>: Monitor scientific research and present humanity's progress toward being \"starship ready\" with a Trek-themed interface tracking advances in propulsion, materials, computing, medicine, etc.</td><td>Idea · Not started</td></tr><tr><td><strong>AI RPG Companion</strong>: Game where you help a pre-AGI entity navigate a world and achieve goals. Care for and guide an AI character that's &ldquo;some % less human&rdquo; through collaborative problem-solving.</td><td>Idea · Not started</td></tr><tr><td><strong>Persona-Based Navigation</strong>: Routing system like Google Maps but paths are generated based on user personas: &ldquo;avoid traffic at all costs,&rdquo; &ldquo;scenic route optimizer,&rdquo; or entertainment modes like &ldquo;what would a bank robber do&rdquo; (for fun only).</td><td>Idea · Not started</td></tr><tr><td><strong><a href=\"/projects/musicr/\">Musicr</a></strong>: Live anonymous chat where every message is matched to a song via semantic similarity (pgvector + 114k-track catalog).</td><td>Built · Closed</td></tr><tr><td><strong>Endless Quiz</strong>: LLM-powered quiz that generates new questions based on user interests and adapts difficulty to skill level. Personalized learning through infinite question generation.</td><td>Idea · Not started</td></tr><tr><td><strong>Scientific Podcast Platform</strong>: Podcast focused on making scientific research accessible and engaging for general audiences.</td><td>Idea · Not started</td></tr><tr><td>Facial recognition eyeglass frame reverse matching for style</td><td>Idea · Not started</td></tr><tr><td>Food scan upload to shoe manufacturer for perfect shoe builder</td><td>Idea · Not started</td></tr><tr><td>Automated self-hosted privacy audit tool inspired by EFF principles</td><td>Idea · Not started</td></tr><tr><td>Keyword clustering Flask app to optimize CPC</td><td>Built · Pending documentation</td></tr></tbody></table>"
       }
     ],
     "updated": "2026-01-04"

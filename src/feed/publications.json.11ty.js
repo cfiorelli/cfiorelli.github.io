@@ -39,7 +39,7 @@ module.exports = class PublicationsJsonFeed {
 
     return JSON.stringify({
       version: "https://jsonfeed.org/version/1",
-      title: `${site.title || "Site"} — Publications`,
+      title: `${site.title || "Site"}: Publications`,
       home_page_url: homeUrl,
       feed_url: feedUrl,
       description: site.description || "Recent publications and reports",

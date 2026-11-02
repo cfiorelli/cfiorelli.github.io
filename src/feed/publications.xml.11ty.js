@@ -53,7 +53,7 @@ module.exports = class PublicationsRssFeed {
     return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>${escapeXml(`${site.title || "Site"} — Publications`)}</title>
+    <title>${escapeXml(`${site.title || "Site"}: Publications`)}</title>
     <link>${escapeXml(channelLink)}</link>
     <description>${escapeXml(site.description || "Recent publications and reports")}</description>
     <lastBuildDate>${lastBuild}</lastBuildDate>

@@ -75,7 +75,7 @@ layout: layout
           {% elif type == 'links' and block.items %}
             <ul class="project-section__links">
               {% for item in block.items %}
-                <li><a href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.title }}</a>{% if item.note %} — <span class="muted">{{ item.note }}</span>{% endif %}</li>
+                <li><a href="{{ item.url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.title }}</a>{% if item.note %}: <span class="muted">{{ item.note }}</span>{% endif %}</li>
               {% endfor %}
             </ul>
           {% elif type == 'gallery' and block.images %}
@@ -106,7 +106,7 @@ layout: layout
       <h2>Links & resources</h2>
       <ul>
         {% for link in project.resources %}
-          <li><a href="{{ link.url }}"{% if link.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a>{% if link.note %} — <span class="muted">{{ link.note }}</span>{% endif %}</li>
+          <li><a href="{{ link.url }}"{% if link.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a>{% if link.note %}: <span class="muted">{{ link.note }}</span>{% endif %}</li>
         {% endfor %}
       </ul>
     </section>

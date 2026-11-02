@@ -12,7 +12,7 @@
     "addedAt": "2026-02-19"
   },
   {
-    "title": "HNSW Explained — Approximate Nearest Neighbor Search",
+    "title": "HNSW Explained: Approximate Nearest Neighbor Search",
     "url": "https://www.pinecone.io/learn/series/faiss/hnsw/",
     "tags": ["Vector Search", "ANN", "ML Infrastructure"],
     "addedAt": "2026-02-18"
