@@ -39,7 +39,7 @@ module.exports = class InterestsJsonFeed {
 
     return JSON.stringify({
       version: "https://jsonfeed.org/version/1",
-      title: `${site.title || "Site"} — Interests`,
+      title: `${site.title || "Site"}: Interests`,
       home_page_url: homeUrl,
       feed_url: feedUrl,
       description: site.description || "Latest interests and links",

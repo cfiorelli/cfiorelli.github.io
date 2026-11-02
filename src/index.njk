@@ -1,7 +1,8 @@
 ---
 layout: layout
-title: Home
-description: C. Fiorelli — Co-founder & CTO, PathReader AI. 10+ years shipping AI/ML at Ai2, Google Geo, and Microsoft Bing.
+title: Chris Fiorelli, Co-founder & CTO, PathReader AI
+standaloneTitle: true
+description: Chris Fiorelli, Co-founder & CTO, PathReader AI. I build the product. Previously 10+ years shipping AI/ML products at Ai2, Google Geo, and Microsoft Bing ML.
 permalink: index.html
 ---
 {% set featuredProjects = projects | selectattr("featured") | sort(attribute='updated') | reverse %}
@@ -9,8 +10,7 @@ permalink: index.html
 
 <section class="hero">
   <h1 class="hero-title">Co-founder &amp; CTO, PathReader AI</h1>
-  <p class="hero-sub">10+ years shipping AI/ML products at Ai2, Google Geo, and Microsoft Bing. Co-founder &amp; CTO, PathReader AI.</p>
-  <p class="hero-meta">Open to advisory and consulting engagements in AI product development.</p>
+  <p class="hero-sub">I build the product. Previously 10+ years shipping AI/ML products at Ai2, Google Geo, and Microsoft Bing ML.</p>
 </section>
 
 <section class="projects-preview" aria-labelledby="projects-heading">
@@ -39,14 +39,11 @@ permalink: index.html
         {% endif %}
         <div class="card-body">
           {% if project.status %}
-            {% set statusPercent = project.status.percent | default(0) %}
-            {% set statusLabel = project.status.label %}
-            <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %} aria-label="{{ statusPercent }}% complete{% if statusLabel %} — {{ statusLabel }}{% endif %}">
-              <span class="project-status__percent">{{ statusPercent }}%</span>
-              {% if statusLabel %}
-                <span class="project-status__label">{{ statusLabel }}</span>
-              {% endif %}
-            </div>
+            {% if project.status.label %}
+              <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %}>
+                <span class="project-status__pill">{{ project.status.label }}</span>
+              </div>
+            {% endif %}
           {% endif %}
           <h3>{{ project.title }}</h3>
           {% if project.tagline %}
@@ -123,15 +120,14 @@ permalink: index.html
 <section class="about-preview" aria-labelledby="about-heading">
   <div class="about-preview-card">
     <h2 id="about-heading">About Christopher</h2>
-    <p class="muted">Technical Product & Program Manager with 10+ years shipping AI and ML products across research labs and consumer-scale platforms. Prior work at Ai2, Google Geo, and Microsoft Bing ML. Hands-on with Python, SQL, and production ML systems.</p>
+    <p class="muted">Co-founder &amp; CTO of PathReader AI. I build the product. Before that, 10+ years shipping AI and ML products at Ai2, Google Geo (Street View / Maps), and Microsoft Bing ML, across research labs and consumer-scale platforms. Hands-on with Python, SQL, and production ML systems.</p>
     <ul class="about-preview-list">
       <li>Co-founder &amp; CTO, <a href="/projects/pathreader/">PathReader AI</a> | Deterministic policy compliance for AI agents</li>
-      <li>Professional experience: <a href="https://allenai.org" target="_blank" rel="noopener noreferrer">Ai2</a>, <a href="https://mapsplatform.google.com/resources/blog/?tags=&year=all" target="_blank" rel="noopener noreferrer">Google Geo (Street View / Maps)</a>, <a href="https://www.microsoft.com/en-us/research/" target="_blank" rel="noopener noreferrer">Microsoft Bing ML</a></li>
+      <li>Professional experience: <a href="https://allenai.org" target="_blank" rel="noopener noreferrer">Ai2</a>, Google Geo (Street View / Maps), Microsoft Bing ML</li>
       <li>Coordinated <a href="https://defcon.org/" target="_blank" rel="noopener noreferrer">Defcon</a> <a href="https://aivillage.org/" target="_blank" rel="noopener noreferrer">AI Village</a> 2024 red-teaming event for Ai2's OLMo LLM</li>
     </ul>
     <div class="card-actions">
       <a class="btn subtle" href="/about/">Full bio →</a>
-      <a class="btn ghost" href="/about/resume.pdf" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
     </div>
   </div>
 </section>

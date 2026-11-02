@@ -2,7 +2,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({"assets": "assets"});
   eleventyConfig.addPassthroughCopy({"data": "data"});
-  eleventyConfig.addPassthroughCopy({"about/resume.pdf": "about/resume.pdf"});
   eleventyConfig.setDataDeepMerge(true);
 
   eleventyConfig.setTemplateFormats([
@@ -14,7 +13,7 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addGlobalData("site", {
     title: "C. Fiorelli",
-    description: "Co-founder & CTO, PathReader AI. Technical PM with 10+ years shipping AI/ML products at Ai2, Google, and Microsoft. Open to advisory and consulting.",
+    description: "Chris Fiorelli, Co-founder & CTO, PathReader AI. I build the product. Previously 10+ years shipping AI/ML products at Ai2, Google, and Microsoft.",
     url: "https://cfiorelli.github.io",
     ogImage: "/assets/img/lion.png"
   });

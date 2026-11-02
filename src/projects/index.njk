@@ -1,7 +1,7 @@
 ---
 layout: layout
 title: Projects
-description: Projects by Christopher Fiorelli — applied AI, developer tools, and data visualization.
+description: "Projects by Christopher Fiorelli: applied AI, developer tools, and data visualization."
 permalink: projects/index.html
 ---
 {% set sortedProjects = projects | sort(attribute='updated') | reverse %}
@@ -32,14 +32,11 @@ permalink: projects/index.html
         {% endif %}
         <div class="card-body">
           {% if project.status %}
-            {% set statusPercent = project.status.percent | default(0) %}
-            {% set statusLabel = project.status.label %}
-            <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %} aria-label="{{ statusPercent }}% complete{% if statusLabel %} — {{ statusLabel }}{% endif %}">
-              <span class="project-status__percent">{{ statusPercent }}%</span>
-              {% if statusLabel %}
-                <span class="project-status__label">{{ statusLabel }}</span>
-              {% endif %}
-            </div>
+            {% if project.status.label %}
+              <div class="project-status"{% if project.status.note %} title="{{ project.status.note }}"{% endif %}>
+                <span class="project-status__pill">{{ project.status.label }}</span>
+              </div>
+            {% endif %}
           {% endif %}
           <h3>{{ project.title }}</h3>
           {% if project.tagline %}

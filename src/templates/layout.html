@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% set pageTitle = title or site.title %}
   {% set fullTitle = site.title %}
-  {% if title and title != site.title %}
+  {% if standaloneTitle %}
+    {% set fullTitle = title %}
+  {% elif title and title != site.title %}
     {% set fullTitle = title ~ ' · ' ~ site.title %}
   {% endif %}
   {% set pageDescription = description or site.description %}
@@ -71,7 +73,7 @@
 
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> C. Fiorelli — <a href="/about/">About</a></p>
+      <p>© <span id="year"></span> C. Fiorelli · <a href="/about/">About</a></p>
     </div>
   </footer>
 

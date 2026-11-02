@@ -1,21 +1,9 @@
 [
   {
-    "title": "Structured Outputs in LLMs — Enforcing JSON Schema at Inference Time",
+    "title": "Efficient Guided Generation for Large Language Models",
     "url": "https://arxiv.org/abs/2307.09702",
-    "tags": ["LLM", "Structured Output", "Compliance"],
+    "tags": ["LLM", "Structured Output", "Guided Generation"],
     "addedAt": "2026-06-01"
-  },
-  {
-    "title": "How Enterprises Are Actually Deploying AI Agents in 2025",
-    "url": "https://a16z.com/ai-agents-enterprise/",
-    "tags": ["AI Agents", "Enterprise", "Deployment"],
-    "addedAt": "2026-04-18"
-  },
-  {
-    "title": "Regulatory Compliance as Code — From Documents to Enforceable Rules",
-    "url": "https://martinfowler.com/articles/compliance-as-code.html",
-    "tags": ["Compliance", "Policy", "Engineering"],
-    "addedAt": "2026-03-07"
   },
   {
     "title": "pgvector: Open-source Vector Similarity Search for Postgres",
@@ -24,7 +12,7 @@
     "addedAt": "2026-02-19"
   },
   {
-    "title": "HNSW Explained — Approximate Nearest Neighbor Search",
+    "title": "HNSW Explained: Approximate Nearest Neighbor Search",
     "url": "https://www.pinecone.io/learn/series/faiss/hnsw/",
     "tags": ["Vector Search", "ANN", "ML Infrastructure"],
     "addedAt": "2026-02-18"
@@ -48,12 +36,6 @@
     "addedAt": "2025-12-15"
   },
   {
-    "title": "Startup Financial Modeling for Technical Founders",
-    "url": "https://www.ycombinator.com/library/6k-startup-financial-modeling",
-    "tags": ["Finance", "Startups", "Y Combinator"],
-    "addedAt": "2025-11-10"
-  },
-  {
     "title": "The First Interstellar Software Update - The Insane Hack That Saved Voyager 1",
     "url": "https://www.youtube.com/watch?v=p0K7u3B_8rY",
     "tags": ["Space", "Software Update"],
@@ -70,24 +52,6 @@
     "url": "https://arxiv.org/abs/2001.08361",
     "tags": ["language-models", "research"],
     "addedAt": "2025-08-14"
-  },
-  {
-    "title": "Practical Evaluation for Retrieval-Augmented Generation",
-    "url": "https://openai.com/research/practical-evaluation-for-rag",
-    "tags": ["rag", "evaluation"],
-    "addedAt": "2025-07-29"
-  },
-  {
-    "title": "Designing Machine Learning Systems",
-    "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098115777/",
-    "tags": ["mlops", "books"],
-    "addedAt": "2025-06-02"
-  },
-  {
-    "title": "Introducing the Semantic Scholar API SDK",
-    "url": "https://www.semanticscholar.org/blog/semantic-scholar-api-sdk/",
-    "tags": ["semantic-scholar", "sdk"],
-    "addedAt": "2025-05-11"
   },
   {
     "title": "GEB: Gödel, Escher, Bach",

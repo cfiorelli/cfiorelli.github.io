@@ -55,7 +55,7 @@ module.exports = class InterestsRssFeed {
     return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>${escapeXml(`${site.title || "Site"} — Interests`)}</title>
+    <title>${escapeXml(`${site.title || "Site"}: Interests`)}</title>
     <link>${escapeXml(channelLink)}</link>
     <description>${escapeXml(site.description || "Latest interests and links")}</description>
     <lastBuildDate>${lastBuild}</lastBuildDate>

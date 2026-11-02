@@ -99,14 +99,11 @@ body{
 
 .project-progress{margin-top:1rem;display:flex;flex-direction:column;gap:.55rem}
 .project-progress--detail{margin-top:1.25rem;max-width:520px}
-.project-progress__pill{display:inline-flex;align-items:center;gap:.45rem;background:rgba(var(--accent)/0.15);color:rgb(var(--accent));padding:.3rem .65rem;border-radius:999px;font-size:.85rem;font-weight:600}
-.project-progress__percent{font-variant-numeric:tabular-nums}
+.project-progress__pill{align-self:flex-start;display:inline-flex;align-items:center;gap:.45rem;background:rgba(var(--accent)/0.15);color:rgb(var(--accent));padding:.3rem .65rem;border-radius:999px;font-size:.85rem;font-weight:600}
 .project-progress__label{color:inherit}
 .project-status{margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;font-size:.9rem}
-.project-status__percent{display:inline-flex;align-items:center;justify-content:center;padding:.25rem .65rem;border-radius:999px;background:rgba(var(--accent)/0.18);color:rgb(var(--accent));font-weight:600;font-variant-numeric:tabular-nums}
+.project-status__pill{display:inline-flex;align-items:center;justify-content:center;padding:.25rem .65rem;border-radius:999px;background:rgba(var(--accent)/0.18);color:rgb(var(--accent));font-weight:600}
 .project-status__label{color:rgb(var(--muted));font-size:.9rem}
-.project-progress__bar{height:6px;border-radius:999px;background:rgba(var(--text)/0.08);overflow:hidden}
-.project-progress__bar-fill{height:100%;background:rgb(var(--accent));border-radius:inherit;transition:width .4s ease;width:calc(var(--progress, 0) * 1%)}
 .project-progress__note{margin:0;font-size:.85rem}
 
 .project-card__links{margin:.75rem 0 0;padding-left:1.1rem;display:flex;flex-direction:column;gap:.35rem;font-size:.9rem}
